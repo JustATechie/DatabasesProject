@@ -4,7 +4,7 @@
  * Sanddhya Jayabalan (SJAYABA1)
 */
 
-/* Drop and create new table. Only run if debugging issues. */
+/* Drop and create new database. Only run if debugging issues. */
 /*
 DROP DATABASE IF EXISTS Project;
 CREATE DATABASE Project;
@@ -39,6 +39,8 @@ DROP TABLE IF EXISTS Food;
 DROP FUNCTION IF EXISTS FilePath;
 
 /*********** End cleanup ***********/
+
+#SOURCE cleanup.sql
 
 /*********** Begin Test Setup ***********/
 

@@ -33,6 +33,6 @@ DROP TABLE IF EXISTS Food;
 DROP FUNCTION IF EXISTS FilePath;
 
 /* Drop Database */
-# DROP DATABASE IF EXISTS Project;
+DROP DATABASE IF EXISTS Test_Project;
 
 /*********** End cleanup ***********/
