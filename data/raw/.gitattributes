@@ -1,1 +1,12 @@
 Disease[[:space:]]by[[:space:]]county[[:space:]]-[[:space:]]Federal.csv filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text
+enrollment[[:space:]]9-12[[:space:]]by[[:space:]]state[[:space:]]and[[:space:]]region.xls filter=lfs diff=lfs merge=lfs -text
+Enrollment[[:space:]]by[[:space:]]level[[:space:]]and[[:space:]]grade.xls filter=lfs diff=lfs merge=lfs -text
+enrollment[[:space:]]k-8[[:space:]]by[[:space:]]state[[:space:]]and[[:space:]]region.xls filter=lfs diff=lfs merge=lfs -text
+FDPIR.xls filter=lfs diff=lfs merge=lfs -text
+February2014[[:space:]]Food[[:space:]]Environment.xls filter=lfs diff=lfs merge=lfs -text
+Food[[:space:]]Distribution[[:space:]]Program[[:space:]]Tables.xls filter=lfs diff=lfs merge=lfs -text
+CSFP.xls filter=lfs diff=lfs merge=lfs -text
+Food[[:space:]]Distribution[[:space:]]Program[[:space:]]Tables[[:space:]]Cost.xls filter=lfs diff=lfs merge=lfs -text
+enrollment[[:space:]]by[[:space:]]region[[:space:]]and[[:space:]]state.xls filter=lfs diff=lfs merge=lfs -text
+*.xlsx filter=lfs diff=lfs merge=lfs -text
