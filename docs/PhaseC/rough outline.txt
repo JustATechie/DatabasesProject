@@ -1,0 +1,5 @@
+A potential mapping of data files to schemas:
+(Organized by schema name)
+
+FoodStamps:
+2015 Food Environment Atlas Data Download: Supplemental Data - Sate

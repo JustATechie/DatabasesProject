@@ -215,6 +215,7 @@ CREATE TABLE FoodStamps(
             ON UPDATE RESTRICT,
 
     Name LONGTEXT NOT NULL,
+    Year SMALLINT(4) UNSIGNED,
     numEnrolled BIGINT UNSIGNED
 
 );
