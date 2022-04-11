@@ -1,0 +1,4 @@
+1,1,1,1992,omegalul
+2,1,1,1992,omegalul2
+3,0,1,1992,fail1
+3,1,1,1992,omegalul3
