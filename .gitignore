@@ -1,3 +1,15 @@
+### Manual
+*.~lock
+*.~lock.*
+*.~lock.*.*
+.~lock
+.~lock.*
+.~lock.*.*
+
+
+
+
+
 ### Linux template
 *~
 
