@@ -2,3 +2,14 @@
 *.zip filter=lfs diff=lfs merge=lfs -text
 2015[[:space:]]Food[[:space:]]Environment[[:space:]]Atlas[[:space:]]Data.xls filter=lfs diff=lfs merge=lfs -text
 *.xlsx filter=lfs diff=lfs merge=lfs -text
+food-affordability-2006-2010-phwrfo.zip filter=lfs diff=lfs merge=lfs -text
+FoodEnvironmentAtlas.zip filter=lfs diff=lfs merge=lfs -text
+obesity-in-california-2012-and-2013-1dmht2.zip filter=lfs diff=lfs merge=lfs -text
+FDPIR.xls filter=lfs diff=lfs merge=lfs -text
+Food[[:space:]]Distribution[[:space:]]Program[[:space:]]Tables[[:space:]]Cost.xls filter=lfs diff=lfs merge=lfs -text
+FY[[:space:]]2016[[:space:]]SNAP[[:space:]]Income[[:space:]]Limits.xlsx filter=lfs diff=lfs merge=lfs -text
+CSFP.xls filter=lfs diff=lfs merge=lfs -text
+February2014[[:space:]]Food[[:space:]]Environment.xls filter=lfs diff=lfs merge=lfs -text
+Food[[:space:]]Distribution[[:space:]]Program[[:space:]]Tables.xls filter=lfs diff=lfs merge=lfs -text
+FoodEnvironment2018.xls filter=lfs diff=lfs merge=lfs -text
+TEFAP.xls filter=lfs diff=lfs merge=lfs -text
