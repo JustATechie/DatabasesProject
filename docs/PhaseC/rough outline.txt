@@ -1,5 +1,11 @@
 A potential mapping of data files to schemas:
 (Organized by schema name)
 
+File organization:
+    if Excel file:
+    Name of file: Name of tab
+
 FoodStamps:
-2015 Food Environment Atlas Data Download: Supplemental Data - Sate
+2015 Food Environment Atlas Data: Supplemental Data - Sate
+    FoodStamps: ID (increment), LocationID (from above), TypeID (from above), name, year, numEnrolled
+

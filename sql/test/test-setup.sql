@@ -24,7 +24,7 @@ DROP TABLE IF EXISTS ConsumptionStats;
 DROP TABLE IF EXISTS MetabolicDisease;
 DROP TABLE IF EXISTS FoodInitiatives;
 DROP TABLE IF EXISTS FoodStamps;
-DROP TABLE IF EXISTS SchoolLunchPrograms;
+DROP TABLE IF EXISTS SchoolFoodPrograms;
 DROP TABLE IF EXISTS FoodInitiativesCreated;
 DROP TABLE IF EXISTS NutritionalValue;
 DROP TABLE IF EXISTS FoodConsumption;
@@ -220,7 +220,7 @@ CREATE TABLE FoodStamps(
 
 );
 
-CREATE TABLE SchoolLunchPrograms(
+CREATE TABLE SchoolFoodPrograms(
     LunchProID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
 
     LocationID SMALLINT UNSIGNED NOT NULL,
@@ -361,9 +361,9 @@ set @path = FilePath();
 
 /* hopefully we can eventually utilize the above code to auto determine file path. */
 LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/test/location-test.txt' INTO TABLE Location FIELDS TERMINATED BY ',';
-LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/test/datatype-test.txt' INTO TABLE DataType FIELDS TERMINATED BY ',';
-LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/test/foodlegislation-test.txt' INTO TABLE FoodLegislation FIELDS TERMINATED BY ',';
-LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/test/populationstats-test.txt' INTO TABLE PopulationStats FIELDS TERMINATED BY ',';
+#LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/test/datatype-test.txt' INTO TABLE DataType FIELDS TERMINATED BY ',';
+#LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/test/foodlegislation-test.txt' INTO TABLE FoodLegislation FIELDS TERMINATED BY ',';
+#LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/test/populationstats-test.txt' INTO TABLE PopulationStats FIELDS TERMINATED BY ',';
 
 /* Lock tables that should be read-only (should be all tables eventually to prevent data deletion.) */
 /*LOCK TABLES DataType READ;*/
