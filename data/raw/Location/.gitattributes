@@ -2,3 +2,6 @@
 simplemaps_uscities_basicv1.74.zip filter=lfs diff=lfs merge=lfs -text
 *.xls filter=lfs diff=lfs merge=lfs -text
 *.xlsx filter=lfs diff=lfs merge=lfs -text
+US[[:space:]]Cities.csv filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text
+US[[:space:]]Cities.xlsx filter=lfs diff=lfs merge=lfs -text
