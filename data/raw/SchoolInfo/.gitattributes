@@ -1,0 +1,7 @@
+enrollment[[:space:]]by[[:space:]]region[[:space:]]and[[:space:]]state.xls filter=lfs diff=lfs merge=lfs -text
+enrollment[[:space:]]k-8[[:space:]]by[[:space:]]state[[:space:]]and[[:space:]]region.xls filter=lfs diff=lfs merge=lfs -text
+*.xlsx filter=lfs diff=lfs merge=lfs -text
+*.csv filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text
+enrollment[[:space:]]9-12[[:space:]]by[[:space:]]state[[:space:]]and[[:space:]]region.xls filter=lfs diff=lfs merge=lfs -text
+Enrollment[[:space:]]by[[:space:]]level[[:space:]]and[[:space:]]grade.xls filter=lfs diff=lfs merge=lfs -text
