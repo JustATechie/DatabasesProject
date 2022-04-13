@@ -298,7 +298,7 @@ CREATE TABLE FoodDistribution(
 
 /* Load data into tables from files. */
 LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/processed/small/USCities.csv' INTO TABLE Location FIELDS TERMINATED BY ',';
-#LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/test/datatype-test.txt' INTO TABLE DataType FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/processed/small/datatype.csv' INTO TABLE DataType FIELDS TERMINATED BY ',';
 #LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/test/foodlegislation-test.txt' INTO TABLE FoodLegislation FIELDS TERMINATED BY ',';
 #LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/test/populationstats-test.txt' INTO TABLE PopulationStats FIELDS TERMINATED BY ',';
 

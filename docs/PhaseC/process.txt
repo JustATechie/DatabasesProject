@@ -31,4 +31,5 @@ the browser. Of the data we could download here is what we downloaded as from wh
 Enrollment by region and state information was downloaded from: https://nces.ed.gov/programs/digest/d13/tables/dt13_203.20.asp.
 This data sheet provided us with data on enrollment numbers from 1990 to projected 2023. We did not remove any columns, but we
 removed the first few rows of data since it was aggregate data divided by regions of the US (northeast, west, etc.). All of this
-data got parsed into the population stats csv.
+data got parsed into the population stats csv. We had a couple versions of this data from the same root site that was
+divided by grade level and grade level group (HS, K-8). We didn't want this level of division for this devel.
