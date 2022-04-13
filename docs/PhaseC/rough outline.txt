@@ -1,9 +1,30 @@
 A potential mapping of data files to schemas:
-(Organized by schema name)
+
+Organization:
+Data Genre
+    File Name
+    Table name and columns
 
 File organization:
-    if Excel file:
-    Name of file: Name of tab
+if Excel file:
+    Name of file: Name of tab in file
+
+
+------Begin Outline------
+
+Location:
+    US Cities.csv
+    Location: LocationID (increment), state, county, city, locationType.
+
+Note: You will need to add a column for locationID. Since data is organized by city, please add row
+entries of just state names and also state names and their counties. This way we cover all the bases if
+location is specified down to state, down to county, or down to city. No need to remove any columns.
+Because we were given an excel file I was able to just delete them very easily. I also took the liberty
+and added all 50 states on their own at the end of the file.
+
+
+When we later look up data, if we need just the ID where no county or city is specified, we can select where
+state=name and County=null. Then we will get the ID of just the state entry.
 
 FoodStamps:
 2015 Food Environment Atlas Data: Supplemental Data - Sate

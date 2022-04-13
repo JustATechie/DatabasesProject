@@ -4,8 +4,23 @@ Partners:
 Louie DiBernardo (LDIBERN1)
 Sanddhya Jayabalan (SJAYABA1)
 
-We downloaded (or at least attempted to download) data from each data source we originally specified in Phase A. Doing so posed some challenge as not all files were available to even be downloaded. Some data like in [EXAMPLE HERE] was only available
-as a digital interactive map that we could explore in the browser. Of the data we could download here is what we downloaded as from which link:
+New Data:
+We gathered location data from a source we previously did not mention. We wanted to be able to import
+all city, county, and state names into the database before we added anything else so that we do not
+have to go back and check if a location already exists and add it if it did not. This way we can get a
+location name, look it up in the database, and then return the ID number associated. We downloaded this
+data from: https://simplemaps.com/data/us-cities. It contained much more information than we needed and
+had to delete the following columns:
+city_ascii, county_fips, state_id, lat, lng, population, density, source, military, incorporated, timezone, ranking, zips.
+
+We needed to add a column that contained the LocationID we generated for each location (it just counts up).
+While the data already had a column with an id, because we wanted to also add extra entries for states
+alone and entries with states and counties without cities, we found it easier to just make our own id
+number as we go.
 
 
-
+Original Data:
+We downloaded (or at least attempted to download) data from each data source we originally specified
+in Phase A. Doing so posed some challenge as not all files were available to even be downloaded. Some
+data like in [EXAMPLE HERE] was only available as a digital interactive map that we could explore in
+the browser. Of the data we could download here is what we downloaded as from which link:
