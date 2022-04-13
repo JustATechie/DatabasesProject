@@ -51,7 +51,11 @@ CREATE TABLE FoodLegislation(
 
                                 YearPassed VARCHAR(4) NOT NULL,
                                 BillName VARCHAR(100) NOT NULL,
+                                HealthTopic LONGTEXT,
+                                PolicyTopic LONGTEXT,
+                                Setting LONGTEXT,
                                 Description LONGTEXT
+
 );
 
 CREATE TABLE PopulationStats(

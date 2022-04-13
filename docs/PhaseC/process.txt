@@ -40,3 +40,10 @@ and we had to amend our age column from an int to a string since it could also b
 LocationID,GeographicLevel,DataSource,Data_Value_Unit,Data_Value_Type,Data_Value_Footnote_Symbol,Data_Value_Footnote,Confidence_limit_Low,Confidence_limit_High,StratificationCategory2,Stratification2,TopicID,X_long,Y_lat
 After that we needed to prune the data since there were extra aggregate rows for states showing percent changes as well as rows
 with no data in them.
+
+Nutrition Physical Activity Obesity Legislation was downloaded from: https://catalog.data.gov/dataset/cdc-nutrition-physical-activity-and-obesity-legislation.
+This data sheet provided names, states, dates, and categories of the bills enacted. We had to amend our FoodLegislation
+table to have categories and settings. We removed the following columns:
+Quarter, LocationAbbr, DataSource, Status, EnactedDate	EffectiveDate	GeoLocation	DisplayOrder	PolicyTypeID	HealthTopicID	PolicyTopicID	SettingID	ProvisionID.
+We renamed the comments column to description to match our column. We also removed any entries that were not enacted via the status column.
+
