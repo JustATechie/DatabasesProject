@@ -46,4 +46,4 @@ This data sheet provided names, states, dates, and categories of the bills enact
 table to have categories and settings. We removed the following columns:
 Quarter, LocationAbbr, DataSource, Status, EnactedDate	EffectiveDate	GeoLocation	DisplayOrder	PolicyTypeID	HealthTopicID	PolicyTopicID	SettingID	ProvisionID.
 We renamed the comments column to description to match our column. We also removed any entries that were not enacted via the status column.
-
+Additionally, I had to filter the text in each column and make sure that there were no extra commas that our script would interpret as columns.
