@@ -18,7 +18,7 @@ DROP TABLE IF EXISTS ConsumptionStats;
 DROP TABLE IF EXISTS MetabolicDisease;
 DROP TABLE IF EXISTS FoodInitiatives;
 DROP TABLE IF EXISTS FoodStamps;
-DROP TABLE IF EXISTS SchoolLunchPrograms;
+DROP TABLE IF EXISTS SchoolFoodPrograms;
 DROP TABLE IF EXISTS FoodInitiativesCreated;
 DROP TABLE IF EXISTS NutritionalValue;
 DROP TABLE IF EXISTS FoodConsumption;

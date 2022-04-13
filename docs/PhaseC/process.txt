@@ -18,6 +18,9 @@ While the data already had a column with an id, because we wanted to also add ex
 alone and entries with states and counties without cities, we found it easier to just make our own id
 number as we go.
 
+Since we wanted to be able to not deal with location data by hand, there is no "small" variant of this
+data. Both the regular data and the "small" data use this same file.
+
 
 Original Data:
 We downloaded (or at least attempted to download) data from each data source we originally specified

@@ -12,7 +12,8 @@ if Excel file:
 
 ------Begin Outline------
 
-Location:
+
+(DONE) Location:
     US Cities.csv
     Location: LocationID (increment), state, county, city, locationType.
 
@@ -22,9 +23,9 @@ location is specified down to state, down to county, or down to city. No need to
 Because we were given an excel file I was able to just delete them very easily. I also took the liberty
 and added all 50 states on their own at the end of the file.
 
-
 When we later look up data, if we need just the ID where no county or city is specified, we can select where
 state=name and County=null. Then we will get the ID of just the state entry.
+
 
 FoodStamps:
 2015 Food Environment Atlas Data: Supplemental Data - Sate
