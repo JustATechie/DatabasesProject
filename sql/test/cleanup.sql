@@ -6,6 +6,9 @@
 
 /*********** Begin Cleanup ***********/
 
+/* Select the right database */
+USE TestProject;
+
 /* Unlock tables so we can remove them all */
 UNLOCK TABLES;
 
@@ -33,6 +36,6 @@ DROP TABLE IF EXISTS Food;
 DROP FUNCTION IF EXISTS FilePath;
 
 /* Drop Database */
-DROP DATABASE IF EXISTS Test_Project;
+DROP DATABASE IF EXISTS TestProject;
 
 /*********** End cleanup ***********/

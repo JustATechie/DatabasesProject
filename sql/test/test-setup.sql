@@ -5,12 +5,14 @@
 */
 
 /* Drop and create new database. Only run if debugging issues. */
-/*
-DROP DATABASE IF EXISTS Project;
-CREATE DATABASE Project;
-*/
+
+DROP DATABASE IF EXISTS TestProject;
+CREATE DATABASE TestProject;
+USE TestProject;
+
 
 /*********** Begin Cleanup ***********/
+
 
 /* Unlock tables so we can remove them all */
 UNLOCK TABLES;

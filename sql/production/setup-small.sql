@@ -6,6 +6,10 @@
 
 /*********** Begin Test Setup ***********/
 
+/* Create and select new database. */
+CREATE DATABASE Project;
+USE Project;
+
 /* Create Parent Tables */
 CREATE TABLE DataType(
                          TypeID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
