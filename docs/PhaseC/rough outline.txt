@@ -26,8 +26,20 @@ and added all 50 states on their own at the end of the file.
 When we later look up data, if we need just the ID where no county or city is specified, we can select where
 state=name and County=null. Then we will get the ID of just the state entry.
 
+(DONE) DataType:
+    Manually entered.
+
+Disease:
+    Disease by county - Federal#.csv
+    MetabolicDisease: MetaDisID (increment), LocationID, TypeID, Age (range), Year, Gender, HeartDisease
+
+Note: I pruned the data pretty far down in the two csv files I made that split the data 50/50. You'll
+need to remove rows in the files with Data_Value_Unit "%", Data_Value_Footnote "Value Suppressed", Stratification3 "Overall".
+There are two columns that only display "sex" and "age". These can be removed, but I left just to visually see.
+
+
+
 
 FoodStamps:
 2015 Food Environment Atlas Data: Supplemental Data - Sate
     FoodStamps: ID (increment), LocationID (from above), TypeID (from above), name, year, numEnrolled
-

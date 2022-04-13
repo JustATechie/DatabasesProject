@@ -33,3 +33,10 @@ This data sheet provided us with data on enrollment numbers from 1990 to project
 removed the first few rows of data since it was aggregate data divided by regions of the US (northeast, west, etc.). All of this
 data got parsed into the population stats csv. We had a couple versions of this data from the same root site that was
 divided by grade level and grade level group (HS, K-8). We didn't want this level of division for this devel.
+
+Heart Disease by county information was downloaded from: https://catalog.data.gov/dataset/heart-disease-mortality-data-among-us-adults-35-by-state-territory-and-county-2017-2019-6c0b7.
+This data sheet provided us with data on heart disease rate by county in the US. This data had a variety of sorting values
+and we had to amend our age column from an int to a string since it could also be a range. We had to remove the following rows:
+LocationID,GeographicLevel,DataSource,Data_Value_Unit,Data_Value_Type,Data_Value_Footnote_Symbol,Data_Value_Footnote,Confidence_limit_Low,Confidence_limit_High,StratificationCategory2,Stratification2,TopicID,X_long,Y_lat
+After that we needed to prune the data since there were extra aggregate rows for states showing percent changes as well as rows
+with no data in them.

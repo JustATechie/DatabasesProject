@@ -135,7 +135,7 @@ CREATE TABLE MetabolicDisease(
                                          ON DELETE CASCADE
                                          ON UPDATE RESTRICT,
 
-                                 Age SMALLINT(3) UNSIGNED NOT NULL,
+                                 Age TEXT NOT NULL,
                                  Year SMALLINT(4) UNSIGNED NOT NULL,
                                  Gender ENUM('female', 'male') NOT NULL,
                                  Diabetes DECIMAL(5,5) UNSIGNED,
