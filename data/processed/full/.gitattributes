@@ -7,3 +7,4 @@ SchoolEnrollment.xls filter=lfs diff=lfs merge=lfs -text
 datatype.csv filter=lfs diff=lfs merge=lfs -text
 FoodLegislation.csv filter=lfs diff=lfs merge=lfs -text
 FoodLegislationCopy.csv filter=lfs diff=lfs merge=lfs -text
+PopStats.csv filter=lfs diff=lfs merge=lfs -text
