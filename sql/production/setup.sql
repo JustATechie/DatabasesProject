@@ -74,9 +74,9 @@ CREATE TABLE PopulationStats(
                                         ON UPDATE RESTRICT,
 
                                 Year SMALLINT(4) UNSIGNED NOT NULL,
-                                CrimeRate DECIMAL(5,5) UNSIGNED,
-                                LiteracyRate DECIMAL(5,5) UNSIGNED,
-                                SchoolEnrollment DECIMAL(5,5) UNSIGNED
+                                CrimeRate BIGINT UNSIGNED,
+                                LiteracyRate BIGINT UNSIGNED,
+                                SchoolEnrollment BIGINT UNSIGNED
 );
 
 CREATE TABLE AvgHousehold(
@@ -304,7 +304,7 @@ CREATE TABLE FoodDistribution(
 LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/processed/full/USCities.csv' INTO TABLE Location FIELDS TERMINATED BY ',';
 LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/processed/full/datatype.csv' INTO TABLE DataType FIELDS TERMINATED BY ',';
 LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/processed/full/FoodLegislationCopy.csv' INTO TABLE FoodLegislation FIELDS TERMINATED BY ',';
-#LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/test/populationstats-test.txt' INTO TABLE PopulationStats FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/processed/full/PopStats.csv' INTO TABLE PopulationStats FIELDS TERMINATED BY ',';
 
 /* Lock tables that should be read-only (should be all tables eventually to prevent data deletion.) */
 /*LOCK TABLES DataType READ;*/

@@ -44,3 +44,11 @@ Food:
 FoodStamps:
 2015 Food Environment Atlas Data: Supplemental Data - Sate
     FoodStamps: ID (increment), LocationID (from above), TypeID (from above), name, year, numEnrolled
+
+
+PopulationStats:
+    SchoolEnrollment.xls:
+    PopulationStats: ID, LocationID, TypeID, Year, null,null,SchoolEnrollment
+
+Note: has school numbers by year and state. Needs to have crime and literacy rates added eventually.
+Has been converted to PopStats.csv in its current state so we can at least have something.
