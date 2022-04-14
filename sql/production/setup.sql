@@ -139,13 +139,13 @@ CREATE TABLE MetabolicDisease(
                                          ON DELETE CASCADE
                                          ON UPDATE RESTRICT,
 
-                                 Age TEXT NOT NULL,
                                  Year SMALLINT(4) UNSIGNED NOT NULL,
-                                 Gender ENUM('female', 'male') NOT NULL,
+                                 AgeRange TEXT NOT NULL,
+                                 Gender ENUM('Female', 'Male') NOT NULL,
+                                 HeartDisease DECIMAL(5,5) UNSIGNED,
                                  Diabetes DECIMAL(5,5) UNSIGNED,
                                  Obesity DECIMAL(5,5) UNSIGNED,
-                                 Cholesterol DECIMAL(5,5) UNSIGNED,
-                                 HeartDisease DECIMAL(5,5) UNSIGNED
+                                 Cholesterol DECIMAL(5,5) UNSIGNED
 );
 
 CREATE TABLE FoodInitiatives(
