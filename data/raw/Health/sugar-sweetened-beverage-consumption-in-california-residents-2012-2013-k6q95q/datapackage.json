@@ -1,0 +1,114 @@
+{
+  "accrual_periodicity": "other",
+  "additional_limitations": "",
+  "citation": "Nutrition Education and Obesity Prevention Branch, California Department of Public Health. 2014. California Adults, Adolescents, and Children Mean Consumption of Sugar-Sweetened Beverages (Self-Report)",
+  "contact_email": "opendata@cdph.ca.gov",
+  "data_collection_tool": "https://archive.cdph.ca.gov/programs/cpns/Pages/CaliforniaStatewideSurveys.aspx  ",
+  "data_license": "Terms of Use",
+  "de_identification_method": "",
+  "description": "The mean servings/times sugar-sweetened beverages consumed daily by California residents. These data are from the 2013 California Dietary Practices Surveys (CDPS), 2012 California Teen Eating, Exercise and Nutrition Survey (CalTEENS), and 2013 California Children’s Healthy Eating and Exercise Practices Survey (CalCHEEPS). These surveys are now discontinued. Adults, adolescents, and children (with parental assistance) were asked about the sugar-sweetened beverages they drank over the previous 24 hour period. Child/Adolescent: Fruit and vegetable, beverage, and junk food consumption, along with physical activity, sedentary time, active transport, sport participation, school environment, home neighborhood environment, fruit and vegetable access and availability, household/family rules, weight status, school breakfast/lunch participation, attitudes, and beliefs. Adult: Fruit and vegetable, beverage, and junk food consumption, along with physical activity, sedentary time, worksite environment, school environment, home neighborhood environment, fruit and vegetable access and availability, household/family rules, weight status and weight loss practices, and food security. According to the Dietary Guidelines for Americans, 2010, sugar-sweetened beverages provide excess calories and few essential nutrients to the diet and should only be consumed when nutrient needs have been met and without exceeding daily calorie limits.",
+  "geo_coverage": "California",
+  "geographic_granularity": "statewide",
+  "keywords": [
+    "adolescent",
+    "adult",
+    "beverage",
+    "child",
+    "drink",
+    "soda",
+    "ssb",
+    "sugar",
+    "sugar-sweetened"
+  ],
+  "limitations": "Limitations",
+  "name": "sugar-sweetened-beverage-consumption-in-california-residents-2012-2013",
+  "program_web_page": "https://www.cdph.ca.gov/Programs/CCDPHP/DCDIC/NEOPB/Pages/Program-Landing2.aspx",
+  "related_resources": "",
+  "resources": [
+    {
+      "description": "The mean servings/times sugar-sweetened beverages consumed daily by California residents. These data are from the 2013 California Dietary Practices Surveys (CDPS), 2012 California Teen Eating, Exercise and Nutrition Survey (CalTEENS), and 2013 California Children’s Healthy Eating and Exercise Practices Survey (CalCHEEPS). These surveys are now discontinued. Adults, adolescents, and children (with parental assistance) were asked about the sugar-sweetened beverages they drank over the previous 24 hour period. Child/Adolescent: Fruit and vegetable, beverage, and junk food consumption, along with physical activity, sedentary time, active transport, sport participation, school environment, home neighborhood environment, fruit and vegetable access and availability, household/family rules, weight status, school breakfast/lunch participation, attitudes, and beliefs. Adult: Fruit and vegetable, beverage, and junk food consumption, along with physical activity, sedentary time, worksite environment, school environment, home neighborhood environment, fruit and vegetable access and availability, household/family rules, weight status and weight loss practices, and food security. According to the Dietary Guidelines for Americans, 2010, sugar-sweetened beverages provide excess calories and few essential nutrients to the diet and should only be consumed when nutrient needs have been met and without exceeding daily calorie limits.",
+      "format": "CSV",
+      "name": "sugar-sweetened-beverage-consumption-in-california-residents-2012-2013-csv",
+      "path": "sugar-sweetened-beverage-consumption-in-california-residents-2012-2013-.csv",
+      "schema": {
+        "fields": [
+          {
+            "description": "2012: Adolescent\n2013: Adult and Child\n",
+            "name": "Year",
+            "title": "Year",
+            "type": "string"
+          },
+          {
+            "description": "Adult: 18 years and older, N=1,505\nAdolescent: 12 to 17 years, N=1,064\nChild: 6 to 11 years, N=651\n",
+            "name": "Age Group",
+            "title": "Age Group",
+            "type": "string"
+          },
+          {
+            "description": "See category/types in data dictionary attachment\n",
+            "name": "Category",
+            "title": "Category",
+            "type": "string"
+          },
+          {
+            "description": "See category/types in data dictionary attachment",
+            "name": "Type",
+            "title": "Type",
+            "type": "string"
+          },
+          {
+            "description": "Sugar-sweetened beverages included soda, sports drinks, energy drinks, and any other fruit, tea, coffee, and milk beverages with added sugar. Chi-square analysis was performed on each category. There was significance at the p<.001 level for Ethnicity.\n\nChi-square analysis was performed on each category. \nAdult: There was significance at the p<.001 level for Gender, Age, Education, and Physical Activity. There was significance at the p<.01 level for Income. There was significance at the p<.05 level for Ethnicity and CalFresh Status.\nAdolescent: There was significance at the p<.001 level for Income. There was significance at the p<.01 level for Gender by Age-Female. There was significance at the p<.05 level for Ethnicity, Gender by Age- Male, and CalFresh Status.\nChild: There was significance at the p<.001 level for Physical Activity.\n",
+            "name": "Mean Servings/Times Sugar-Sweetened Beverages Consumed Daily",
+            "title": "Mean Servings/Times Sugar-Sweetened Beverages Consumed Daily",
+            "type": "number"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "path": "https://data.chhs.ca.gov/dataset/bb703230-1f5f-44b5-8a90-55e45e08c452/resource/4a8dde27-c4e1-4ca3-860b-447d813b2ce6/download/sugar-sweetened-beverage-consumption-in-california-residents-20122013.csv",
+          "title": "Sugar-Sweetened Beverage Consumption in California Residents, 2012/2013 (CSV)"
+        }
+      ],
+      "title": "Sugar-Sweetened Beverage Consumption in California Residents, 2012/2013 (CSV)"
+    },
+    {
+      "description": "The mean servings/times sugar-sweetened beverages consumed daily by California residents. These data are from the 2013 California Dietary Practices Surveys (CDPS), 2012 California Teen Eating, Exercise and Nutrition Survey (CalTEENS), and 2013 California Children’s Healthy Eating and Exercise Practices Survey (CalCHEEPS). These surveys are now discontinued. Adults, adolescents, and children (with parental assistance) were asked about the sugar-sweetened beverages they drank over the previous 24 hour period. Child/Adolescent: Fruit and vegetable, beverage, and junk food consumption, along with physical activity, sedentary time, active transport, sport participation, school environment, home neighborhood environment, fruit and vegetable access and availability, household/family rules, weight status, school breakfast/lunch participation, attitudes, and beliefs. Adult: Fruit and vegetable, beverage, and junk food consumption, along with physical activity, sedentary time, worksite environment, school environment, home neighborhood environment, fruit and vegetable access and availability, household/family rules, weight status and weight loss practices, and food security. According to the Dietary Guidelines for Americans, 2010, sugar-sweetened beverages provide excess calories and few essential nutrients to the diet and should only be consumed when nutrient needs have been met and without exceeding daily calorie limits.",
+      "format": "PDF",
+      "name": "sugar-sweetened-beverage-consumption-in-california-residents-2012-2013",
+      "path": "sugar-sweetened-beverage-consumption-in-california-residents-2012-2013.pdf",
+      "sources": [
+        {
+          "path": "https://data.chhs.ca.gov/dataset/bb703230-1f5f-44b5-8a90-55e45e08c452/resource/3936eb87-9ffb-4e73-b9dd-54536259c586/download/sugar-sweetenedbeverageconsumptionincaliforniaresidents2012-2013.pdf",
+          "title": "sugar-sweetened-beverage-consumption-in-california-residents-2012-2013"
+        }
+      ],
+      "title": "sugar-sweetened-beverage-consumption-in-california-residents-2012-2013"
+    },
+    {
+      "description": "The mean servings/times sugar-sweetened beverages consumed daily by California residents. These data are from the 2013 California Dietary Practices Surveys (CDPS), 2012 California Teen Eating, Exercise and Nutrition Survey (CalTEENS), and 2013 California Children’s Healthy Eating and Exercise Practices Survey (CalCHEEPS). These surveys are now discontinued. Adults, adolescents, and children (with parental assistance) were asked about the sugar-sweetened beverages they drank over the previous 24 hour period. Child/Adolescent: Fruit and vegetable, beverage, and junk food consumption, along with physical activity, sedentary time, active transport, sport participation, school environment, home neighborhood environment, fruit and vegetable access and availability, household/family rules, weight status, school breakfast/lunch participation, attitudes, and beliefs. Adult: Fruit and vegetable, beverage, and junk food consumption, along with physical activity, sedentary time, worksite environment, school environment, home neighborhood environment, fruit and vegetable access and availability, household/family rules, weight status and weight loss practices, and food security. According to the Dietary Guidelines for Americans, 2010, sugar-sweetened beverages provide excess calories and few essential nutrients to the diet and should only be consumed when nutrient needs have been met and without exceeding daily calorie limits.",
+      "format": "XLSX",
+      "name": "ssb-in-california-residents-dd",
+      "path": "ssb-in-california-residents-dd.xlsx",
+      "schema": {
+        "fields": []
+      },
+      "sources": [
+        {
+          "path": "https://data.chhs.ca.gov/dataset/bb703230-1f5f-44b5-8a90-55e45e08c452/resource/bb263f47-134a-4edf-95e2-09daea379d21/download/ssbincaliforniaresidentsdd.xlsx",
+          "title": "ssb-in-california-residents-dd"
+        }
+      ],
+      "title": "ssb-in-california-residents-dd"
+    }
+  ],
+  "secondary_sources": "",
+  "sources": [
+    {
+      "name": "Center for Chronic Disease Prevention and Health Promotion/Chronic Disease and Injury Control/Nutrition Education and Obesity Prevention Branch/Research and Evaluation Section",
+      "web": "https://archive.cdph.ca.gov/programs/cpns/Pages/CaliforniaStatewideSurveys.aspx"
+    }
+  ],
+  "temporal_coverage": "2012 and 2013",
+  "title": "Sugar-Sweetened Beverage Consumption in California Residents"
+}

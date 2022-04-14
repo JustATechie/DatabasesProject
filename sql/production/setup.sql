@@ -116,12 +116,14 @@ CREATE TABLE ConsumptionStats(
                                          ON DELETE CASCADE
                                          ON UPDATE RESTRICT,
 
-                                 Age SMALLINT(3) UNSIGNED NOT NULL,
                                  Year SMALLINT(4) UNSIGNED NOT NULL,
+                                 AgeRange TEXT NOT NULL,
+                                 Gender ENUM('Female','Male') NOT NULL,
+                                 ProduceIntake DECIMAL(5,1) UNSIGNED,
                                  SugarIntake SMALLINT UNSIGNED,
                                  FatIntake SMALLINT UNSIGNED,
-                                 ProcessedIntake SMALLINT UNSIGNED,
-                                 ProduceIntake SMALLINT UNSIGNED
+                                 ProcessedIntake SMALLINT UNSIGNED
+
 );
 
 CREATE TABLE MetabolicDisease(
@@ -305,6 +307,7 @@ LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/pro
 LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/processed/full/DataType/datatype.csv' INTO TABLE DataType FIELDS TERMINATED BY ',';
 LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/processed/full/FoodLegislation/FoodLegislation.csv' INTO TABLE FoodLegislation FIELDS TERMINATED BY ',';
 LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/processed/full/PopulationStats/PopStats.csv' INTO TABLE PopulationStats FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/processed/full/ConsumptionStats/ConsumptionStats.csv' INTO TABLE ConsumptionStats FIELDS TERMINATED BY ',';
 
 /* Lock tables that should be read-only (should be all tables eventually to prevent data deletion.) */
 /*LOCK TABLES DataType READ;*/

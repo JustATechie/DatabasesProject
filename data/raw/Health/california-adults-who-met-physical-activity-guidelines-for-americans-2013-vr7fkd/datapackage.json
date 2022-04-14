@@ -1,0 +1,103 @@
+{
+  "accrual_periodicity": "other",
+  "additional_limitations": "",
+  "citation": "Nutrition Education and Obesity Prevention Branch, California Department of Public Health. 2014. Self-Reported Participation in Recommended Aerobic Physical Activity by California Adults",
+  "contact_email": "opendata@cdph.ca.gov",
+  "data_collection_tool": "https://archive.cdph.ca.gov/programs/cpns/Pages/CaliforniaStatewideSurveys.aspx  ",
+  "data_license": "Terms of Use",
+  "de_identification_method": null,
+  "description": "This dataset is from the 2013 California Dietary Practices Survey of Adults. This survey has been discontinued. Adults were asked a series of eight questions about their physical activity practices in the last month. These questions were borrowed from the Behavior Risk Factor Surveillance System. Data displayed in this table represent California adults who met the aerobic recommendation for physical activity, as defined by the 2008 U.S. Department of Health and Human Services Physical Activity Guidelines for Americans and Objectives 2.1 and 2.2 of Healthy People 2020.\r\n\r\nThe California Dietary Practices Surveys (CDPS) (now discontinued) was the most extensive dietary and physical activity assessment of adults 18 years and older in the state of California. CDPS was designed in 1989 and was administered biennially in odd years up through 2013.  The CDPS was designed to monitor dietary trends, especially fruit and vegetable consumption, among California adults for evaluating their progress toward meeting the 2010 Dietary Guidelines for Americans and the Healthy People 2020 Objectives. For the data in this table, adults were asked a series of eight questions about their physical activity practices in the last month. Questions included: 1) During the past month, other than your regular job, did you participate in any physical activities or exercise such as running, calisthenics, golf, gardening or walking for exercise?  2) What type of physical activity or exercise did you spend the most time doing during the past month?  3) How many times per week or per month did you take part   n this activity during the past month?  4) And when you took part in this activity, for how many minutes or hours did you usually keep at it?  5) During the past month, how many times per week or per month did you do physical activities or exercises to strengthen your muscles? Questions 2, 3, and 4 were repeated to collect a second activity. Data were collected using a list of participating CalFresh households and random digit dial, approximately 1,400-1,500 adults (ages 18 and over) were interviewed via phone survey between the months of June and October. Demographic data included gender, age, ethnicity, education level, income, physical activity level, overweight status, and food stamp eligibility status. Data were oversampled for low-income adults to provide greater sensitivity for analyzing trends among our target population.",
+  "geo_coverage": "California",
+  "geographic_granularity": "statewide",
+  "keywords": [
+    "exercise",
+    "obesity",
+    "physical activity",
+    "recommendations"
+  ],
+  "limitations": "Limitations",
+  "name": "california-adults-who-met-physical-activity-guidelines-for-americans-2013",
+  "program_web_page": "https://www.cdph.ca.gov/Programs/CCDPHP/DCDIC/NEOPB/Pages/Program-Landing2.aspx",
+  "related_resources": null,
+  "resources": [
+    {
+      "description": "This dataset is from the 2013 California Dietary Practices Survey of Adults. This survey has been discontinued. Adults were asked a series of eight questions about their physical activity practices in the last month. These questions were borrowed from the Behavior Risk Factor Surveillance System. Data displayed in this table represent California adults who met the aerobic recommendation for physical activity, as defined by the 2008 U.S. Department of Health and Human Services Physical Activity Guidelines for Americans and Objectives 2.1 and 2.2 of Healthy People 2020.\r\n\r\nThe California Dietary Practices Surveys (CDPS) (now discontinued) was the most extensive dietary and physical activity assessment of adults 18 years and older in the state of California. CDPS was designed in 1989 and was administered biennially in odd years up through 2013.  The CDPS was designed to monitor dietary trends, especially fruit and vegetable consumption, among California adults for evaluating their progress toward meeting the 2010 Dietary Guidelines for Americans and the Healthy People 2020 Objectives. For the data in this table, adults were asked a series of eight questions about their physical activity practices in the last month. Questions included: 1) During the past month, other than your regular job, did you participate in any physical activities or exercise such as running, calisthenics, golf, gardening or walking for exercise?  2) What type of physical activity or exercise did you spend the most time doing during the past month?  3) How many times per week or per month did you take part   n this activity during the past month?  4) And when you took part in this activity, for how many minutes or hours did you usually keep at it?  5) During the past month, how many times per week or per month did you do physical activities or exercises to strengthen your muscles? Questions 2, 3, and 4 were repeated to collect a second activity. Data were collected using a list of participating CalFresh households and random digit dial, approximately 1,400-1,500 adults (ages 18 and over) were interviewed via phone survey between the months of June and October. Demographic data included gender, age, ethnicity, education level, income, physical activity level, overweight status, and food stamp eligibility status. Data were oversampled for low-income adults to provide greater sensitivity for analyzing trends among our target population.",
+      "format": "CSV",
+      "name": "california-adults-who-met-physical-activity-guidelines-for-americans-2013-csv",
+      "path": "california-adults-who-met-physical-activity-guidelines-for-americans-2013-.csv",
+      "schema": {
+        "fields": [
+          {
+            "description": "Data shown are for 2013 only. N=1,468\n\nThe California Dietary Practices Survey (CDPS) was the most extensive dietary and physical activity assessment of adults 18 years and older in the state of California. CDPS was designed in 1989 and was administered biennially in odd years through 2013. Using a list of participating CalFresh households and random digit dial, 1,468 adults (ages 18 and over) were interviewed via phone survey between the months of June and October. . ",
+            "name": "Year",
+            "title": "Year",
+            "type": "string"
+          },
+          {
+            "description": "Demographic data included gender, age, ethnicity, education level, income, physical activity level, overweight status, and SNAP-Ed eligibility status. \n\nData were oversampled for low-income adults to provide greater sensitivity for analyzing trends among the target population. \n",
+            "name": "Category",
+            "title": "Category",
+            "type": "string"
+          },
+          {
+            "description": "Overweight Status:\nOverweight/Obese = Body mass index greater than or equal to 25. \nNot overweight = Body mass index less than 25.\nIncome\nIncome = household income for the individual interviewed.\n\nSNAP/CalFresh Status \nSNAP participants are defined as having indicated they or someone in their household received CalFresh benefits in the last 12 months. The population not receiving CalFresh benefits with incomes between 131% and 185% of the Federal Poverty Level was not an adequate size for analysis.\nLikely eligible = household income at or below 130% of the Federal Poverty Level, but have not received CalFresh benefits in the last 12 months. \nNot eligible = household income above 185% of the Federal Poverty Level, and have not received CalFresh benefits in the last 12 months.\n",
+            "name": "Type",
+            "title": "Type",
+            "type": "string"
+          },
+          {
+            "description": "As defined by the 2008 U.S. Department of Health and Human Services Physical Activity Guidelines for Americans and Objectives 2.1 and 2.2 of Healthy People 2020, it is recommended that adults engage in 75 minutes of vigorous or 150 minutes of moderate physical activity per week, or an equivalent combination. \n\nChi-square analysis was performed on each category. There was significance at the p<.001 level for Ethnicity, Education, and SNAP/CalFresh Status, % FPL. There was significance at the p<.01 level for Overweight Status. There was significance at the p<.05 level for Income. \n",
+            "name": "Physical Activity (%)",
+            "title": "Physical Activity (%)",
+            "type": "number"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "path": "https://data.chhs.ca.gov/dataset/af545417-38ac-4a6c-baa4-67789ac1d53b/resource/c0a08ebe-9aad-4501-a51e-49da0d18dc0f/download/california-adults-who-met-physical-activity-guidelines-for-americans-2013.csv",
+          "title": "California Adults Who Met Physical Activity Guidelines for Americans, 2013 (CSV)"
+        }
+      ],
+      "title": "California Adults Who Met Physical Activity Guidelines for Americans, 2013 (CSV)"
+    },
+    {
+      "description": "This dataset is from the 2013 California Dietary Practices Survey of Adults. This survey has been discontinued. Adults were asked a series of eight questions about their physical activity practices in the last month. These questions were borrowed from the Behavior Risk Factor Surveillance System. Data displayed in this table represent California adults who met the aerobic recommendation for physical activity, as defined by the 2008 U.S. Department of Health and Human Services Physical Activity Guidelines for Americans and Objectives 2.1 and 2.2 of Healthy People 2020.\r\n\r\nThe California Dietary Practices Surveys (CDPS) (now discontinued) was the most extensive dietary and physical activity assessment of adults 18 years and older in the state of California. CDPS was designed in 1989 and was administered biennially in odd years up through 2013.  The CDPS was designed to monitor dietary trends, especially fruit and vegetable consumption, among California adults for evaluating their progress toward meeting the 2010 Dietary Guidelines for Americans and the Healthy People 2020 Objectives. For the data in this table, adults were asked a series of eight questions about their physical activity practices in the last month. Questions included: 1) During the past month, other than your regular job, did you participate in any physical activities or exercise such as running, calisthenics, golf, gardening or walking for exercise?  2) What type of physical activity or exercise did you spend the most time doing during the past month?  3) How many times per week or per month did you take part   n this activity during the past month?  4) And when you took part in this activity, for how many minutes or hours did you usually keep at it?  5) During the past month, how many times per week or per month did you do physical activities or exercises to strengthen your muscles? Questions 2, 3, and 4 were repeated to collect a second activity. Data were collected using a list of participating CalFresh households and random digit dial, approximately 1,400-1,500 adults (ages 18 and over) were interviewed via phone survey between the months of June and October. Demographic data included gender, age, ethnicity, education level, income, physical activity level, overweight status, and food stamp eligibility status. Data were oversampled for low-income adults to provide greater sensitivity for analyzing trends among our target population.",
+      "format": "XLSX",
+      "name": "physical-activity-of-california-adults-dd",
+      "path": "physical-activity-of-california-adults-dd.xlsx",
+      "schema": {
+        "fields": [
+          {
+            "name": "COLUMN NAME",
+            "type": "string"
+          },
+          {
+            "name": "FORMAT",
+            "type": "string"
+          },
+          {
+            "name": "DEFINITION",
+            "type": "string"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "path": "https://data.chhs.ca.gov/dataset/af545417-38ac-4a6c-baa4-67789ac1d53b/resource/1d5c379d-8e05-4e89-a1d1-7da06e8dc560/download/physicalactivityofcaliforniaadultsdd.xlsx",
+          "title": "physical-activity-of-california-adults-dd"
+        }
+      ],
+      "title": "physical-activity-of-california-adults-dd"
+    }
+  ],
+  "secondary_sources": "N/A",
+  "sources": [
+    {
+      "name": "Center for Chronic Disease Prevention and Health Promotion/Chronic Disease and Injury Control/Nutrition Education and Obesity Prevention Branch/Research and Evaluation Section",
+      "web": "https://www.cdph.ca.gov/Programs/CCDPHP/DCDIC/NEOPB/Pages/Program-Landing2.aspx"
+    }
+  ],
+  "temporal_coverage": "2013",
+  "title": "California Adults Who Met Physical Activity Guidelines for Americans, 2013"
+}

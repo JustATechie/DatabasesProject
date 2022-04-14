@@ -1,0 +1,112 @@
+{
+  "accrual_periodicity": "other",
+  "additional_limitations": "",
+  "citation": "Nutrition Education and Obesity Prevention Branch, California Department of Public Health. 2014. California Adults, Adolescents, and Children Eating Five or More Servings of Fruits and Vegetables Per Day (Self-Report)",
+  "contact_email": "opendata@cdph.ca.gov",
+  "data_collection_tool": "https://archive.cdph.ca.gov/programs/cpns/Pages/CaliforniaStatewideSurveys.aspx",
+  "data_license": "Terms of Use",
+  "de_identification_method": null,
+  "description": "Percentage of California residents who consumed five or more servings of fruits and vegetables a day. These data are from the 2013 California Dietary Practices Surveys (CDPS), 2012 California Teen Eating, Exercise and Nutrition Survey (CalTEENS), and 2013 California Children’s Healthy Eating and Exercise Practices Survey (CalCHEEPS). These surveys have been discontinued. Adults, adolescents, and children (with parental assistance) were asked about the serving sizes and types of fruits and vegetables they ate over the previous 24 hour period. Child/Adolescent: Fruit and vegetable, beverage, and junk food consumption, along with physical activity, sedentary time, active transport, sport participation, school environment, home neighborhood environment, fruit and vegetable access and availability, household/family rules, weight status, school breakfast/lunch participation, attitudes, and beliefs. Adult: Fruit and vegetable, beverage, and junk food consumption, along with physical activity, sedentary time, worksite environment, school environment, home neighborhood environment, fruit and vegetable access and availability, household/family rules, weight status and weight loss practices, and food security.",
+  "geo_coverage": "California",
+  "geographic_granularity": "statewide",
+  "keywords": [
+    "adolescent",
+    "adult",
+    "child",
+    "consumption",
+    "fruit",
+    "fv",
+    "vegetable"
+  ],
+  "limitations": "Limitations",
+  "name": "fruit-and-vegetable-consumption-in-california-residents-2012-2013",
+  "program_web_page": "https://www.cdph.ca.gov/Programs/CCDPHP/DCDIC/NEOPB/Pages/Program-Landing2.aspx",
+  "related_resources": null,
+  "resources": [
+    {
+      "description": "Percentage of California residents who consumed five or more servings of fruits and vegetables a day. These data are from the 2013 California Dietary Practices Surveys (CDPS), 2012 California Teen Eating, Exercise and Nutrition Survey (CalTEENS), and 2013 California Children’s Healthy Eating and Exercise Practices Survey (CalCHEEPS). These surveys have been discontinued. Adults, adolescents, and children (with parental assistance) were asked about the serving sizes and types of fruits and vegetables they ate over the previous 24 hour period. Child/Adolescent: Fruit and vegetable, beverage, and junk food consumption, along with physical activity, sedentary time, active transport, sport participation, school environment, home neighborhood environment, fruit and vegetable access and availability, household/family rules, weight status, school breakfast/lunch participation, attitudes, and beliefs. Adult: Fruit and vegetable, beverage, and junk food consumption, along with physical activity, sedentary time, worksite environment, school environment, home neighborhood environment, fruit and vegetable access and availability, household/family rules, weight status and weight loss practices, and food security.",
+      "format": "CSV",
+      "name": "fruit-and-vegetable-consumption-in-california-residents-2012-2013-csv",
+      "path": "fruit-and-vegetable-consumption-in-california-residents-2012-2013-.csv",
+      "schema": {
+        "fields": [
+          {
+            "description": "2012: Adolescent\n2013: Adult and Child\n",
+            "name": "Year",
+            "title": "Year",
+            "type": "string"
+          },
+          {
+            "description": "Adult: 18 years and older, N=1,505\nAdolescent: 12 to 17 years, N=1,064\nChild: 6 to 11 years, N=651\n",
+            "name": "Age Group",
+            "title": "Age Group",
+            "type": "string"
+          },
+          {
+            "description": "See Category and Category Types below\n",
+            "name": "Category",
+            "title": "Category",
+            "type": "string"
+          },
+          {
+            "description": "Gender (All Age Groups): Male, Female \nGender by Age- Male (Adolescent): 12-13, 14-15, 16-17 \nGender by Age- Female (Adolescent): 12-13, 14-15, 16-17 \nAge (Adult): 18-24, 25-34, 35-50, 51-64, 65+\nAge (Child): 6-8, 9-11 \nRace/Ethnicity (All Age Groups): White, African American, Latino, Asian/Other \nEducation (Adult): Less than high school, high school graduate, some college, college graduate \nParent Education (Child): Less than high school, high school graduate, some college/graduate \nIncome (Adult): Less than $15,000, $15,000-24,999, $25,000-34,999, $35,000-49,999, $50,000 or greater\nIncome (Adolescent): Less than $15,000, $15,000-24,999, $25,000-34,999, $35,000-49,999, $50,000-74,999, $75,000 or greater \nPhysical Activity (Adult): Met aerobic recommendation, did not meet aerobic recommendation.  As defined by the 2008 U.S. Department of Health and Human Services Physical Activity Guidelines for Americans and Objectives 2.1 and 2.2 of Healthy People 2020, it is recommended that adults engage in 75 minutes of vigorous or 150 minutes of moderate physical activity per week, or an equivalent combination.  \nPhysical Activity (Adolescent): Regular, Irregular. An adolescent was considered to get \"\"regular\"\" physical activity if he/she exercised for at least 60 minutes per day on 3 or more days in the week preceding the survey administration. \nPhysical Activity (Child): > 60 minutes, < 60 minutes Based on the Dietary Guidelines for Americans, 2010 and the 2008 Physical Activity Guidelines for Americans, children should do 60 minutes or more of physical activity each day. \nOverweight Status (Adult): Not Overweight, Overweight/Obese. Not Overweight is defined as a body mass index (BMI) less than 25. Overweight/Obese is defined as a BMI greater than or equal to 25. \nOverweight Status (Adolescent/Child): Not Overweight, Overweight/Obese. Not Overweight is defined as a BMI less than the 85th percentile. Overweight/Obese is defined as a BMI greater than or equal to the 85th percentile, according to CDC growth charts. \nCalFresh Status,  % FPL (Adult/Adolescent): Participants, Likely Eligible, Not Eligible. Participants are defined as having indicated they or someone in their household received CalFresh (http://www.dss.cahwnet.gov/foodstamps/ ) benefits in the last 12 months. Likely eligible is defined as having a household income at or below 130% of the Federal Poverty Level (FPL), but have not received CalFresh benefits in the last 12 months. Not eligible is defined as having a household income above 185% of the FPL, and have not received CalFresh benefits in the last 12 months. The population not receiving CalFresh benefits with incomes between 131% and 185% of the FPL was not an adequate size for analysis.\n",
+            "name": "Type",
+            "title": "Type",
+            "type": "string"
+          },
+          {
+            "description": "Fruit servings are defined per the Dietary Guidelines for Americans 2010 as one medium apple, banana, orange or pear, ½ cup of chopped, cooked, or canned fruit, ¼ of cup dried fruit or ½ cup of fruit juice. Fruit servings include fruit and juice consumed separately (plain) and in fruit salad. Fruit in baked goods is generally excluded from the fruit servings count. Vegetable servings are defined per the Dietary Guidelines for Americans 2010 as 1 cup of raw leafy vegetables, ½ cup of other cooked or raw vegetables, or ½ cup of vegetable juice. When multiple forms of a food are available for a given food, the most common form is selected to represent the serving weight for the food, e.g., chopped, sliced, and grated. Vegetable servings include vegetables and vegetable juice consumed separately (plain) and in recipes containing vegetables, e.g., stew, soup, lasagna, pizza, salad, casseroles, commercial entrees.\n\nChi-square analysis was performed on each category. \nAdult: There was significance at the p<.001 level for Gender, Age, Education, and Physical Activity. There was significance at the p<.01 level for Income. There was significance at the p<.05 level for Ethnicity and CalFresh Status.\nAdolescent: There was significance at the p<.001 level for Income. There was significance at the p<.01 level for Gender by Age-Female. There was significance at the p<.05 level for Ethnicity, Gender by Age- Male, and CalFresh Status.\nChild: There was significance at the p<.001 level for Physical Activity.\n",
+            "name": "Five or more servings of fruits and vegetables (%)",
+            "title": "Five or more servings of fruits and vegetables (%)",
+            "type": "number"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "path": "https://data.chhs.ca.gov/dataset/cfdf572b-d7b0-4cb9-8036-47068f98298c/resource/43637c83-49ae-4625-9628-947766e324d3/download/fruit-and-vegetable-consumption-in-california-residents-20122013.csv",
+          "title": "Fruit and Vegetable Consumption in California Residents, 2012/2013 (CSV)"
+        }
+      ],
+      "title": "Fruit and Vegetable Consumption in California Residents, 2012/2013 (CSV)"
+    },
+    {
+      "description": "Percentage of California residents who consumed five or more servings of fruits and vegetables a day. These data are from the 2013 California Dietary Practices Surveys (CDPS), 2012 California Teen Eating, Exercise and Nutrition Survey (CalTEENS), and 2013 California Children’s Healthy Eating and Exercise Practices Survey (CalCHEEPS). These surveys have been discontinued. Adults, adolescents, and children (with parental assistance) were asked about the serving sizes and types of fruits and vegetables they ate over the previous 24 hour period. Child/Adolescent: Fruit and vegetable, beverage, and junk food consumption, along with physical activity, sedentary time, active transport, sport participation, school environment, home neighborhood environment, fruit and vegetable access and availability, household/family rules, weight status, school breakfast/lunch participation, attitudes, and beliefs. Adult: Fruit and vegetable, beverage, and junk food consumption, along with physical activity, sedentary time, worksite environment, school environment, home neighborhood environment, fruit and vegetable access and availability, household/family rules, weight status and weight loss practices, and food security.",
+      "format": "PDF",
+      "name": "fruit-and-vegetable-consumption-in-california-residents-2012-2013",
+      "path": "fruit-and-vegetable-consumption-in-california-residents-2012-2013.pdf",
+      "sources": [
+        {
+          "path": "https://data.chhs.ca.gov/dataset/cfdf572b-d7b0-4cb9-8036-47068f98298c/resource/1352e43c-0f21-4c7e-8943-15d0a37dbdc1/download/fruit-and-vegetable-consumption-in-california-residents-2012-2013.pdf",
+          "title": "fruit-and-vegetable-consumption-in-california-residents-2012-2013"
+        }
+      ],
+      "title": "fruit-and-vegetable-consumption-in-california-residents-2012-2013"
+    },
+    {
+      "description": "Percentage of California residents who consumed five or more servings of fruits and vegetables a day. These data are from the 2013 California Dietary Practices Surveys (CDPS), 2012 California Teen Eating, Exercise and Nutrition Survey (CalTEENS), and 2013 California Children’s Healthy Eating and Exercise Practices Survey (CalCHEEPS). These surveys have been discontinued. Adults, adolescents, and children (with parental assistance) were asked about the serving sizes and types of fruits and vegetables they ate over the previous 24 hour period. Child/Adolescent: Fruit and vegetable, beverage, and junk food consumption, along with physical activity, sedentary time, active transport, sport participation, school environment, home neighborhood environment, fruit and vegetable access and availability, household/family rules, weight status, school breakfast/lunch participation, attitudes, and beliefs. Adult: Fruit and vegetable, beverage, and junk food consumption, along with physical activity, sedentary time, worksite environment, school environment, home neighborhood environment, fruit and vegetable access and availability, household/family rules, weight status and weight loss practices, and food security.",
+      "format": "XLSX",
+      "name": "fv-in-california-residents-dd",
+      "path": "fv-in-california-residents-dd.xlsx",
+      "schema": {
+        "fields": []
+      },
+      "sources": [
+        {
+          "path": "https://data.chhs.ca.gov/dataset/cfdf572b-d7b0-4cb9-8036-47068f98298c/resource/3f2c2fec-286e-4e40-8251-30e920a477b4/download/fvincaliforniaresidentsdd.xlsx",
+          "title": "fv-in-california-residents-dd"
+        }
+      ],
+      "title": "fv-in-california-residents-dd"
+    }
+  ],
+  "secondary_sources": null,
+  "sources": [
+    {
+      "name": "Center for Chronic Disease Prevention and Health Promotion/Chronic Disease and Injury Control/Nutrition Education and Obesity Prevention Branch/Research and Evaluation Section",
+      "web": "https://archive.cdph.ca.gov/programs/cpns/Pages/CaliforniaStatewideSurveys.aspx"
+    }
+  ],
+  "temporal_coverage": "2012 and 2013",
+  "title": "Fruit and Vegetable Consumption in California Residents, 2012/2013"
+}
