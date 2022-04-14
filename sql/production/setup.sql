@@ -25,12 +25,12 @@ CREATE TABLE Location(
                          LocationType ENUM('urban', 'suburban', 'mixed', 'rural')
 );
 
-CREATE TABLE Food(
+/*CREATE TABLE Food(
                      FoodID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
                      Name LONGTEXT,
                      Brand LONGTEXT,
                      Type ENUM('cereal','test','ebola')
-);
+);*/
 
 /* Create child tables. */
 
@@ -213,7 +213,7 @@ CREATE TABLE SchoolFoodPrograms(
 
 );
 
-CREATE TABLE FoodInitiativesCreated(
+/*CREATE TABLE FoodInitiativesCreated(
                                        InitiativeID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
 
                                        LocationID SMALLINT UNSIGNED NOT NULL,
@@ -232,9 +232,9 @@ CREATE TABLE FoodInitiativesCreated(
                                        StartYear SMALLINT(4) UNSIGNED,
                                        EndYear SMALLINT(4) UNSIGNED
 
-);
+);*/
 
-CREATE TABLE NutritionalValue(
+/*CREATE TABLE NutritionalValue(
                                  ValueID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
 
                                  FoodID SMALLINT UNSIGNED NOT NULL,
@@ -248,10 +248,10 @@ CREATE TABLE NutritionalValue(
                                  Fats SMALLINT UNSIGNED,
                                  Sodium SMALLINT UNSIGNED
 
-);
+);*/
 
 
-CREATE TABLE FoodConsumption(
+/*CREATE TABLE FoodConsumption(
                                 ConsumptionID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
 
                                 LocationID SMALLINT UNSIGNED NOT NULL,
@@ -275,7 +275,7 @@ CREATE TABLE FoodConsumption(
                                 Year SMALLINT(4) UNSIGNED NOT NULL,
                                 Age SMALLINT(3) UNSIGNED NOT NULL,
                                 AmountConsumed SMALLINT UNSIGNED
-);
+);*/
 
 CREATE TABLE FoodDistribution(
                                  DistributionID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
@@ -292,11 +292,11 @@ CREATE TABLE FoodDistribution(
                                          ON DELETE CASCADE
                                          ON UPDATE RESTRICT,
 
-                                 FoodID SMALLINT UNSIGNED NOT NULL,
+                                 /*FoodID SMALLINT UNSIGNED NOT NULL,
                                  CONSTRAINT FK_FoodID_FD
                                      FOREIGN KEY (FoodID) references Food(FoodID)
                                          ON DELETE CASCADE
-                                         ON UPDATE RESTRICT,
+                                         ON UPDATE RESTRICT,*/
 
                                  Year SMALLINT(4) UNSIGNED NOT NULL,
                                  amountDistributed SMALLINT UNSIGNED

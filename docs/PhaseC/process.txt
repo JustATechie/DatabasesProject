@@ -72,3 +72,15 @@ Food Environment Atlas was downloaded from: https://www.ers.usda.gov/data-produc
 We used the Supplemental Data - Sate sheet in the excel file. This sheet included data for school food programs as well and was split into two files,
 one for each table. We combined data from the 2015 version and the current version of this data so we could have data as far back as 2015.
 We needed to alter the schoolFoodPrograms table since the data did not breakdown to the school level.
+
+
+
+
+
+END:
+During our process we slimmed down our database tables. We realized some were pretty unreasonable to have. The ones we eliminated were:
+Food, NutritionValue, FoodInitiativesCreated, FoodConsumption. We eliminated Food, NutritionValue, and FoodConsumption since these would not really add anything to the rest
+of our data set since everything is generalized to the a pretty large level so we could not see what people are eating. Also, as a research
+point, that would be pretty difficult to do since people would need to keep track of everything they consumed. Most data is generalized to
+how many of a food genre do you have. We also eliminated FoodIntiatives created and opted to merge this data with the FoodInitiatives table.
+
