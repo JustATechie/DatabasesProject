@@ -57,3 +57,6 @@ This data sheet was not nearly as in-depth as we would have liked but since we w
 similar studies performed in other states, we used this data sheet. Since there were not many entries in the sheet,
 we manually picked what we wanted. We kept entries that were of category "Gender by age" and "gender" to insert
 into our table. We were not concerned with the other data since it was not what we wanted to focus on.
+
+Sugar/Sweetened Drink Consumption in CA was downloaded from: https://data.ca.gov/dataset/sugar-sweetened-beverage-consumption-in-california-residents.
+This data was in the same format as above the fruit and vegetable consumption and was added to the same file.

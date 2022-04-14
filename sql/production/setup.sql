@@ -118,9 +118,9 @@ CREATE TABLE ConsumptionStats(
 
                                  Year SMALLINT(4) UNSIGNED NOT NULL,
                                  AgeRange TEXT NOT NULL,
-                                 Gender ENUM('Female','Male') NOT NULL,
-                                 ProduceIntake DECIMAL(5,1) UNSIGNED,
-                                 SugarIntake SMALLINT UNSIGNED,
+                                 Gender ENUM('Female','Male','All') NOT NULL,
+                                 ProduceIntake DECIMAL(6,2) UNSIGNED,
+                                 SugarIntake DECIMAL(6,3) UNSIGNED,
                                  FatIntake SMALLINT UNSIGNED,
                                  ProcessedIntake SMALLINT UNSIGNED
 
@@ -311,3 +311,5 @@ LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/pro
 
 /* Lock tables that should be read-only (should be all tables eventually to prevent data deletion.) */
 /*LOCK TABLES DataType READ;*/
+
+USE information_schema;
