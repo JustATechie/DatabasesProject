@@ -7,8 +7,8 @@
 /*********** Begin Test Setup ***********/
 
 /* Create and select new database. */
-CREATE DATABASE Project;
-USE Project;
+#CREATE DATABASE Project;
+#USE Project;
 
 /* Create Parent Tables */
 CREATE TABLE DataType(
