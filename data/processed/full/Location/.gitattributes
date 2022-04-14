@@ -1,7 +1,7 @@
-US_Locations-All-Sorted.csv filter=lfs diff=lfs merge=lfs -text
-US_Locations-Cities-Sorted.csv filter=lfs diff=lfs merge=lfs -text
-US_Locations-Counties-Sorted.csv filter=lfs diff=lfs merge=lfs -text
-US_Locations-States-Sorted.csv filter=lfs diff=lfs merge=lfs -text
+US_Locations-All-Sorted.txt filter=lfs diff=lfs merge=lfs -text
+US_Locations-Cities-Sorted.txt filter=lfs diff=lfs merge=lfs -text
+US_Locations-Counties-Sorted.txt filter=lfs diff=lfs merge=lfs -text
+US_Locations-States-Sorted.txt filter=lfs diff=lfs merge=lfs -text
 *.xls filter=lfs diff=lfs merge=lfs -text
 *.xlsx filter=lfs diff=lfs merge=lfs -text
 *.zip filter=lfs diff=lfs merge=lfs -text
