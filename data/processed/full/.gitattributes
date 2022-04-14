@@ -2,9 +2,4 @@ US[[:space:]]Cities.csv filter=lfs diff=lfs merge=lfs -text
 *.zip filter=lfs diff=lfs merge=lfs -text
 *.xls filter=lfs diff=lfs merge=lfs -text
 *.xlsx filter=lfs diff=lfs merge=lfs -text
-USCities.csv filter=lfs diff=lfs merge=lfs -text
-SchoolEnrollment.xls filter=lfs diff=lfs merge=lfs -text
-datatype.csv filter=lfs diff=lfs merge=lfs -text
-FoodLegislation.csv filter=lfs diff=lfs merge=lfs -text
-FoodLegislationCopy.csv filter=lfs diff=lfs merge=lfs -text
-PopStats.csv filter=lfs diff=lfs merge=lfs -text
+*.csv filter=lfs diff=lfs merge=lfs -text
