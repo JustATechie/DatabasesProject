@@ -1,0 +1,2 @@
+PopStats currently has only school enrollment numbers. Please add to the excel file and export to csv
+when additional info is gathered.

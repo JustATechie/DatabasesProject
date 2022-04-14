@@ -18,6 +18,10 @@ While the data already had a column with an id, because we wanted to also add ex
 alone and entries with states and counties without cities, we found it easier to just make our own id
 number as we go.
 
+We went back and created a couple different versions of this location data so that when running scripts
+to add locationID's, depending on the location type they did not have to search through entries they did
+not need to.
+
 Since we wanted to be able to not deal with location data by hand, there is no "small" variant of this
 data. Both the regular data and the "small" data use this same file.
 
