@@ -67,3 +67,5 @@ unable to be added to the existing heart disease data file since that was divide
 We had to remove the following columns from the original data: YearEnd, LocationAbbr, Datasource, Class, Topic, Question, Data_Value_Unit, Data_Value_Alt, Data_Value_Footnote_Symbol, Data_Value_Footnote, Low_Confidence_Limit, High_Confidence_Limit,
 Stample_Size, Total, Race, GeoLocation, ClassID, TopicID, DataValueTypeID, LocationID, Stratification1, StratificationCategoryID1, StratificationID1.
 We couldnt use the given locationID since they used a different numbering system than we do.
+
+Food Environment Atlas was downloaded from: https://www.ers.usda.gov/data-products/food-environment-atlas/data-access-and-documentation-downloads
