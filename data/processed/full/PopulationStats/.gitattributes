@@ -1,4 +1,4 @@
-PopStats.csv filter=lfs diff=lfs merge=lfs -text
+PopulationStats.txt filter=lfs diff=lfs merge=lfs -text
 PopStats.xls filter=lfs diff=lfs merge=lfs -text
 *.xlsx filter=lfs diff=lfs merge=lfs -text
 *.zip filter=lfs diff=lfs merge=lfs -text
