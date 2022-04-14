@@ -75,9 +75,6 @@ We needed to alter the schoolFoodPrograms table since the data did not breakdown
 
 Average household data was downloaded from:
 
-
-
-
 END:
 During our process we slimmed down our database tables. We realized some were pretty unreasonable to have. The ones we eliminated were:
 Food, NutritionValue, FoodInitiativesCreated, FoodConsumption. We eliminated Food, NutritionValue, and FoodConsumption since these would not really add anything to the rest
