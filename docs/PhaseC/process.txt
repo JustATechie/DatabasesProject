@@ -29,8 +29,8 @@ data. Both the regular data and the "small" data use this same file.
 Original Data:
 We downloaded (or at least attempted to download) data from each data source we originally specified
 in Phase A. Doing so posed some challenge as not all files were available to even be downloaded. Some
-data like in [EXAMPLE HERE] was only available as a digital interactive map that we could explore in
-the browser. Of the data we could download here is what we downloaded as from which link:
+data like in Let's Move Salad Bars to Schools was only available as a digital interactive map that we could explore in
+the browser; link: https://geoplatform.maps.arcgis.com/home/webmap/viewer.html?webmap=09037bc822ec45d09d0a8a08ed670dfd.
 
 Enrollment by region and state information was downloaded from: https://nces.ed.gov/programs/digest/d13/tables/dt13_203.20.asp.
 This data sheet provided us with data on enrollment numbers from 1990 to projected 2023. We did not remove any columns, but we
@@ -73,6 +73,7 @@ We used the Supplemental Data - Sate sheet in the excel file. This sheet include
 one for each table. We combined data from the 2015 version and the current version of this data so we could have data as far back as 2015.
 We needed to alter the schoolFoodPrograms table since the data did not breakdown to the school level.
 
+Average household data was downloaded from:
 
 
 
@@ -84,3 +85,6 @@ of our data set since everything is generalized to the a pretty large level so w
 point, that would be pretty difficult to do since people would need to keep track of everything they consumed. Most data is generalized to
 how many of a food genre do you have. We also eliminated FoodIntiatives created and opted to merge this data with the FoodInitiatives table.
 
+We also removed the FoodDistribution table since we found out that the different food stamp programs were the food distribution programs.
+We renamed the FoodStamps program to FoodAssistance  to reflect the change. We decided to keep school food programs seperate since they are
+specific to schools and children where as the food assistance programs are not specific to organizations like schools.

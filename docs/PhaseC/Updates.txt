@@ -8,3 +8,15 @@ Disease by county - Federal#.csv:
     US Cities.csv file for the appropriate locationID.
 
 
+I removed some tables I felt could be combined, and others that seemed impossible to get as explained in
+process.txt. If you disagree, the tables are still present in setup.sql, they are just commented out.
+
+We stil need data for avghousehold table. Could you please find this? It shouldnt be too hard, but if its taking a while
+I can definitely do it.
+
+First, I would say move the current implementation over to the dbase account and try running as-is. You'll need to change the file
+paths but other than that, everything should work. you'll get some warnings about data type being wrong and not enough data for
+some rows and thats fine. it'll add what we currently have.
+
+Let me know if you have any issues.
+

@@ -150,7 +150,7 @@ CREATE TABLE MetabolicDisease(
                                  Cholesterol DECIMAL(5,2) UNSIGNED
 );
 
-CREATE TABLE FoodInitiatives(
+/*CREATE TABLE FoodInitiatives(
                                 FoodID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
 
                                 LocationID SMALLINT UNSIGNED NOT NULL,
@@ -169,10 +169,10 @@ CREATE TABLE FoodInitiatives(
                                 AgeRange VARCHAR(20),
                                 Genders ENUM('female', 'male', 'both')
 
-);
+);*/
 
-CREATE TABLE FoodStamps(
-                           FoodStampID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
+CREATE TABLE FoodAssistance(
+                           FoodAssistID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
 
                            LocationID SMALLINT UNSIGNED NOT NULL,
                            CONSTRAINT FK_LocationID_FS
@@ -277,7 +277,7 @@ CREATE TABLE SchoolFoodPrograms(
                                 AmountConsumed SMALLINT UNSIGNED
 );*/
 
-CREATE TABLE FoodDistribution(
+/*CREATE TABLE FoodDistribution(
                                  DistributionID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
 
                                  LocationID SMALLINT UNSIGNED NOT NULL,
@@ -292,15 +292,15 @@ CREATE TABLE FoodDistribution(
                                          ON DELETE CASCADE
                                          ON UPDATE RESTRICT,
 
-                                 /*FoodID SMALLINT UNSIGNED NOT NULL,
+                                 FoodID SMALLINT UNSIGNED NOT NULL,
                                  CONSTRAINT FK_FoodID_FD
                                      FOREIGN KEY (FoodID) references Food(FoodID)
                                          ON DELETE CASCADE
-                                         ON UPDATE RESTRICT,*/
+                                         ON UPDATE RESTRICT,
 
                                  Year SMALLINT(4) UNSIGNED NOT NULL,
                                  amountDistributed SMALLINT UNSIGNED
-);
+);*/
 
 
 /* Load data into tables from files. */
@@ -324,7 +324,7 @@ LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/pro
 LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/processed/full/MetabolicDisease/InfantObesity.csv' INTO TABLE MetabolicDisease FIELDS TERMINATED BY ',';
 
 /* Food Stamps Data */
-LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/processed/full/FoodStamps/FoodStamps.csv' INTO TABLE FoodStamps FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/processed/full/FoodStamps/FoodStamps.csv' INTO TABLE FoodAssistance FIELDS TERMINATED BY ',';
 
 /* School Lunch Program Data */
 LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/processed/full/SchoolFoodPrograms/SchoolFoodPrograms.csv' INTO TABLE SchoolFoodPrograms FIELDS TERMINATED BY ',';
@@ -333,4 +333,5 @@ LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/pro
 /* Lock tables that should be read-only (should be all tables eventually to prevent data deletion.) */
 /*LOCK TABLES DataType READ;*/
 
-USE information_schema;
+# for louie:
+#USE information_schema;
