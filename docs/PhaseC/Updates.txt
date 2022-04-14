@@ -1,0 +1,10 @@
+In the "ready" folder in data, you will find data files that are ready to be processed by scripts for
+final additions.
+
+Directions for each genre:
+Disease by county - Federal#.csv:
+    These two files have final data for heart disease and are ready to have locationID's assigned to them.
+    In each, there are two columns specifying that row's State and county. Use this to search through the
+    US Cities.csv file for the appropriate locationID.
+
+
