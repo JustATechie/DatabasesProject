@@ -312,13 +312,13 @@ LOAD DATA LOCAL INFILE './DatabasesProject/data/final-small/Location.csv' INTO T
 LOAD DATA LOCAL INFILE './DatabasesProject/data/final-small/DataType.csv' INTO TABLE DataType FIELDS TERMINATED BY ',';
 
 /* Food Legislation Data */
-LOAD DATA LOCAL INFILE './DatabasesProject/data/final/FoodLegislation.csv' INTO TABLE FoodLegislation FIELDS TERMINATED BY ',';
+#LOAD DATA LOCAL INFILE './DatabasesProject/data/final/FoodLegislation.csv' INTO TABLE FoodLegislation FIELDS TERMINATED BY ',';
 
 /* population Stats Data */
-#LOAD DATA LOCAL INFILE './DatabasesProject/data/final/PopulationStats.csv' INTO TABLE PopulationStats FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE './DatabasesProject/data/final/PopulationStats.csv' INTO TABLE PopulationStats FIELDS TERMINATED BY ',';
 
 /* Consumption Stats Data */
-#LOAD DATA LOCAL INFILE './DatabasesProject/data/final/ConsumptionStats.csv' INTO TABLE ConsumptionStats FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE './DatabasesProject/data/final/ConsumptionStats.csv' INTO TABLE ConsumptionStats FIELDS TERMINATED BY ',';
 
 /* Metabolic Disease Data */
 #LOAD DATA LOCAL INFILE './DatabasesProject/data/final/MetabolicDisease.csv' INTO TABLE MetabolicDisease FIELDS TERMINATED BY ',';
