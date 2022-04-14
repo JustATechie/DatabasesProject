@@ -309,7 +309,7 @@ CREATE TABLE SchoolFoodPrograms(
 LOAD DATA LOCAL INFILE './DatabasesProject/data/processed/full/Location/US_Locations-All-Sorted.csv' INTO TABLE Location FIELDS TERMINATED BY ',';
 
 /* Data Type */
-LOAD DATA LOCAL INFILE './DatabasesProject/data/processed/full/DataType/datatype.csv' INTO TABLE DataType FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE './DatabasesProject/data/processed/full/DataType/datatype.txt' INTO TABLE DataType FIELDS TERMINATED BY ',';
 
 /* Food Legislation Data */
 LOAD DATA LOCAL INFILE './DatabasesProject/data/processed/full/FoodLegislation/FoodLegislation.csv' INTO TABLE FoodLegislation FIELDS TERMINATED BY ',';
