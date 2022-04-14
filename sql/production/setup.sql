@@ -306,7 +306,7 @@ CREATE TABLE SchoolFoodPrograms(
 /* Load data into tables from files. */
 
 /* Location Data */
-LOAD DATA LOCAL INFILE './DatabasesProject/data/final/Location.txt' INTO TABLE Location FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE './DatabasesProject/data/final/Location.csv' INTO TABLE Location FIELDS TERMINATED BY ',';
 
 /* Data Type */
 LOAD DATA LOCAL INFILE './DatabasesProject/data/final/DataType.csv' INTO TABLE DataType FIELDS TERMINATED BY ',';
