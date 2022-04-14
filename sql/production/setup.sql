@@ -127,7 +127,7 @@ CREATE TABLE ConsumptionStats(
 );
 
 CREATE TABLE MetabolicDisease(
-                                 MetaDisID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
+                                 MetaDisID BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
 
                                  LocationID SMALLINT UNSIGNED NOT NULL,
                                  CONSTRAINT FK_LocationID_MD
@@ -143,11 +143,11 @@ CREATE TABLE MetabolicDisease(
 
                                  Year SMALLINT(4) UNSIGNED NOT NULL,
                                  AgeRange TEXT NOT NULL,
-                                 Gender ENUM('Female', 'Male') NOT NULL,
-                                 HeartDisease DECIMAL(5,5) UNSIGNED,
-                                 Diabetes DECIMAL(5,5) UNSIGNED,
-                                 Obesity DECIMAL(5,5) UNSIGNED,
-                                 Cholesterol DECIMAL(5,5) UNSIGNED
+                                 Gender ENUM('Female', 'Male', 'All') NOT NULL,
+                                 HeartDisease DECIMAL(5,2) UNSIGNED,
+                                 Diabetes DECIMAL(5,2) UNSIGNED,
+                                 Obesity DECIMAL(5,2) UNSIGNED,
+                                 Cholesterol DECIMAL(5,2) UNSIGNED
 );
 
 CREATE TABLE FoodInitiatives(
@@ -303,11 +303,25 @@ CREATE TABLE FoodDistribution(
 
 
 /* Load data into tables from files. */
+
+/* Location Data */
 LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/processed/full/Location/US_Locations-All-Sorted.csv' INTO TABLE Location FIELDS TERMINATED BY ',';
+
+/* Data Type */
 LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/processed/full/DataType/datatype.csv' INTO TABLE DataType FIELDS TERMINATED BY ',';
+
+/* Food Legislation Data */
 LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/processed/full/FoodLegislation/FoodLegislation.csv' INTO TABLE FoodLegislation FIELDS TERMINATED BY ',';
+
+/* population Stats Data */
 LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/processed/full/PopulationStats/PopStats.csv' INTO TABLE PopulationStats FIELDS TERMINATED BY ',';
+
+/* Consumption Stats Data */
 LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/processed/full/ConsumptionStats/ConsumptionStats.csv' INTO TABLE ConsumptionStats FIELDS TERMINATED BY ',';
+
+/* Metabolic Disease Data */
+LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/processed/full/MetabolicDisease/InfantObesity.csv' INTO TABLE MetabolicDisease FIELDS TERMINATED BY ',';
+
 
 /* Lock tables that should be read-only (should be all tables eventually to prevent data deletion.) */
 /*LOCK TABLES DataType READ;*/

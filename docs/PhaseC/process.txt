@@ -60,3 +60,10 @@ into our table. We were not concerned with the other data since it was not what 
 
 Sugar/Sweetened Drink Consumption in CA was downloaded from: https://data.ca.gov/dataset/sugar-sweetened-beverage-consumption-in-california-residents.
 This data was in the same format as above the fruit and vegetable consumption and was added to the same file.
+
+Nutrition, Physical Activity, and Obesity - Women, Infant, and Child was downloaded from: https://catalog.data.gov/dataset/nutrition-physical-activity-and-obesity-women-infant-and-child-14757.
+This data sheet contained obesity data for infants. It did not include obesity info on children on adult women. This data was seperated by state so I was
+unable to be added to the existing heart disease data file since that was divided by county. This is still included in the data table.
+We had to remove the following columns from the original data: YearEnd, LocationAbbr, Datasource, Class, Topic, Question, Data_Value_Unit, Data_Value_Alt, Data_Value_Footnote_Symbol, Data_Value_Footnote, Low_Confidence_Limit, High_Confidence_Limit,
+Stample_Size, Total, Race, GeoLocation, ClassID, TopicID, DataValueTypeID, LocationID, Stratification1, StratificationCategoryID1, StratificationID1.
+We couldnt use the given locationID since they used a different numbering system than we do.
