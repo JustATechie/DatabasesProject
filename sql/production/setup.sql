@@ -306,10 +306,10 @@ CREATE TABLE SchoolFoodPrograms(
 /* Load data into tables from files. */
 
 /* Location Data */
-LOAD DATA LOCAL INFILE './DatabasesProject/data/final/Location.txt' INTO TABLE Location FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+LOAD DATA LOCAL INFILE './DatabasesProject/data/final/Location.txt' INTO TABLE Location FIELDS TERMINATED BY ',';
 
 /* Data Type */
-LOAD DATA LOCAL INFILE './DatabasesProject/data/final/DataType.txt' INTO TABLE DataType FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE './DatabasesProject/data/final/DataType.csv' INTO TABLE DataType FIELDS TERMINATED BY ',';
 
 /* Food Legislation Data */
 LOAD DATA LOCAL INFILE './DatabasesProject/data/final/FoodLegislation.txt' INTO TABLE FoodLegislation FIELDS TERMINATED BY ',';
