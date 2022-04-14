@@ -207,8 +207,9 @@ CREATE TABLE SchoolFoodPrograms(
                                            ON DELETE CASCADE
                                            ON UPDATE RESTRICT,
 
-                                   SchoolName LONGTEXT NOT NULL,
-                                   numStudents BIGINT
+                                   Name LONGTEXT NOT NULL,
+                                   Year SMALLINT(4) UNSIGNED,
+                                   numStudents BIGINT UNSIGNED
 
 );
 
@@ -321,6 +322,12 @@ LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/pro
 
 /* Metabolic Disease Data */
 LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/processed/full/MetabolicDisease/InfantObesity.csv' INTO TABLE MetabolicDisease FIELDS TERMINATED BY ',';
+
+/* Food Stamps Data */
+LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/processed/full/FoodStamps/FoodStamps.csv' INTO TABLE FoodStamps FIELDS TERMINATED BY ',';
+
+/* School Lunch Program Data */
+LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/processed/full/SchoolFoodPrograms/SchoolFoodPrograms.csv' INTO TABLE SchoolFoodPrograms FIELDS TERMINATED BY ',';
 
 
 /* Lock tables that should be read-only (should be all tables eventually to prevent data deletion.) */

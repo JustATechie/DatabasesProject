@@ -70,4 +70,5 @@ We couldnt use the given locationID since they used a different numbering system
 
 Food Environment Atlas was downloaded from: https://www.ers.usda.gov/data-products/food-environment-atlas/data-access-and-documentation-downloads.
 We used the Supplemental Data - Sate sheet in the excel file. This sheet included data for school food programs as well and was split into two files,
-one for each table.
+one for each table. We combined data from the 2015 version and the current version of this data so we could have data as far back as 2015.
+We needed to alter the schoolFoodPrograms table since the data did not breakdown to the school level.
