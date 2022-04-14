@@ -68,4 +68,6 @@ We had to remove the following columns from the original data: YearEnd, Location
 Stample_Size, Total, Race, GeoLocation, ClassID, TopicID, DataValueTypeID, LocationID, Stratification1, StratificationCategoryID1, StratificationID1.
 We couldnt use the given locationID since they used a different numbering system than we do.
 
-Food Environment Atlas was downloaded from: https://www.ers.usda.gov/data-products/food-environment-atlas/data-access-and-documentation-downloads
+Food Environment Atlas was downloaded from: https://www.ers.usda.gov/data-products/food-environment-atlas/data-access-and-documentation-downloads.
+We used the Supplemental Data - Sate sheet in the excel file. This sheet included data for school food programs as well and was split into two files,
+one for each table.

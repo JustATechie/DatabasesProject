@@ -42,7 +42,7 @@ Food:
 
 
 FoodStamps:
-2015 Food Environment Atlas Data: Supplemental Data - Sate
+CURRENTFood Environment Atlas Data: Supplemental Data - Sate
     FoodStamps: ID (increment), LocationID (from above), TypeID (from above), name, year, numEnrolled
 
 
