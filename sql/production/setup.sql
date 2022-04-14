@@ -318,16 +318,16 @@ LOAD DATA LOCAL INFILE './DatabasesProject/data/final/FoodLegislation.csv' INTO 
 LOAD DATA LOCAL INFILE './DatabasesProject/data/final/PopulationStats.csv' INTO TABLE PopulationStats FIELDS TERMINATED BY ',';
 
 /* Consumption Stats Data */
-LOAD DATA LOCAL INFILE './DatabasesProject/data/final/ConsumptionStats.csv' INTO TABLE ConsumptionStats FIELDS TERMINATED BY ',';
+#LOAD DATA LOCAL INFILE './DatabasesProject/data/final/ConsumptionStats.csv' INTO TABLE ConsumptionStats FIELDS TERMINATED BY ',';
 
 /* Metabolic Disease Data */
-LOAD DATA LOCAL INFILE './DatabasesProject/data/final/MetabolicDisease.csv' INTO TABLE MetabolicDisease FIELDS TERMINATED BY ',';
+#LOAD DATA LOCAL INFILE './DatabasesProject/data/final/MetabolicDisease.csv' INTO TABLE MetabolicDisease FIELDS TERMINATED BY ',';
 
 /* Food Assistance Data */
-LOAD DATA LOCAL INFILE './DatabasesProject/data/final/FoodAssistance.csv' INTO TABLE FoodAssistance FIELDS TERMINATED BY ',';
+#LOAD DATA LOCAL INFILE './DatabasesProject/data/final/FoodAssistance.csv' INTO TABLE FoodAssistance FIELDS TERMINATED BY ',';
 
 /* School Lunch Program Data */
-LOAD DATA LOCAL INFILE './DatabasesProject/data/final/SchoolFoodPrograms.csv' INTO TABLE SchoolFoodPrograms FIELDS TERMINATED BY ',';
+#LOAD DATA LOCAL INFILE './DatabasesProject/data/final/SchoolFoodPrograms.csv' INTO TABLE SchoolFoodPrograms FIELDS TERMINATED BY ',';
 
 
 /* Lock tables that should be read-only (should be all tables eventually to prevent data deletion.) */
