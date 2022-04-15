@@ -7,8 +7,8 @@
 /*********** Begin Test Setup ***********/
 
 /* Create and select new database. */
-CREATE DATABASE 22sp_ldibern1_db;
-USE 22sp_ldibern1_db;
+#CREATE DATABASE 22sp_ldibern1_db;
+#USE 22sp_ldibern1_db;
 
 /* Create Parent Tables */
 CREATE TABLE DataType(

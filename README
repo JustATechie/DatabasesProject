@@ -31,3 +31,21 @@ is also extremely large (~212000 tuples). To make this file smaller we plan on c
 the data by location (by performing an average across each county). We will first try to consolidate
 at the county level, but if there are still too many tuples, we may have to consolidate to the 
 state level. 
+
+HOW TO RUN THIS REPO:
+Log into ugradx and put this entire repo into your home folder. cd into the DatabasesProject folder.
+run your login script to log into your dbase account. Select your database using:
+USE [name of your database].
+
+Now you can run: source ~/DatabasesProject/sql/production/cleanup.sql;
+This will remove any existing tables with the same name.
+
+Then run: source ~/DatabasesProject/sql/production/setup-small.sql;
+This will create all the tables and populate them with the small data. This data is in the exact same
+format as the full data, but is parred down to just california locations.
+
+To run the full script run: source ~/DatabasesProject/sql/production/setup.sql;
+This contains all data we have gathered. Sadly, this will fail in dbase due to user account restrictions.
+If you run these scripts on a local mariadb instance using the root account, all the scripts will work,
+and all data will be populated. We explain further in the section about this.
+
