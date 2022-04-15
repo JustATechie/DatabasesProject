@@ -306,10 +306,10 @@ CREATE TABLE SchoolFoodPrograms(
 /* Load data into tables from files. */
 
 /* Location Data */
-LOAD DATA LOCAL INFILE './data/final-small/Location-small.csv' INTO TABLE Location FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE './data/final-small/Location-small.txt' INTO TABLE Location FIELDS TERMINATED BY ',';
 
 /* Data Type */
-LOAD DATA LOCAL INFILE './data/final-small/DataType.csv' INTO TABLE DataType FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE './data/final-small/DataType.txt' INTO TABLE DataType FIELDS TERMINATED BY ',';
 
 /* Food Legislation Data */
 #LOAD DATA LOCAL INFILE './DatabasesProject/data/final/FoodLegislation.csv' INTO TABLE FoodLegislation FIELDS TERMINATED BY ',';
@@ -318,13 +318,13 @@ LOAD DATA LOCAL INFILE './data/final-small/DataType.csv' INTO TABLE DataType FIE
 #LOAD DATA LOCAL INFILE './DatabasesProject/data/final/PopulationStats.csv' INTO TABLE PopulationStats FIELDS TERMINATED BY ',';
 
 /* Consumption Stats Data */
-LOAD DATA LOCAL INFILE './data/final-small/ConsumptionStats.csv' INTO TABLE ConsumptionStats FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE './data/final-small/ConsumptionStats.txt' INTO TABLE ConsumptionStats FIELDS TERMINATED BY ',';
 
 /* Metabolic Disease Data */
 #LOAD DATA LOCAL INFILE './DatabasesProject/data/final/MetabolicDisease.csv' INTO TABLE MetabolicDisease FIELDS TERMINATED BY ',';
 
 /* Food Assistance Data */
-#LOAD DATA LOCAL INFILE './DatabasesProject/data/final/FoodAssistance.csv' INTO TABLE FoodAssistance FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE './data/final-small/FoodAssistance-small.txt' INTO TABLE FoodAssistance FIELDS TERMINATED BY ',';
 
 /* School Lunch Program Data */
 #LOAD DATA LOCAL INFILE './DatabasesProject/data/final/SchoolFoodPrograms.csv' INTO TABLE SchoolFoodPrograms FIELDS TERMINATED BY ',';
