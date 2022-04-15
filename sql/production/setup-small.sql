@@ -334,6 +334,9 @@ LOAD DATA LOCAL INFILE './data/final-small/FoodAssistance-small.txt' INTO TABLE 
 /* School Lunch Program Data */
 #LOAD DATA LOCAL INFILE './DatabasesProject/data/final/SchoolFoodPrograms.csv' INTO TABLE SchoolFoodPrograms FIELDS TERMINATED BY ',';
 
+/* Average Household Data */
+LOAD DATA LOCAL INFILE './data/final-small/AvgHousehold-small.txt' INTO TABLE AvgHousehold FIELDS TERMINATED BY ',';
+
 
 /* Lock tables that should be read-only (should be all tables eventually to prevent data deletion.) */
 /*LOCK TABLES DataType READ;*/
