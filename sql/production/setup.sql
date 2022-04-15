@@ -13,7 +13,7 @@
 /* Create Parent Tables */
 CREATE TABLE DataType(
                          TypeID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
-                         BrokenTo ENUM('state', 'county', 'city') NOT NULL,
+                         BrokenTo ENUM('state', 'county', 'city', 'federal') NOT NULL,
                          Researcher ENUM('federal', 'state') NOT NULL
 );
 
