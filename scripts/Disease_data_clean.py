@@ -1,4 +1,4 @@
-import os
+txtimport os
 
 us_state_to_abbrev = {
     "Alabama": "AL",
@@ -85,7 +85,7 @@ def addLocation(fileName, outFile, locationData):
 
 inFile1 = 'data/ready/Disease/Disease by county - Federal1.csv'
 inFile2 = 'data/ready/Disease/Disease by county - Federal2.csv'
-outF = 'data/processed/full/MetabolicDisease/MetabolicDisease.csv'
+outF = 'data/processed/full/MetabolicDisease/MetabolicDisease.txt'
 locationF = 'data/processed/full/Location/US_Locations-Counties-Sorted.csv'
 addLocation(inFile1, outF, locationF)
 addLocation(inFile2, outF, locationF)

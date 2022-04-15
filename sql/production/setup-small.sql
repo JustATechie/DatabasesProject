@@ -82,11 +82,9 @@ CREATE TABLE PopulationStats(
 CREATE TABLE AvgHousehold(
                              AvgHouseID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
 
-                             LocationID SMALLINT UNSIGNED NOT NULL,
-                             CONSTRAINT FK_LocationID_AH
-                                 FOREIGN KEY (LocationID) references Location(LocationID)
-                                     ON DELETE CASCADE
-                                     ON UPDATE RESTRICT,
+                             Year SMALLINT(4) UNSIGNED NOT NULL,
+
+                             NumHouseholds INT UNSIGNED,
 
                              TypeID SMALLINT UNSIGNED NOT NULL,
                              CONSTRAINT FK_TypeID_AH
@@ -94,11 +92,18 @@ CREATE TABLE AvgHousehold(
                                      ON DELETE CASCADE
                                      ON UPDATE RESTRICT,
 
-                             Year SMALLINT(4) UNSIGNED NOT NULL,
-                             NumMembers SMALLINT(2) UNSIGNED,
-                             NumDependents SMALLINT(2) UNSIGNED,
-                             NumWorking SMALLINT(2) UNSIGNED,
-                             AvgIncome SMALLINT(6) UNSIGNED
+                             IncomeUnder15k DECIMAL(4,1),
+                             Income15kTo25k DECIMAL(4,1),
+                             Income25kTo35k DECIMAL(4,1),
+                             Income35kTo50k DECIMAL(4,1),
+                             Income50kTo75k DECIMAL(4,1),
+                             Income75kTo100k DECIMAL(4,1),
+                             Income100kTo150k DECIMAL(4,1),
+                             Income150kTo200k DECIMAL(4,1),
+                             Income200kAbove DECIMAL(4,1),
+                             MedianIncome INT UNSIGNED,
+                             AvgIncome INT UNSIGNED,
+                             AvgNumMembers DECIMAL(3,2) UNSIGNED
 );
 
 CREATE TABLE ConsumptionStats(
