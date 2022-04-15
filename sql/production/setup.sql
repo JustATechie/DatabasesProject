@@ -317,7 +317,7 @@ LOAD DATA LOCAL INFILE './data/final/Location.txt' INTO TABLE Location FIELDS TE
 LOAD DATA LOCAL INFILE './data/final/DataType.txt' INTO TABLE DataType FIELDS TERMINATED BY ',';
 
 /* Food Legislation Data */
-LOAD DATA LOCAL INFILE '.data/final/FoodLegislation.txt' INTO TABLE FoodLegislation FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE './data/final/FoodLegislation.txt' INTO TABLE FoodLegislation FIELDS TERMINATED BY ',';
 
 /* population Stats Data */
 LOAD DATA LOCAL INFILE './data/final/PopulationStats.txt' INTO TABLE PopulationStats FIELDS TERMINATED BY ',';
