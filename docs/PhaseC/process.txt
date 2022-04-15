@@ -25,6 +25,13 @@ not need to.
 Since we wanted to be able to not deal with location data by hand, there is no "small" variant of this
 data. Both the regular data and the "small" data use this same file.
 
+The data for the MetabolicDisease file was among the largest we used (~212000 lines). We wrote a python
+script found at the relative path scripts/Disease_data_clean.py to extract and appropriately assign 
+location IDs to the data based on the location IDs described in Location.txt. This script contains a 
+single function which takes in three parameters: original disease data, name to use for generated output
+file, and file containing location IDs. It then extracts location from the disease file and finds appropriate
+id values to use in generating the final text file.
+
 
 Original Data:
 We downloaded (or at least attempted to download) data from each data source we originally specified
@@ -73,7 +80,11 @@ We used the Supplemental Data - Sate sheet in the excel file. This sheet include
 one for each table. We combined data from the 2015 version and the current version of this data so we could have data as far back as 2015.
 We needed to alter the schoolFoodPrograms table since the data did not breakdown to the school level.
 
-Average household data was downloaded from:
+Average household data was downloaded from: https://www.census.gov/library/publications/2021/demo/p60-273.html and https://www.census.gov/data/tables/time-series/demo/families/households.html.
+We used Table A-2: Households by Total Money Income, Race, and Hispanic Origin of Householder 1967 to 2020. We had 
+to reorganize the data in this file to include a race attribute because the original data file 
+contained different segments of rows dedicated to each race. We used Table HH-4 for the second link to get average 
+household members by year. 
 
 END:
 During our process we slimmed down our database tables. We realized some were pretty unreasonable to have. The ones we eliminated were:
@@ -85,3 +96,7 @@ how many of a food genre do you have. We also eliminated FoodIntiatives created 
 We also removed the FoodDistribution table since we found out that the different food stamp programs were the food distribution programs.
 We renamed the FoodStamps program to FoodAssistance  to reflect the change. We decided to keep school food programs seperate since they are
 specific to schools and children where as the food assistance programs are not specific to organizations like schools.
+
+We had a hard time finding values to fill our original AverageHousehold relation with values such as number of dependents, number working, etc 
+by location. However, we were able to find some intersesting federal data values regarding income distribution by race and year. So we decided 
+to use the AverageHousehold relation to store this data. 
