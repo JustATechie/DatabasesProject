@@ -326,7 +326,7 @@ LOAD DATA LOCAL INFILE './data/final-small/PopulationStats-small.txt' INTO TABLE
 LOAD DATA LOCAL INFILE './data/final-small/ConsumptionStats-small.txt' INTO TABLE ConsumptionStats FIELDS TERMINATED BY ',';
 
 /* Metabolic Disease Data */
-LOAD DATA LOCAL INFILE './DatabasesProject/data/final/MetabolicDisease-small.txt' INTO TABLE MetabolicDisease FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE './data/final-small/MetabolicDisease-small.txt' INTO TABLE MetabolicDisease FIELDS TERMINATED BY ',';
 
 /* Food Assistance Data */
 LOAD DATA LOCAL INFILE './data/final-small/FoodAssistance-small.txt' INTO TABLE FoodAssistance FIELDS TERMINATED BY ',';
