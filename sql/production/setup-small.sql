@@ -7,13 +7,13 @@
 /*********** Begin Test Setup ***********/
 
 /* Create and select new database. */
-CREATE DATABASE Project;
-USE Project;
+#CREATE DATABASE 22sp_ldibern1_db;
+#USE 22sp_ldibern1_db;
 
 /* Create Parent Tables */
 CREATE TABLE DataType(
                          TypeID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
-                         BrokenTo ENUM('state', 'county', 'city') NOT NULL,
+                         BrokenTo ENUM('state', 'county', 'city', 'federal') NOT NULL,
                          Researcher ENUM('federal', 'state') NOT NULL
 );
 
@@ -25,12 +25,12 @@ CREATE TABLE Location(
                          LocationType ENUM('urban', 'suburban', 'mixed', 'rural')
 );
 
-CREATE TABLE Food(
+/*CREATE TABLE Food(
                      FoodID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
                      Name LONGTEXT,
                      Brand LONGTEXT,
                      Type ENUM('cereal','test','ebola')
-);
+);*/
 
 /* Create child tables. */
 
@@ -50,7 +50,7 @@ CREATE TABLE FoodLegislation(
                                         ON UPDATE RESTRICT,
 
                                 YearPassed VARCHAR(4) NOT NULL,
-                                BillName VARCHAR(100) NOT NULL,
+                                BillName LONGTEXT NOT NULL,
                                 HealthTopic LONGTEXT,
                                 PolicyTopic LONGTEXT,
                                 Setting LONGTEXT,
@@ -74,9 +74,9 @@ CREATE TABLE PopulationStats(
                                         ON UPDATE RESTRICT,
 
                                 Year SMALLINT(4) UNSIGNED NOT NULL,
-                                CrimeRate DECIMAL(5,5) UNSIGNED,
-                                LiteracyRate DECIMAL(5,5) UNSIGNED,
-                                SchoolEnrollment DECIMAL(5,5) UNSIGNED
+                                CrimeRate BIGINT UNSIGNED,
+                                LiteracyRate BIGINT UNSIGNED,
+                                SchoolEnrollment BIGINT UNSIGNED
 );
 
 CREATE TABLE AvgHousehold(
@@ -121,16 +121,18 @@ CREATE TABLE ConsumptionStats(
                                          ON DELETE CASCADE
                                          ON UPDATE RESTRICT,
 
-                                 Age SMALLINT(3) UNSIGNED NOT NULL,
                                  Year SMALLINT(4) UNSIGNED NOT NULL,
-                                 SugarIntake SMALLINT UNSIGNED,
+                                 AgeRange TEXT NOT NULL,
+                                 Gender ENUM('Female','Male','All') NOT NULL,
+                                 ProduceIntake DECIMAL(6,2) UNSIGNED,
+                                 SugarIntake DECIMAL(6,3) UNSIGNED,
                                  FatIntake SMALLINT UNSIGNED,
-                                 ProcessedIntake SMALLINT UNSIGNED,
-                                 ProduceIntake SMALLINT UNSIGNED
+                                 ProcessedIntake SMALLINT UNSIGNED
+
 );
 
 CREATE TABLE MetabolicDisease(
-                                 MetaDisID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
+                                 MetaDisID BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
 
                                  LocationID SMALLINT UNSIGNED NOT NULL,
                                  CONSTRAINT FK_LocationID_MD
@@ -144,16 +146,16 @@ CREATE TABLE MetabolicDisease(
                                          ON DELETE CASCADE
                                          ON UPDATE RESTRICT,
 
-                                 Age TEXT NOT NULL,
                                  Year SMALLINT(4) UNSIGNED NOT NULL,
-                                 Gender ENUM('female', 'male') NOT NULL,
-                                 Diabetes DECIMAL(5,5) UNSIGNED,
-                                 Obesity DECIMAL(5,5) UNSIGNED,
-                                 Cholesterol DECIMAL(5,5) UNSIGNED,
-                                 HeartDisease DECIMAL(5,5) UNSIGNED
+                                 AgeRange TEXT NOT NULL,
+                                 Gender ENUM('Female', 'Male', 'All') NOT NULL,
+                                 HeartDisease DECIMAL(5,2) UNSIGNED,
+                                 Diabetes DECIMAL(5,2) UNSIGNED,
+                                 Obesity DECIMAL(5,2) UNSIGNED,
+                                 Cholesterol DECIMAL(5,2) UNSIGNED
 );
 
-CREATE TABLE FoodInitiatives(
+/*CREATE TABLE FoodInitiatives(
                                 FoodID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
 
                                 LocationID SMALLINT UNSIGNED NOT NULL,
@@ -172,26 +174,26 @@ CREATE TABLE FoodInitiatives(
                                 AgeRange VARCHAR(20),
                                 Genders ENUM('female', 'male', 'both')
 
-);
+);*/
 
-CREATE TABLE FoodStamps(
-                           FoodStampID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
+CREATE TABLE FoodAssistance(
+                               FoodAssistID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
 
-                           LocationID SMALLINT UNSIGNED NOT NULL,
-                           CONSTRAINT FK_LocationID_FS
-                               FOREIGN KEY (LocationID) references Location(LocationID)
-                                   ON DELETE CASCADE
-                                   ON UPDATE RESTRICT,
+                               LocationID SMALLINT UNSIGNED NOT NULL,
+                               CONSTRAINT FK_LocationID_FS
+                                   FOREIGN KEY (LocationID) references Location(LocationID)
+                                       ON DELETE CASCADE
+                                       ON UPDATE RESTRICT,
 
-                           TypeID SMALLINT UNSIGNED NOT NULL,
-                           CONSTRAINT FK_TypeID_FS
-                               FOREIGN KEY (TypeID) references DataType(TypeID)
-                                   ON DELETE CASCADE
-                                   ON UPDATE RESTRICT,
+                               TypeID SMALLINT UNSIGNED NOT NULL,
+                               CONSTRAINT FK_TypeID_FS
+                                   FOREIGN KEY (TypeID) references DataType(TypeID)
+                                       ON DELETE CASCADE
+                                       ON UPDATE RESTRICT,
 
-                           Name LONGTEXT NOT NULL,
-                           Year SMALLINT(4) UNSIGNED,
-                           numEnrolled BIGINT UNSIGNED
+                               Name LONGTEXT NOT NULL,
+                               Year SMALLINT(4) UNSIGNED,
+                               numEnrolled BIGINT UNSIGNED
 
 );
 
@@ -210,12 +212,13 @@ CREATE TABLE SchoolFoodPrograms(
                                            ON DELETE CASCADE
                                            ON UPDATE RESTRICT,
 
-                                   SchoolName LONGTEXT NOT NULL,
-                                   numStudents BIGINT
+                                   Name LONGTEXT NOT NULL,
+                                   Year SMALLINT(4) UNSIGNED,
+                                   numStudents BIGINT UNSIGNED
 
 );
 
-CREATE TABLE FoodInitiativesCreated(
+/*CREATE TABLE FoodInitiativesCreated(
                                        InitiativeID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
 
                                        LocationID SMALLINT UNSIGNED NOT NULL,
@@ -234,9 +237,9 @@ CREATE TABLE FoodInitiativesCreated(
                                        StartYear SMALLINT(4) UNSIGNED,
                                        EndYear SMALLINT(4) UNSIGNED
 
-);
+);*/
 
-CREATE TABLE NutritionalValue(
+/*CREATE TABLE NutritionalValue(
                                  ValueID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
 
                                  FoodID SMALLINT UNSIGNED NOT NULL,
@@ -250,10 +253,10 @@ CREATE TABLE NutritionalValue(
                                  Fats SMALLINT UNSIGNED,
                                  Sodium SMALLINT UNSIGNED
 
-);
+);*/
 
 
-CREATE TABLE FoodConsumption(
+/*CREATE TABLE FoodConsumption(
                                 ConsumptionID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
 
                                 LocationID SMALLINT UNSIGNED NOT NULL,
@@ -277,9 +280,9 @@ CREATE TABLE FoodConsumption(
                                 Year SMALLINT(4) UNSIGNED NOT NULL,
                                 Age SMALLINT(3) UNSIGNED NOT NULL,
                                 AmountConsumed SMALLINT UNSIGNED
-);
+);*/
 
-CREATE TABLE FoodDistribution(
+/*CREATE TABLE FoodDistribution(
                                  DistributionID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
 
                                  LocationID SMALLINT UNSIGNED NOT NULL,
@@ -302,14 +305,41 @@ CREATE TABLE FoodDistribution(
 
                                  Year SMALLINT(4) UNSIGNED NOT NULL,
                                  amountDistributed SMALLINT UNSIGNED
-);
+);*/
 
 
 /* Load data into tables from files. */
-LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/processed/small/USCities.csv' INTO TABLE Location FIELDS TERMINATED BY ',';
-LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/processed/small/datatype.csv' INTO TABLE DataType FIELDS TERMINATED BY ',';
-#LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/test/foodlegislation-test.txt' INTO TABLE FoodLegislation FIELDS TERMINATED BY ',';
-#LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/test/populationstats-test.txt' INTO TABLE PopulationStats FIELDS TERMINATED BY ',';
+
+/* Location Data */
+LOAD DATA LOCAL INFILE './data/final-small/Location-small.txt' INTO TABLE Location FIELDS TERMINATED BY ',';
+
+/* Data Type */
+LOAD DATA LOCAL INFILE './data/final-small/DataType-small.txt' INTO TABLE DataType FIELDS TERMINATED BY ',';
+
+/* Food Legislation Data */
+LOAD DATA LOCAL INFILE './data/final-small/FoodLegislation-small.txt' INTO TABLE FoodLegislation FIELDS TERMINATED BY ',';
+
+/* population Stats Data */
+LOAD DATA LOCAL INFILE './data/final-small/PopulationStats-small.txt' INTO TABLE PopulationStats FIELDS TERMINATED BY ',';
+
+/* Consumption Stats Data */
+LOAD DATA LOCAL INFILE './data/final-small/ConsumptionStats-small.txt' INTO TABLE ConsumptionStats FIELDS TERMINATED BY ',';
+
+/* Metabolic Disease Data */
+LOAD DATA LOCAL INFILE './data/final-small/MetabolicDisease-small.txt' INTO TABLE MetabolicDisease FIELDS TERMINATED BY ',';
+
+/* Food Assistance Data */
+LOAD DATA LOCAL INFILE './data/final-small/FoodAssistance-small.txt' INTO TABLE FoodAssistance FIELDS TERMINATED BY ',';
+
+/* School Lunch Program Data */
+LOAD DATA LOCAL INFILE './data/final-small/SchoolFoodPrograms-small.txt' INTO TABLE SchoolFoodPrograms FIELDS TERMINATED BY ',';
+
+/* Average Household Data */
+LOAD DATA LOCAL INFILE './data/final-small/AvgHousehold-small.txt' INTO TABLE AvgHousehold FIELDS TERMINATED BY ',';
+
 
 /* Lock tables that should be read-only (should be all tables eventually to prevent data deletion.) */
 /*LOCK TABLES DataType READ;*/
+
+# for louie:
+#USE information_schema;

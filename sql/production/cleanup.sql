@@ -7,13 +7,14 @@
 /*********** Begin Cleanup ***********/
 
 /* Select the right database */
-#USE Project;
+#USE 22sp_ldibern1_db;
 
 /* Unlock tables so we can remove them all */
 UNLOCK TABLES;
 
 /* Drop any and all tables/functions that already exist. */
 /* Child Tables */
+DROP TABLE IF EXISTS AvgHousehold;
 DROP TABLE IF EXISTS FoodLegislation;
 DROP TABLE IF EXISTS PopulationStats;
 DROP TABLE IF EXISTS AvgHousehold;
@@ -37,6 +38,6 @@ DROP TABLE IF EXISTS Food;
 DROP FUNCTION IF EXISTS FilePath;
 
 /* Drop Database */
-#DROP DATABASE IF EXISTS Project;
+#DROP DATABASE IF EXISTS 22sp_ldibern1_db;
 
 /*********** End cleanup ***********/

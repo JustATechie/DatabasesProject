@@ -1,0 +1,1529 @@
+5,California,,
+147,California,Alameda,
+3228,California,Alpine,
+1528,California,Amador,
+339,California,Butte,
+1691,California,Calaveras,
+1705,California,Colusa,
+119,California,Contra Costa,
+1065,California,Del Norte,
+604,California,El Dorado,
+115,California,Fresno,
+1416,California,Glenn,
+622,California,Humboldt,
+350,California,Imperial,
+1442,California,Inyo,
+127,California,Kern,
+387,California,Kings,
+1047,California,Lake,
+1129,California,Lassen,
+52,California,Los Angeles,
+409,California,Madera,
+533,California,Marin,
+2841,California,Mariposa,
+772,California,Mendocino,
+292,California,Merced,
+2465,California,Modoc,
+1564,California,Mono,
+246,California,Monterey,
+408,California,Napa,
+715,California,Nevada,
+124,California,Orange,
+299,California,Placer,
+2556,California,Plumas,
+71,California,Riverside,
+77,California,Sacramento,
+582,California,San Benito,
+167,California,San Bernardino,
+65,California,San Diego,
+63,California,San Francisco,
+155,California,San Joaquin,
+473,California,San Luis Obispo,
+362,California,San Mateo,
+237,California,Santa Barbara,
+79,California,Santa Clara,
+261,California,Santa Cruz,
+326,California,Shasta,
+3113,California,Sierra,
+1640,California,Siskiyou,
+262,California,Solano,
+174,California,Sonoma,
+161,California,Stanislaus,
+329,California,Sutter,
+1002,California,Tehama,
+2315,California,Trinity,
+218,California,Tulare,
+794,California,Tuolumne,
+159,California,Ventura,
+436,California,Yolo,
+968,California,Yuba,
+3866,California,Alameda,Alameda
+5690,California,Alameda,Albany
+5227,California,Alameda,Ashland
+3615,California,Alameda,Berkeley
+4032,California,Alameda,Castro Valley
+6140,California,Alameda,Cherryland
+4013,California,Alameda,Dublin
+6867,California,Alameda,Emeryville
+7268,California,Alameda,Fairview
+3442,California,Alameda,Fremont
+3529,California,Alameda,Hayward
+3769,California,Alameda,Livermore
+4268,California,Alameda,Newark
+3354,California,Alameda,Oakland
+7103,California,Alameda,Piedmont
+3820,California,Alameda,Pleasanton
+3778,California,Alameda,San Leandro
+5135,California,Alameda,San Lorenzo
+18908,California,Alameda,Sunol
+3902,California,Alameda,Union City
+29431,California,Alpine,Alpine Village
+29989,California,Alpine,Kirkwood
+28632,California,Alpine,Markleeville
+26347,California,Alpine,Mesa Vista
+27194,California,Amador,Amador City
+13231,California,Amador,Buckhorn
+21078,California,Amador,Buena Vista
+17176,California,Amador,Camanche North Shore
+18535,California,Amador,Camanche Village
+31332,California,Amador,Drytown
+24606,California,Amador,Fiddletown
+7923,California,Amador,Ione
+8381,California,Amador,Jackson
+23461,California,Amador,Martell
+14727,California,Amador,Pine Grove
+16049,California,Amador,Pioneer
+17488,California,Amador,Plymouth
+14651,California,Amador,Red Corral
+21362,California,Amador,River Pines
+12789,California,Amador,Sutter Creek
+30950,California,Amador,Volcano
+23057,California,Butte,Bangor
+16320,California,Butte,Berry Creek
+14384,California,Butte,Biggs
+18178,California,Butte,Butte Creek Canyon
+30943,California,Butte,Butte Meadows
+19816,California,Butte,Butte Valley
+28479,California,Butte,Cherokee
+3634,California,Butte,Chico
+24446,California,Butte,Clipper Mills
+20714,California,Butte,Cohasset
+21522,California,Butte,Concow
+9205,California,Butte,Durham
+23282,California,Butte,Forbestown
+19527,California,Butte,Forest Ranch
+7663,California,Butte,Gridley
+29050,California,Butte,Honcut
+12374,California,Butte,Kelly Ridge
+7016,California,Butte,Magalia
+24817,California,Butte,Nord
+4259,California,Butte,Oroville
+8280,California,Butte,Oroville East
+9586,California,Butte,Palermo
+9241,California,Butte,Paradise
+26782,California,Butte,Rackerby
+26762,California,Butte,Richvale
+30646,California,Butte,Robinson Mill
+12299,California,Butte,South Oroville
+23817,California,Butte,Stirling City
+8706,California,Butte,Thermalito
+25376,California,Butte,Yankee Hill
+10910,California,Calaveras,Angels
+13422,California,Calaveras,Arnold
+21424,California,Calaveras,Avery
+10468,California,Calaveras,Copperopolis
+25391,California,Calaveras,Dorrington
+16266,California,Calaveras,Forest Meadows
+20181,California,Calaveras,Mokelumne Hill
+17168,California,Calaveras,Mountain Ranch
+13645,California,Calaveras,Murphys
+27177,California,Calaveras,Rail Road Flat
+8648,California,Calaveras,Rancho Calaveras
+11994,California,Calaveras,San Andreas
+26218,California,Calaveras,Vallecito
+11422,California,Calaveras,Valley Springs
+18271,California,Calaveras,Wallace
+22709,California,Calaveras,West Point
+11062,California,Colusa,Arbuckle
+27662,California,Colusa,College City
+8708,California,Colusa,Colusa
+24928,California,Colusa,Grimes
+27702,California,Colusa,Lodoga
+17492,California,Colusa,Maxwell
+23698,California,Colusa,Princeton
+29682,California,Colusa,Stonyford
+9537,California,Colusa,Williams
+17212,California,Contra Costa,Acalanes Ridge
+6300,California,Contra Costa,Alamo
+19424,California,Contra Costa,Alhambra Valley
+3399,California,Contra Costa,Antioch
+5117,California,Contra Costa,Bay Point
+13690,California,Contra Costa,Bethel Island
+7540,California,Contra Costa,Blackhawk
+4017,California,Contra Costa,Brentwood
+16360,California,Contra Costa,Byron
+10108,California,Contra Costa,Camino Tassajara
+15871,California,Contra Costa,Castle Hill
+6826,California,Contra Costa,Clayton
+19352,California,Contra Costa,Clyde
+3323,California,Contra Costa,Concord
+8872,California,Contra Costa,Contra Costa Centre
+11764,California,Contra Costa,Crockett
+4361,California,Contra Costa,Danville
+22783,California,Contra Costa,Diablo
+6129,California,Contra Costa,Discovery Bay
+11921,California,Contra Costa,East Richmond Heights
+5143,California,Contra Costa,El Cerrito
+5084,California,Contra Costa,Hercules
+9644,California,Contra Costa,Kensington
+16973,California,Contra Costa,Knightsen
+5064,California,Contra Costa,Lafayette
+4538,California,Contra Costa,Martinez
+12369,California,Contra Costa,Montalvin Manor
+5905,California,Contra Costa,Moraga
+18587,California,Contra Costa,Norris Canyon
+20223,California,Contra Costa,North Gate
+10765,California,Contra Costa,North Richmond
+4410,California,Contra Costa,Oakley
+5661,California,Contra Costa,Orinda
+10466,California,Contra Costa,Pacheco
+5738,California,Contra Costa,Pinole
+3920,California,Contra Costa,Pittsburg
+4658,California,Contra Costa,Pleasant Hill
+27418,California,Contra Costa,Port Costa
+11403,California,Contra Costa,Reliez Valley
+3667,California,Contra Costa,Richmond
+7309,California,Contra Costa,Rodeo
+11491,California,Contra Costa,Rollingwood
+11522,California,Contra Costa,San Miguel
+4814,California,Contra Costa,San Pablo
+3878,California,Contra Costa,San Ramon
+9088,California,Contra Costa,Saranap
+16206,California,Contra Costa,Shell Ridge
+9793,California,Contra Costa,Tara Hills
+10978,California,Contra Costa,Vine Hill
+3946,California,Contra Costa,Walnut Creek
+14114,California,Del Norte,Bertsch-Oceanview
+6029,California,Del Norte,Crescent City
+17384,California,Del Norte,Fort Dick
+20224,California,Del Norte,Gasquet
+26041,California,Del Norte,Hiouchi
+20701,California,Del Norte,Klamath
+22149,California,Del Norte,Smith River
+11218,California,El Dorado,Auburn Lake Trails
+5748,California,El Dorado,Cameron Park
+14308,California,El Dorado,Camino
+21206,California,El Dorado,Cold Springs
+23087,California,El Dorado,Coloma
+6963,California,El Dorado,Diamond Springs
+4327,California,El Dorado,El Dorado Hills
+12879,California,El Dorado,Georgetown
+16876,California,El Dorado,Grizzly Flats
+4777,California,El Dorado,Placerville
+8580,California,El Dorado,Pollock Pines
+11026,California,El Dorado,Shingle Springs
+4854,California,El Dorado,South Lake Tahoe
+14069,California,Fresno,Auberry
+27013,California,Fresno,Big Creek
+14897,California,Fresno,Biola
+25515,California,Fresno,Bowles
+13864,California,Fresno,Calwa
+23749,California,Fresno,Cantua Creek
+12928,California,Fresno,Caruthers
+23739,California,Fresno,Centerville
+3648,California,Fresno,Clovis
+5987,California,Fresno,Coalinga
+16562,California,Fresno,Del Rey
+14047,California,Fresno,Easton
+8036,California,Fresno,Firebaugh
+21668,California,Fresno,Fort Washington
+8761,California,Fresno,Fowler
+3319,California,Fresno,Fresno
+20976,California,Fresno,Friant
+8510,California,Fresno,Huron
+6259,California,Fresno,Kerman
+6863,California,Fresno,Kingsburg
+26385,California,Fresno,Lanare
+14086,California,Fresno,Laton
+16935,California,Fresno,Malaga
+9917,California,Fresno,Mayfair
+6967,California,Fresno,Mendota
+18179,California,Fresno,Minkler
+29149,California,Fresno,Monmouth
+9295,California,Fresno,Old Fig Garden
+7140,California,Fresno,Orange Cove
+6208,California,Fresno,Parlier
+23274,California,Fresno,Raisin City
+4272,California,Fresno,Reedley
+11520,California,Fresno,Riverdale
+10838,California,Fresno,San Joaquin
+4978,California,Fresno,Sanger
+4359,California,Fresno,Selma
+22457,California,Fresno,Shaver Lake
+11239,California,Fresno,Squaw Valley
+10361,California,Fresno,Sunnyside
+11287,California,Fresno,Tarpey Village
+25942,California,Fresno,Three Rocks
+19215,California,Fresno,Tranquillity
+17513,California,Fresno,West Park
+29985,California,Fresno,Westside
+24825,California,Glenn,Artois
+27344,California,Glenn,Elk Creek
+13808,California,Glenn,Hamilton City
+7428,California,Glenn,Orland
+8540,California,Glenn,Willows
+27990,California,Humboldt,Alderpoint
+4670,California,Humboldt,Arcata
+12448,California,Humboldt,Bayview
+29012,California,Humboldt,Benbow
+29472,California,Humboldt,Big Lagoon
+16647,California,Humboldt,Blue Lake
+12273,California,Humboldt,Cutten
+4371,California,Humboldt,Eureka
+27498,California,Humboldt,Fairhaven
+16171,California,Humboldt,Ferndale
+18701,California,Humboldt,Fieldbrook
+25895,California,Humboldt,Fields Landing
+6571,California,Humboldt,Fortuna
+18467,California,Humboldt,Garberville
+11860,California,Humboldt,Hoopa
+10510,California,Humboldt,Humboldt Hill
+17552,California,Humboldt,Hydesville
+19787,California,Humboldt,Indianola
+20705,California,Humboldt,Loleta
+19344,California,Humboldt,Manila
+5983,California,Humboldt,McKinleyville
+20959,California,Humboldt,Miranda
+28628,California,Humboldt,Myers Flat
+9719,California,Humboldt,Myrtletown
+23606,California,Humboldt,Orick
+30230,California,Humboldt,Phillipsville
+11594,California,Humboldt,Pine Hills
+31278,California,Humboldt,Redcrest
+16144,California,Humboldt,Redway
+10801,California,Humboldt,Rio Dell
+26692,California,Humboldt,Samoa
+21606,California,Humboldt,Scotia
+21226,California,Humboldt,Shelter Cove
+24099,California,Humboldt,Trinidad
+24940,California,Humboldt,Weott
+17319,California,Humboldt,Westhaven-Moonstone
+15541,California,Humboldt,Willow Creek
+25061,California,Imperial,Bombay Beach
+5080,California,Imperial,Brawley
+4483,California,Imperial,Calexico
+8599,California,Imperial,Calipatria
+21285,California,Imperial,Desert Shores
+3660,California,Imperial,El Centro
+11295,California,Imperial,Heber
+8324,California,Imperial,Holtville
+5848,California,Imperial,Imperial
+20712,California,Imperial,Niland
+29762,California,Imperial,Ocotillo
+30352,California,Imperial,Palo Verde
+9067,California,Imperial,Salton City
+25716,California,Imperial,Salton Sea Beach
+14062,California,Imperial,Seeley
+13493,California,Imperial,Westmorland
+27160,California,Imperial,Winterhaven
+15490,California,Inyo,Big Pine
+7543,California,Inyo,Bishop
+31566,California,Inyo,Cartago
+29455,California,Inyo,Darwin
+12717,California,Inyo,Dixon Lane-Meadow Creek
+29254,California,Inyo,Furnace Creek
+30261,California,Inyo,Homewood Canyon
+20985,California,Inyo,Independence
+31496,California,Inyo,Keeler
+14596,California,Inyo,Lone Pine
+24205,California,Inyo,Mesa
+26331,California,Inyo,Olancha
+31543,California,Inyo,Pearsonville
+22019,California,Inyo,Round Valley
+31405,California,Inyo,Shoshone
+27704,California,Inyo,Tecopa
+30965,California,Inyo,Trona
+12579,California,Inyo,West Bishop
+21912,California,Inyo,Wilkerson
+5431,California,Kern,Arvin
+3331,California,Kern,Bakersfield
+9668,California,Kern,Bear Valley Springs
+14016,California,Kern,Bodfish
+13569,California,Kern,Boron
+15810,California,Kern,Buttonwillow
+6415,California,Kern,California City
+26660,California,Kern,Cherokee Strip
+13760,California,Kern,China Lake Acres
+4164,California,Kern,Delano
+23639,California,Kern,Derby Acres
+20618,California,Kern,Dustin Acres
+24079,California,Kern,Edmundson Acres
+12955,California,Kern,Edwards AFB
+30699,California,Kern,Fellows
+10077,California,Kern,Ford City
+12854,California,Kern,Frazier Park
+18673,California,Kern,Fuller Acres
+7625,California,Kern,Golden Hills
+9255,California,Kern,Greenacres
+20134,California,Kern,Inyokern
+28980,California,Kern,Johannesburg
+26351,California,Kern,Keene
+20423,California,Kern,Kernville
+11432,California,Kern,Lake Isabella
+18347,California,Kern,Lake of the Woods
+6325,California,Kern,Lamont
+15688,California,Kern,Lebec
+14840,California,Kern,Lost Hills
+16891,California,Kern,Maricopa
+6203,California,Kern,McFarland
+29040,California,Kern,McKittrick
+27971,California,Kern,Mettler
+23152,California,Kern,Mexican Colony
+11013,California,Kern,Mojave
+16004,California,Kern,Mountain Mesa
+18707,California,Kern,North Edwards
+4664,California,Kern,Oildale
+22403,California,Kern,Onyx
+14756,California,Kern,Pine Mountain Club
+28808,California,Kern,Randsburg
+4743,California,Kern,Ridgecrest
+5557,California,Kern,Rosamond
+6032,California,Kern,Rosedale
+5464,California,Kern,Shafter
+22299,California,Kern,Smith Corner
+14707,California,Kern,South Taft
+17998,California,Kern,Squirrel Mountain Valley
+11324,California,Kern,Stallion Springs
+6301,California,Kern,Taft
+14093,California,Kern,Taft Heights
+6298,California,Kern,Tehachapi
+28321,California,Kern,Tupman
+20497,California,Kern,Valley Acres
+4925,California,Kern,Wasco
+13424,California,Kern,Weedpatch
+13363,California,Kern,Weldon
+13334,California,Kern,Wofford Heights
+10411,California,Kings,Armona
+6559,California,Kings,Avenal
+5385,California,Kings,Corcoran
+24240,California,Kings,Grangeville
+3749,California,Kings,Hanford
+28451,California,Kings,Hardwick
+15512,California,Kings,Home Garden
+17196,California,Kings,Kettleman City
+5055,California,Kings,Lemoore
+8727,California,Kings,Lemoore Station
+18555,California,Kings,Stratford
+6157,California,Lake,Clearlake
+13470,California,Lake,Clearlake Oaks
+10936,California,Lake,Clearlake Riviera
+17817,California,Lake,Cobb
+9491,California,Lake,Hidden Valley Lake
+11346,California,Lake,Kelseyville
+5954,California,Lake,Lakeport
+16158,California,Lake,Lower Lake
+12315,California,Lake,Lucerne
+19784,California,Lake,Middletown
+12988,California,Lake,Nice
+11630,California,Lake,North Lakeport
+18718,California,Lake,Soda Bay
+18596,California,Lake,Upper Lake
+27985,California,Lassen,Bieber
+26741,California,Lassen,Clear Creek
+20802,California,Lassen,Doyle
+16394,California,Lassen,Herlong
+15934,California,Lassen,Janesville
+17219,California,Lassen,Johnstonville
+26864,California,Lassen,Litchfield
+31240,California,Lassen,Little Valley
+26840,California,Lassen,Milford
+31061,California,Lassen,Nubieber
+20725,California,Lassen,Patton Village
+29237,California,Lassen,Spaulding
+6290,California,Lassen,Susanville
+15109,California,Lassen,Westwood
+8544,California,Los Angeles,Acton
+5618,California,Los Angeles,Agoura Hills
+11133,California,Los Angeles,Agua Dulce
+3810,California,Los Angeles,Alhambra
+8049,California,Los Angeles,Alondra Park
+4356,California,Los Angeles,Altadena
+4115,California,Los Angeles,Arcadia
+6056,California,Los Angeles,Artesia
+11203,California,Los Angeles,Avalon
+6243,California,Los Angeles,Avocado Heights
+4250,California,Los Angeles,Azusa
+3889,California,Los Angeles,Baldwin Park
+4638,California,Los Angeles,Bell
+4424,California,Los Angeles,Bell Gardens
+3876,California,Los Angeles,Bellflower
+4711,California,Los Angeles,Beverly Hills
+17518,California,Los Angeles,Bradbury
+3701,California,Los Angeles,Burbank
+5289,California,Los Angeles,Calabasas
+3766,California,Los Angeles,Carson
+5723,California,Los Angeles,Castaic
+4252,California,Los Angeles,Cerritos
+7403,California,Los Angeles,Charter Oak
+7374,California,Los Angeles,Citrus
+4606,California,Los Angeles,Claremont
+6737,California,Los Angeles,Commerce
+3735,California,Los Angeles,Compton
+4316,California,Los Angeles,Covina
+5313,California,Los Angeles,Cudahy
+4507,California,Los Angeles,Culver City
+7423,California,Los Angeles,Del Aire
+12710,California,Los Angeles,Desert View Highlands
+4143,California,Los Angeles,Diamond Bar
+3662,California,Los Angeles,Downey
+5506,California,Los Angeles,Duarte
+3619,California,Los Angeles,East Los Angeles
+9128,California,Los Angeles,East Pasadena
+6188,California,Los Angeles,East Rancho Dominguez
+6117,California,Los Angeles,East San Gabriel
+7321,California,Los Angeles,East Whittier
+3643,California,Los Angeles,El Monte
+6053,California,Los Angeles,El Segundo
+14772,California,Los Angeles,Elizabeth Lake
+3999,California,Los Angeles,Florence-Graham
+4090,California,Los Angeles,Gardena
+3480,California,Los Angeles,Glendale
+4219,California,Los Angeles,Glendora
+4158,California,Los Angeles,Hacienda Heights
+17146,California,Los Angeles,Hasley Canyon
+6424,California,Los Angeles,Hawaiian Gardens
+3792,California,Los Angeles,Hawthorne
+5731,California,Los Angeles,Hermosa Beach
+14355,California,Los Angeles,Hidden Hills
+4126,California,Los Angeles,Huntington Park
+26922,California,Los Angeles,Industry
+3680,California,Los Angeles,Inglewood
+15802,California,Los Angeles,Irwindale
+5649,California,Los Angeles,La Cañada Flintridge
+5691,California,Los Angeles,La Crescenta-Montrose
+8917,California,Los Angeles,La Habra Heights
+4296,California,Los Angeles,La Mirada
+4492,California,Los Angeles,La Puente
+4774,California,Los Angeles,La Verne
+8841,California,Los Angeles,Ladera Heights
+21887,California,Los Angeles,Lake Hughes
+6959,California,Los Angeles,Lake Los Angeles
+3849,California,Los Angeles,Lakewood
+3379,California,Los Angeles,Lancaster
+4750,California,Los Angeles,Lawndale
+5457,California,Los Angeles,Lennox
+15350,California,Los Angeles,Leona Valley
+19399,California,Los Angeles,Littlerock
+5607,California,Los Angeles,Lomita
+3347,California,Los Angeles,Long Beach
+3255,California,Los Angeles,Los Angeles
+3948,California,Los Angeles,Lynwood
+6945,California,Los Angeles,Malibu
+4649,California,Los Angeles,Manhattan Beach
+7457,California,Los Angeles,Marina del Rey
+9275,California,Los Angeles,Mayflower Village
+5035,California,Los Angeles,Maywood
+4602,California,Los Angeles,Monrovia
+4053,California,Los Angeles,Montebello
+4083,California,Los Angeles,Monterey Park
+10934,California,Los Angeles,North El Monte
+3696,California,Los Angeles,Norwalk
+3538,California,Los Angeles,Palmdale
+6611,California,Los Angeles,Palos Verdes Estates
+4179,California,Los Angeles,Paramount
+3572,California,Los Angeles,Pasadena
+4050,California,Los Angeles,Pico Rivera
+3547,California,Los Angeles,Pomona
+7419,California,Los Angeles,Quartz Hill
+4438,California,Los Angeles,Rancho Palos Verdes
+3988,California,Los Angeles,Redondo Beach
+14481,California,Los Angeles,Rolling Hills
+8146,California,Los Angeles,Rolling Hills Estates
+12507,California,Los Angeles,Rose Hills
+4178,California,Los Angeles,Rosemead
+4244,California,Los Angeles,Rowland Heights
+4714,California,Los Angeles,San Dimas
+5244,California,Los Angeles,San Fernando
+4480,California,Los Angeles,San Gabriel
+6659,California,Los Angeles,San Marino
+14161,California,Los Angeles,San Pasqual
+3397,California,Los Angeles,Santa Clarita
+5925,California,Los Angeles,Santa Fe Springs
+3772,California,Los Angeles,Santa Monica
+7200,California,Los Angeles,Sierra Madre
+7033,California,Los Angeles,Signal Hill
+5583,California,Los Angeles,South El Monte
+3752,California,Los Angeles,South Gate
+8863,California,Los Angeles,South Monrovia Island
+5150,California,Los Angeles,South Pasadena
+8103,California,Los Angeles,South San Gabriel
+5653,California,Los Angeles,South San Jose Hills
+4075,California,Los Angeles,South Whittier
+5745,California,Los Angeles,Stevenson Ranch
+6508,California,Los Angeles,Sun Village
+4624,California,Los Angeles,Temple City
+8217,California,Los Angeles,Topanga
+3563,California,Los Angeles,Torrance
+12577,California,Los Angeles,Val Verde
+5298,California,Los Angeles,Valinda
+29202,California,Los Angeles,Vernon
+6956,California,Los Angeles,View Park-Windsor Hills
+6122,California,Los Angeles,Vincent
+4876,California,Los Angeles,Walnut
+6166,California,Los Angeles,Walnut Park
+7502,California,Los Angeles,West Athens
+5438,California,Los Angeles,West Carson
+3691,California,Los Angeles,West Covina
+4596,California,Los Angeles,West Hollywood
+5332,California,Los Angeles,West Puente Valley
+5355,California,Los Angeles,West Rancho Dominguez
+5060,California,Los Angeles,West Whittier-Los Nietos
+8072,California,Los Angeles,Westlake Village
+4646,California,Los Angeles,Westmont
+3798,California,Los Angeles,Whittier
+5365,California,Los Angeles,Willowbrook
+13009,California,Madera,Ahwahnee
+22773,California,Madera,Bass Lake
+5826,California,Madera,Chowchilla
+15309,California,Madera,Coarsegold
+17345,California,Madera,Fairmead
+26716,California,Madera,La Vina
+3807,California,Madera,Madera
+7455,California,Madera,Madera Acres
+24198,California,Madera,Nipinnawasee
+11497,California,Madera,Oakhurst
+13132,California,Madera,Parksdale
+13654,California,Madera,Parkwood
+9508,California,Madera,Yosemite Lakes
+20908,California,Marin,Alto
+13834,California,Marin,Belvedere
+15180,California,Marin,Black Point-Green Point
+17505,California,Marin,Bolinas
+7491,California,Marin,Corte Madera
+25849,California,Marin,Dillon Beach
+8395,California,Marin,Fairfax
+17386,California,Marin,Inverness
+8650,California,Marin,Kentfield
+14699,California,Marin,Lagunitas-Forest Knolls
+6829,California,Marin,Larkspur
+8802,California,Marin,Lucas Valley-Marinwood
+11986,California,Marin,Marin City
+6402,California,Marin,Mill Valley
+24427,California,Marin,Muir Beach
+30200,California,Marin,Nicasio
+4151,California,Marin,Novato
+25231,California,Marin,Point Reyes Station
+13130,California,Marin,Ross
+6776,California,Marin,San Anselmo
+23487,California,Marin,San Geronimo
+4105,California,Marin,San Rafael
+10344,California,Marin,Santa Venetia
+8624,California,Marin,Sausalito
+13457,California,Marin,Sleepy Hollow
+21022,California,Marin,Stinson Beach
+9504,California,Marin,Strawberry
+6973,California,Marin,Tamalpais-Homestead Valley
+7721,California,Marin,Tiburon
+27168,California,Marin,Tomales
+16998,California,Marin,Woodacre
+27058,California,Mariposa,Bear Valley
+19754,California,Mariposa,Bootjack
+31495,California,Mariposa,Buck Meadows
+20969,California,Mariposa,Catheys Valley
+30487,California,Mariposa,Coulterville
+26538,California,Mariposa,El Portal
+29650,California,Mariposa,Fish Camp
+19715,California,Mariposa,Greeley Hill
+30333,California,Mariposa,Hornitos
+18552,California,Mariposa,Lake Don Pedro
+16936,California,Mariposa,Mariposa
+15870,California,Mariposa,Midpines
+27204,California,Mariposa,Wawona
+17014,California,Mariposa,Yosemite Valley
+25830,California,Mendocino,Albion
+24156,California,Mendocino,Anchor Bay
+18254,California,Mendocino,Boonville
+11078,California,Mendocino,Brooktrails
+20249,California,Mendocino,Calpella
+20924,California,Mendocino,Caspar
+18085,California,Mendocino,Cleone
+29497,California,Mendocino,Comptche
+17173,California,Mendocino,Covelo
+7318,California,Mendocino,Fort Bragg
+18422,California,Mendocino,Hopland
+16858,California,Mendocino,Laytonville
+29913,California,Mendocino,Leggett
+26702,California,Mendocino,Little River
+26572,California,Mendocino,Manchester
+18863,California,Mendocino,Mendocino
+27557,California,Mendocino,Philo
+22768,California,Mendocino,Point Arena
+22155,California,Mendocino,Potter Valley
+14874,California,Mendocino,Redwood Valley
+17858,California,Mendocino,Talmage
+4889,California,Mendocino,Ukiah
+8149,California,Mendocino,Willits
+4890,California,Merced,Atwater
+21687,California,Merced,Ballico
+28215,California,Merced,Bear Creek
+24357,California,Merced,Cressey
+6820,California,Merced,Delhi
+8409,California,Merced,Dos Palos
+26321,California,Merced,Dos Palos Y
+24381,California,Merced,El Nido
+8689,California,Merced,Franklin
+9270,California,Merced,Gustine
+9360,California,Merced,Hilmar-Irwin
+14792,California,Merced,Le Grand
+6303,California,Merced,Livingston
+4450,California,Merced,Los Banos
+10422,California,Merced,McSwain
+3560,California,Merced,Merced
+10400,California,Merced,Planada
+13762,California,Merced,Santa Nella
+28966,California,Merced,Snelling
+14743,California,Merced,South Dos Palos
+27512,California,Merced,Stevinson
+29598,California,Merced,Tuttle
+28742,California,Merced,Volta
+7069,California,Merced,Winton
+27627,California,Modoc,Adin
+12760,California,Modoc,Alturas
+23022,California,Modoc,California Pines
+25314,California,Modoc,Canby
+20948,California,Modoc,Cedarville
+26763,California,Modoc,Daphnedale Park
+30682,California,Modoc,Eagleville
+27154,California,Modoc,Fort Bidwell
+30576,California,Modoc,Lake City
+30871,California,Modoc,Lookout
+29779,California,Modoc,New Pine Creek
+21365,California,Modoc,Newell
+31301,California,Mono,Aspen Springs
+24543,California,Mono,Benton
+21640,California,Mono,Bridgeport
+17849,California,Mono,Chalfant
+22576,California,Mono,Coleville
+17474,California,Mono,Crowley Lake
+23600,California,Mono,June Lake
+29526,California,Mono,Lee Vining
+8066,California,Mono,Mammoth Lakes
+29576,California,Mono,Mono City
+30292,California,Mono,Sunny Slopes
+25901,California,Mono,Swall Meadows
+28784,California,Mono,Topaz
+18848,California,Mono,Walker
+14721,California,Monterey,Boronda
+29116,California,Monterey,Bradley
+10685,California,Monterey,Carmel Valley Village
+11059,California,Monterey,Carmel-by-the-Sea
+8893,California,Monterey,Castroville
+15546,California,Monterey,Chualar
+10744,California,Monterey,Del Monte Forest
+15080,California,Monterey,Del Rey Oaks
+17101,California,Monterey,Elkhorn
+8030,California,Monterey,Gonzales
+5923,California,Monterey,Greenfield
+6169,California,Monterey,King City
+12268,California,Monterey,Las Lomas
+21934,California,Monterey,Lockwood
+5368,California,Monterey,Marina
+4956,California,Monterey,Monterey
+30637,California,Monterey,Moss Landing
+6244,California,Monterey,Pacific Grove
+11274,California,Monterey,Pajaro
+13262,California,Monterey,Pine Canyon
+5606,California,Monterey,Prunedale
+3489,California,Monterey,Salinas
+21639,California,Monterey,San Ardo
+21636,California,Monterey,San Lucas
+23476,California,Monterey,Sand City
+3638,California,Monterey,Seaside
+5088,California,Monterey,Soledad
+23265,California,Monterey,Spreckels
+5593,California,Napa,American Canyon
+11894,California,Napa,Angwin
+9697,California,Napa,Calistoga
+18770,California,Napa,Deer Park
+3797,California,Napa,Napa
+29709,California,Napa,Oakville
+29786,California,Napa,Rutherford
+17781,California,Napa,Silverado Resort
+8631,California,Napa,St. Helena
+12202,California,Napa,Yountville
+8511,California,Nevada,Alta Sierra
+31461,California,Nevada,Graniteville
+4687,California,Nevada,Grass Valley
+30202,California,Nevada,Kingvale
+11304,California,Nevada,Lake of the Pines
+9707,California,Nevada,Lake Wildwood
+11953,California,Nevada,Nevada City
+27479,California,Nevada,North San Juan
+16211,California,Nevada,Penn Valley
+22135,California,Nevada,Rough and Ready
+30827,California,Nevada,Soda Springs
+6043,California,Nevada,Truckee
+30587,California,Nevada,Washington
+4233,California,Orange,Aliso Viejo
+3376,California,Orange,Anaheim
+4391,California,Orange,Brea
+3819,California,Orange,Buena Park
+3653,California,Orange,Costa Mesa
+6286,California,Orange,Coto de Caza
+4275,California,Orange,Cypress
+4716,California,Orange,Dana Point
+4154,California,Orange,Fountain Valley
+3581,California,Orange,Fullerton
+3516,California,Orange,Garden Grove
+3481,California,Orange,Huntington Beach
+3406,California,Orange,Irvine
+4073,California,Orange,La Habra
+6241,California,Orange,La Palma
+5007,California,Orange,Ladera Ranch
+5361,California,Orange,Laguna Beach
+4804,California,Orange,Laguna Hills
+3990,California,Orange,Laguna Niguel
+6176,California,Orange,Laguna Woods
+3796,California,Orange,Lake Forest
+9288,California,Orange,Las Flores
+7040,California,Orange,Los Alamitos
+8009,California,Orange,Midway City
+3328,California,Orange,Mission Viejo
+3803,California,Orange,Newport Beach
+5201,California,Orange,North Tustin
+3580,California,Orange,Orange
+4225,California,Orange,Placentia
+4307,California,Orange,Rancho Santa Margarita
+7108,California,Orange,Rossmoor
+4016,California,Orange,San Clemente
+4620,California,Orange,San Juan Capistrano
+3383,California,Orange,Santa Ana
+5286,California,Orange,Seal Beach
+4543,California,Orange,Stanton
+3848,California,Orange,Tustin
+9335,California,Orange,Villa Park
+3770,California,Orange,Westminster
+3976,California,Orange,Yorba Linda
+21360,California,Placer,Alta
+4644,California,Placer,Auburn
+22736,California,Placer,Carnelian Bay
+11854,California,Placer,Colfax
+19246,California,Placer,Dollar Point
+27468,California,Placer,Dutch Flat
+14457,California,Placer,Foresthill
+5337,California,Placer,Granite Bay
+12093,California,Placer,Kings Beach
+4293,California,Placer,Lincoln
+8723,California,Placer,Loomis
+11204,California,Placer,Meadow Vista
+16816,California,Placer,Newcastle
+6401,California,Placer,North Auburn
+19149,California,Placer,Penryn
+3961,California,Placer,Rocklin
+3569,California,Placer,Roseville
+16157,California,Placer,Sheridan
+17034,California,Placer,Sunnyside-Tahoe City
+17063,California,Placer,Tahoe Vista
+18058,California,Placer,Tahoma
+23267,California,Plumas,Beckwourth
+31393,California,Plumas,Blairsden
+28402,California,Plumas,C-Road
+13737,California,Plumas,Chester
+23153,California,Plumas,Chilcoot-Vinton
+30518,California,Plumas,Clio
+29641,California,Plumas,Crescent Mills
+24741,California,Plumas,Cromberg
+22416,California,Plumas,Delleker
+13599,California,Plumas,East Quincy
+28749,California,Plumas,East Shore
+21689,California,Plumas,Graeagle
+25807,California,Plumas,Greenhorn
+19154,California,Plumas,Greenville
+22177,California,Plumas,Hamilton Branch
+30650,California,Plumas,Indian Falls
+27175,California,Plumas,Iron Horse
+30089,California,Plumas,Keddie
+23348,California,Plumas,Lake Almanor Country Club
+23941,California,Plumas,Lake Almanor Peninsula
+26446,California,Plumas,Lake Almanor West
+30675,California,Plumas,Lake Davis
+31263,California,Plumas,Mabie
+23190,California,Plumas,Meadow Valley
+30631,California,Plumas,Mohawk Vista
+23966,California,Plumas,Plumas Eureka
+13378,California,Plumas,Portola
+31189,California,Plumas,Prattville
+14204,California,Plumas,Quincy
+31352,California,Plumas,Spring Garden
+27030,California,Plumas,Taylorsville
+24552,California,Plumas,Twain
+30731,California,Plumas,Whitehawk
+19245,California,Riverside,Aguanga
+12050,California,Riverside,Anza
+4803,California,Riverside,Banning
+4227,California,Riverside,Beaumont
+8797,California,Riverside,Bermuda Dunes
+5693,California,Riverside,Blythe
+12852,California,Riverside,Cabazon
+7690,California,Riverside,Calimesa
+7072,California,Riverside,Canyon Lake
+4163,California,Riverside,Cathedral City
+8113,California,Riverside,Cherry Valley
+4346,California,Riverside,Coachella
+3521,California,Riverside,Corona
+11585,California,Riverside,Coronita
+26620,California,Riverside,Desert Center
+11678,California,Riverside,Desert Edge
+4378,California,Riverside,Desert Hot Springs
+8770,California,Riverside,Desert Palms
+5619,California,Riverside,East Hemet
+4020,California,Riverside,Eastvale
+6496,California,Riverside,El Sobrante
+4611,California,Riverside,French Valley
+9673,California,Riverside,Garnet
+7676,California,Riverside,Good Hope
+3508,California,Riverside,Hemet
+9336,California,Riverside,Highgrove
+6855,California,Riverside,Home Gardens
+8613,California,Riverside,Homeland
+13014,California,Riverside,Idyllwild-Pine Cove
+9536,California,Riverside,Indian Wells
+3358,California,Riverside,Indio
+19436,California,Riverside,Indio Hills
+3672,California,Riverside,Jurupa Valley
+4431,California,Riverside,La Quinta
+3956,California,Riverside,Lake Elsinore
+8759,California,Riverside,Lake Mathews
+16160,California,Riverside,Lake Riverside
+6663,California,Riverside,Lakeland Village
+12758,California,Riverside,Lakeview
+17948,California,Riverside,March ARB
+5631,California,Riverside,Mead Valley
+11546,California,Riverside,Meadowbrook
+8826,California,Riverside,Mecca
+3741,California,Riverside,Menifee
+18471,California,Riverside,Mesa Verde
+3467,California,Riverside,Moreno Valley
+28914,California,Riverside,Moskowite Corner
+3341,California,Riverside,Murrieta
+5066,California,Riverside,Norco
+12534,California,Riverside,North Shore
+8566,California,Riverside,Nuevo
+12363,California,Riverside,Oasis
+4192,California,Riverside,Palm Desert
+4285,California,Riverside,Palm Springs
+3850,California,Riverside,Perris
+5804,California,Riverside,Rancho Mirage
+22841,California,Riverside,Ripley
+3274,California,Riverside,Riverside
+13413,California,Riverside,Romoland
+4266,California,Riverside,San Jacinto
+13553,California,Riverside,Sky Valley
+3647,California,Riverside,Temecula
+4988,California,Riverside,Temescal Valley
+16248,California,Riverside,Thermal
+8756,California,Riverside,Thousand Palms
+5917,California,Riverside,Valle Vista
+12563,California,Riverside,Vista Santa Rosa
+14396,California,Riverside,Warm Springs
+18635,California,Riverside,Whitewater
+4570,California,Riverside,Wildomar
+11674,California,Riverside,Winchester
+5896,California,Riverside,Woodcrest
+4290,California,Sacramento,Antelope
+3699,California,Sacramento,Arden-Arcade
+4018,California,Sacramento,Carmichael
+3782,California,Sacramento,Citrus Heights
+16927,California,Sacramento,Clay
+27447,California,Sacramento,Courtland
+3513,California,Sacramento,Elk Grove
+9452,California,Sacramento,Elverta
+4813,California,Sacramento,Fair Oaks
+4313,California,Sacramento,Florin
+3827,California,Sacramento,Folsom
+4621,California,Sacramento,Foothill Farms
+30204,California,Sacramento,Freeport
+9148,California,Sacramento,Fruitridge Pocket
+4964,California,Sacramento,Galt
+8386,California,Sacramento,Gold River
+18096,California,Sacramento,Herald
+24804,California,Sacramento,Hood
+18952,California,Sacramento,Isleton
+7189,California,Sacramento,La Riviera
+6334,California,Sacramento,Lemon Hill
+10563,California,Sacramento,Mather
+17639,California,Sacramento,McClellan Park
+4311,California,Sacramento,North Highlands
+4659,California,Sacramento,Orangevale
+6184,California,Sacramento,Parkway
+3890,California,Sacramento,Rancho Cordova
+9368,California,Sacramento,Rancho Murieta
+6095,California,Sacramento,Rio Linda
+5308,California,Sacramento,Rosemont
+3280,California,Sacramento,Sacramento
+4943,California,Sacramento,Vineyard
+16123,California,Sacramento,Walnut Grove
+9416,California,Sacramento,Wilton
+13079,California,San Benito,Aromas
+4276,California,San Benito,Hollister
+12338,California,San Benito,Ridgemark
+13836,California,San Benito,San Juan Bautista
+20238,California,San Benito,Tres Pinos
+4694,California,San Bernardino,Adelanto
+3910,California,San Bernardino,Apple Valley
+21649,California,San Bernardino,Baker
+4833,California,San Bernardino,Barstow
+6568,California,San Bernardino,Big Bear City
+9678,California,San Bernardino,Big Bear Lake
+17124,California,San Bernardino,Big River
+5455,California,San Bernardino,Bloomington
+27829,California,San Bernardino,Bluewater
+3746,California,San Bernardino,Chino
+3809,California,San Bernardino,Chino Hills
+4168,California,San Bernardino,Colton
+7859,California,San Bernardino,Crestline
+3466,California,San Bernardino,Fontana
+7452,California,San Bernardino,Fort Irwin
+6755,California,San Bernardino,Grand Terrace
+3733,California,San Bernardino,Hesperia
+4153,California,San Bernardino,Highland
+12351,California,San Bernardino,Homestead Valley
+8368,California,San Bernardino,Joshua Tree
+7778,California,San Bernardino,Lake Arrowhead
+10720,California,San Bernardino,Lenwood
+5219,California,San Bernardino,Loma Linda
+9222,California,San Bernardino,Lucerne Valley
+20335,California,San Bernardino,Lytle Creek
+7476,California,San Bernardino,Mentone
+4476,California,San Bernardino,Montclair
+12033,California,San Bernardino,Morongo Valley
+10377,California,San Bernardino,Mountain View Acres
+6762,California,San Bernardino,Muscoy
+7844,California,San Bernardino,Needles
+23042,California,San Bernardino,Oak Glen
+7297,California,San Bernardino,Oak Hills
+3495,California,San Bernardino,Ontario
+6152,California,San Bernardino,Phelan
+8326,California,San Bernardino,Piñon Hills
+3507,California,San Bernardino,Rancho Cucamonga
+3933,California,San Bernardino,Redlands
+3697,California,San Bernardino,Rialto
+10783,California,San Bernardino,Running Springs
+11870,California,San Bernardino,San Antonio Heights
+3461,California,San Bernardino,San Bernardino
+14958,California,San Bernardino,Searles Valley
+9296,California,San Bernardino,Silver Lakes
+7979,California,San Bernardino,Spring Valley Lake
+5097,California,San Bernardino,Twentynine Palms
+3871,California,San Bernardino,Upland
+3378,California,San Bernardino,Victorville
+10876,California,San Bernardino,Wrightwood
+4180,California,San Bernardino,Yucaipa
+5174,California,San Bernardino,Yucca Valley
+6310,California,San Diego,Alpine
+6727,California,San Diego,Bonita
+10368,California,San Diego,Bonsall
+13739,California,San Diego,Borrego Springs
+6055,California,San Diego,Bostonia
+23380,California,San Diego,Boulevard
+8468,California,San Diego,Camp Pendleton North
+6915,California,San Diego,Camp Pendleton South
+11551,California,San Diego,Campo
+3645,California,San Diego,Carlsbad
+5675,California,San Diego,Casa de Oro-Mount Helix
+3415,California,San Diego,Chula Vista
+5297,California,San Diego,Coronado
+12520,California,San Diego,Crest
+10505,California,San Diego,Del Mar
+15361,California,San Diego,Descanso
+3700,California,San Diego,El Cajon
+4038,California,San Diego,Encinitas
+3548,California,San Diego,Escondido
+9138,California,San Diego,Eucalyptus Hills
+13877,California,San Diego,Fairbanks Ranch
+4783,California,San Diego,Fallbrook
+11427,California,San Diego,Granite Hills
+10683,California,San Diego,Harbison Canyon
+11472,California,San Diego,Hidden Meadows
+4998,California,San Diego,Imperial Beach
+24896,California,San Diego,Jacumba
+9550,California,San Diego,Jamul
+17778,California,San Diego,Julian
+4094,California,San Diego,La Mesa
+4540,California,San Diego,La Presa
+10116,California,San Diego,Lake San Marcos
+5449,California,San Diego,Lakeside
+5050,California,San Diego,Lemon Grove
+29034,California,San Diego,Mount Laguna
+4058,California,San Diego,National City
+3512,California,San Diego,Oceanside
+17846,California,San Diego,Pala
+15666,California,San Diego,Pine Valley
+18981,California,San Diego,Potrero
+4265,California,San Diego,Poway
+13283,California,San Diego,Rainbow
+5495,California,San Diego,Ramona
+5461,California,San Diego,Rancho San Diego
+13016,California,San Diego,Rancho Santa Fe
+3268,California,San Diego,San Diego
+7272,California,San Diego,San Diego Country Estates
+3729,California,San Diego,San Marcos
+4112,California,San Diego,Santee
+6608,California,San Diego,Solana Beach
+4784,California,San Diego,Spring Valley
+7134,California,San Diego,Valley Center
+3704,California,San Diego,Vista
+5315,California,San Diego,Winter Gardens
+3266,California,San Francisco,San Francisco
+26894,California,San Joaquin,Acampo
+7977,California,San Joaquin,August
+12647,California,San Joaquin,Collierville
+7425,California,San Joaquin,Country Club
+12753,California,San Joaquin,Dogtown
+8358,California,San Joaquin,Escalon
+27622,California,San Joaquin,Farmington
+11030,California,San Joaquin,French Camp
+7427,California,San Joaquin,Garden Acres
+11619,California,San Joaquin,Kennedy
+5218,California,San Joaquin,Lathrop
+9991,California,San Joaquin,Lincoln Village
+15415,California,San Joaquin,Linden
+11396,California,San Joaquin,Lockeford
+3894,California,San Joaquin,Lodi
+3698,California,San Joaquin,Manteca
+11913,California,San Joaquin,Morada
+5875,California,San Joaquin,Mountain House
+20783,California,San Joaquin,Peters
+6092,California,San Joaquin,Ripon
+3365,California,San Joaquin,Stockton
+17350,California,San Joaquin,Taft Mosswood
+22808,California,San Joaquin,Terminous
+17705,California,San Joaquin,Thornton
+3717,California,San Joaquin,Tracy
+26624,California,San Joaquin,Victor
+20360,California,San Joaquin,Waterloo
+11322,California,San Joaquin,Woodbridge
+4176,California,San Luis Obispo,Arroyo Grande
+4860,California,San Luis Obispo,Atascadero
+16326,California,San Luis Obispo,Avila Beach
+18903,California,San Luis Obispo,Blacklake
+16784,California,San Luis Obispo,Callender
+9429,California,San Luis Obispo,Cambria
+12775,California,San Luis Obispo,Cayucos
+31105,California,San Luis Obispo,Creston
+27615,California,San Luis Obispo,Edna
+3942,California,San Luis Obispo,El Paso de Robles
+23411,California,San Luis Obispo,Garden Farms
+6569,California,San Luis Obispo,Grover Beach
+12183,California,San Luis Obispo,Lake Nacimiento
+21805,California,San Luis Obispo,Los Berros
+6065,California,San Luis Obispo,Los Osos
+15124,California,San Luis Obispo,Los Ranchos
+7263,California,San Luis Obispo,Morro Bay
+5930,California,San Luis Obispo,Nipomo
+24212,California,San Luis Obispo,Oak Shores
+8410,California,San Luis Obispo,Oceano
+8092,California,San Luis Obispo,Pismo Beach
+4045,California,San Luis Obispo,San Luis Obispo
+20490,California,San Luis Obispo,San Simeon
+17266,California,San Luis Obispo,Santa Margarita
+17439,California,San Luis Obispo,Shandon
+8244,California,San Luis Obispo,Templeton
+26449,California,San Luis Obispo,Whitley Gardens
+14025,California,San Luis Obispo,Woodlands
+8590,California,San Mateo,Atherton
+5039,California,San Mateo,Belmont
+10147,California,San Mateo,Brisbane
+9756,California,San Mateo,Broadmoor
+4822,California,San Mateo,Burlingame
+15627,California,San Mateo,Colma
+3688,California,San Mateo,Daly City
+4900,California,San Mateo,East Palo Alto
+9161,California,San Mateo,El Granada
+10109,California,San Mateo,Emerald Lake Hills
+4703,California,San Mateo,Foster City
+5303,California,San Mateo,Half Moon Bay
+7045,California,San Mateo,Hillsborough
+18160,California,San Mateo,La Honda
+15231,California,San Mateo,Ladera
+27618,California,San Mateo,Loma Mar
+4667,California,San Mateo,Menlo Park
+5403,California,San Mateo,Millbrae
+13024,California,San Mateo,Montara
+11296,California,San Mateo,Moss Beach
+6384,California,San Mateo,North Fair Oaks
+4529,California,San Mateo,Pacifica
+26550,California,San Mateo,Pescadero
+10247,California,San Mateo,Portola Valley
+3794,California,San Mateo,Redwood City
+4401,California,San Mateo,San Bruno
+4855,California,San Mateo,San Carlos
+3694,California,San Mateo,San Mateo
+3975,California,San Mateo,South San Francisco
+10675,California,San Mateo,West Menlo Park
+9542,California,San Mateo,Woodside
+21794,California,Santa Barbara,Ballard
+9807,California,Santa Barbara,Buellton
+6586,California,Santa Barbara,Carpinteria
+28304,California,Santa Barbara,Casmalia
+31403,California,Santa Barbara,Cuyama
+27173,California,Santa Barbara,Garey
+4818,California,Santa Barbara,Goleta
+8277,California,Santa Barbara,Guadalupe
+4984,California,Santa Barbara,Isla Vista
+4212,California,Santa Barbara,Lompoc
+15141,California,Santa Barbara,Los Alamos
+19361,California,Santa Barbara,Los Olivos
+13018,California,Santa Barbara,Mission Canyon
+11029,California,Santa Barbara,Mission Hills
+8058,California,Santa Barbara,Montecito
+20454,California,Santa Barbara,New Cuyama
+4808,California,Santa Barbara,Orcutt
+3474,California,Santa Barbara,Santa Barbara
+3575,California,Santa Barbara,Santa Maria
+10275,California,Santa Barbara,Santa Ynez
+27687,California,Santa Barbara,Sisquoc
+6064,California,Santa Barbara,Solvang
+18951,California,Santa Barbara,Summerland
+14830,California,Santa Barbara,Toro Canyon
+11577,California,Santa Barbara,Vandenberg AFB
+8115,California,Santa Barbara,Vandenberg Village
+6997,California,Santa Clara,Alum Rock
+11776,California,Santa Clara,Cambrian Park
+4428,California,Santa Clara,Campbell
+4093,California,Santa Clara,Cupertino
+9085,California,Santa Clara,East Foothills
+18150,California,Santa Clara,Fruitdale
+3628,California,Santa Clara,Gilroy
+12670,California,Santa Clara,Lexington Hills
+4858,California,Santa Clara,Los Altos
+7970,California,Santa Clara,Los Altos Hills
+4853,California,Santa Clara,Los Gatos
+11605,California,Santa Clara,Loyola
+3805,California,Santa Clara,Milpitas
+11529,California,Santa Clara,Monte Sereno
+4341,California,Santa Clara,Morgan Hill
+3815,California,Santa Clara,Mountain View
+4006,California,Santa Clara,Palo Alto
+3282,California,Santa Clara,San Jose
+8749,California,Santa Clara,San Martin
+3599,California,Santa Clara,Santa Clara
+4857,California,Santa Clara,Saratoga
+6102,California,Santa Clara,Stanford
+3546,California,Santa Clara,Sunnyvale
+11920,California,Santa Cruz,Amesti
+8988,California,Santa Cruz,Aptos
+13506,California,Santa Cruz,Aptos Hills-Larkin Valley
+8711,California,Santa Cruz,Ben Lomond
+12024,California,Santa Cruz,Bonny Doon
+9749,California,Santa Cruz,Boulder Creek
+14231,California,Santa Cruz,Brookdale
+7414,California,Santa Cruz,Capitola
+13693,California,Santa Cruz,Corralitos
+23904,California,Santa Cruz,Davenport
+12110,California,Santa Cruz,Day Valley
+11257,California,Santa Cruz,Felton
+11095,California,Santa Cruz,Freedom
+8261,California,Santa Cruz,Interlaken
+12681,California,Santa Cruz,La Selva Beach
+6030,California,Santa Cruz,Live Oak
+17694,California,Santa Cruz,Lompico
+16569,California,Santa Cruz,Mount Hermon
+25288,California,Santa Cruz,Pajaro Dunes
+21564,California,Santa Cruz,Paradise Park
+16823,California,Santa Cruz,Pasatiempo
+9172,California,Santa Cruz,Pleasure Point
+7516,California,Santa Cruz,Rio del Mar
+3509,California,Santa Cruz,Santa Cruz
+6955,California,Santa Cruz,Scotts Valley
+11735,California,Santa Cruz,Seacliff
+7181,California,Santa Cruz,Soquel
+9743,California,Santa Cruz,Twin Lakes
+3868,California,Santa Cruz,Watsonville
+19335,California,Santa Cruz,Zayante
+7248,California,Shasta,Anderson
+13157,California,Shasta,Bella Vista
+28609,California,Shasta,Big Bend
+10899,California,Shasta,Burney
+25976,California,Shasta,Cassel
+11799,California,Shasta,Cottonwood
+25483,California,Shasta,Fall River Mills
+23009,California,Shasta,French Gulch
+28708,California,Shasta,Hat Creek
+25219,California,Shasta,Keswick
+20358,California,Shasta,Lakehead
+22815,California,Shasta,McArthur
+20292,California,Shasta,Millville
+28284,California,Shasta,Montgomery Creek
+18225,California,Shasta,Mountain Gate
+31141,California,Shasta,Old Station
+17155,California,Shasta,Palo Cedro
+3617,California,Shasta,Redding
+29757,California,Shasta,Round Mountain
+15344,California,Shasta,Shasta
+7307,California,Shasta,Shasta Lake
+13520,California,Shasta,Shingletown
+30048,California,Sierra,Alleghany
+27361,California,Sierra,Calpine
+27953,California,Sierra,Downieville
+31229,California,Sierra,Goodyears Bar
+20089,California,Sierra,Loyalton
+27925,California,Sierra,Pike
+29823,California,Sierra,Sattley
+25143,California,Sierra,Sierra Brooks
+28783,California,Sierra,Sierra City
+29855,California,Sierra,Sierraville
+27224,California,Sierra,Verdi
+29678,California,Siskiyou,Carrick
+18589,California,Siskiyou,Dorris
+15376,California,Siskiyou,Dunsmuir
+31018,California,Siskiyou,Edgewood
+19965,California,Siskiyou,Etna
+20168,California,Siskiyou,Fort Jones
+30600,California,Siskiyou,Gazelle
+26310,California,Siskiyou,Greenview
+23492,California,Siskiyou,Grenada
+18956,California,Siskiyou,Happy Camp
+26719,California,Siskiyou,Hornbrook
+30627,California,Siskiyou,Macdoel
+17772,California,Siskiyou,McCloud
+15990,California,Siskiyou,Montague
+30180,California,Siskiyou,Mount Hebron
+8416,California,Siskiyou,Mount Shasta
+31230,California,Siskiyou,Tennant
+18027,California,Siskiyou,Tulelake
+12592,California,Siskiyou,Weed
+8396,California,Siskiyou,Yreka
+16045,California,Solano,Allendale
+4950,California,Solano,Benicia
+5564,California,Solano,Dixon
+26036,California,Solano,Elmira
+3551,California,Solano,Fairfield
+15682,California,Solano,Green Valley
+12215,California,Solano,Hartley
+7498,California,Solano,Rio Vista
+4877,California,Solano,Suisun City
+3707,California,Solano,Vacaville
+3515,California,Solano,Vallejo
+25148,California,Sonoma,Bloomfield
+18621,California,Sonoma,Bodega
+20403,California,Sonoma,Bodega Bay
+8299,California,Sonoma,Boyes Hot Springs
+24348,California,Sonoma,Cazadero
+7674,California,Sonoma,Cloverdale
+8443,California,Sonoma,Cotati
+11719,California,Sonoma,El Verano
+15888,California,Sonoma,Eldridge
+10448,California,Sonoma,Fetters Hot Springs-Agua Caliente
+11114,California,Sonoma,Forestville
+20499,California,Sonoma,Fulton
+19578,California,Sonoma,Geyserville
+19836,California,Sonoma,Glen Ellen
+14362,California,Sonoma,Graton
+9871,California,Sonoma,Guerneville
+6937,California,Sonoma,Healdsburg
+31167,California,Sonoma,Jenner
+19980,California,Sonoma,Kenwood
+8026,California,Sonoma,Larkfield-Wikiup
+18035,California,Sonoma,Monte Rio
+19120,California,Sonoma,Occidental
+12453,California,Sonoma,Penngrove
+3987,California,Sonoma,Petaluma
+4390,California,Sonoma,Rohnert Park
+31356,California,Sonoma,Salmon Creek
+3387,California,Sonoma,Santa Rosa
+17210,California,Sonoma,Sea Ranch
+8317,California,Sonoma,Sebastopol
+29990,California,Sonoma,Sereno del Mar
+4710,California,Sonoma,Sonoma
+15183,California,Sonoma,Temelec
+28398,California,Sonoma,Timber Cove
+31071,California,Sonoma,Valley Ford
+5017,California,Sonoma,Windsor
+15661,California,Stanislaus,Airport
+9769,California,Stanislaus,Bret Harte
+11118,California,Stanislaus,Bystrom
+4281,California,Stanislaus,Ceres
+22147,California,Stanislaus,Cowan
+24932,California,Stanislaus,Crows Landing
+15278,California,Stanislaus,Del Rio
+9810,California,Stanislaus,Denair
+18642,California,Stanislaus,Diablo Grande
+12397,California,Stanislaus,East Oakdale
+10807,California,Stanislaus,Empire
+16124,California,Stanislaus,Grayson
+20009,California,Stanislaus,Hickman
+8375,California,Stanislaus,Hughson
+8878,California,Stanislaus,Keyes
+3371,California,Stanislaus,Modesto
+25518,California,Stanislaus,Monterey Park Tract
+6950,California,Stanislaus,Newman
+5310,California,Stanislaus,Oakdale
+17667,California,Stanislaus,Parklawn
+5352,California,Stanislaus,Patterson
+5188,California,Stanislaus,Riverbank
+17703,California,Stanislaus,Riverdale Park
+14013,California,Stanislaus,Rouse
+6405,California,Stanislaus,Salida
+3683,California,Stanislaus,Turlock
+27298,California,Stanislaus,Valley Home
+7519,California,Stanislaus,Waterford
+9358,California,Stanislaus,West Modesto
+18086,California,Stanislaus,Westley
+25500,California,Sutter,East Nicolaus
+23866,California,Sutter,Meridian
+28205,California,Sutter,Nicolaus
+24187,California,Sutter,Rio Oso
+23183,California,Sutter,Robbins
+12152,California,Sutter,Sutter
+25840,California,Sutter,Trowbridge
+3622,California,Sutter,Yuba City
+22145,California,Tehama,Bend
+7907,California,Tehama,Corning
+28021,California,Tehama,Flournoy
+17171,California,Tehama,Gerber
+11662,California,Tehama,Lake California
+14767,California,Tehama,Los Molinos
+24184,California,Tehama,Manton
+24039,California,Tehama,Mineral
+29422,California,Tehama,Paskenta
+30047,California,Tehama,Paynes Creek
+27374,California,Tehama,Proberta
+14988,California,Tehama,Rancho Tehama Reserve
+5755,California,Tehama,Red Bluff
+25012,California,Tehama,Richfield
+23833,California,Tehama,Tehama
+26291,California,Tehama,Vina
+25019,California,Trinity,Burnt Ranch
+27044,California,Trinity,Coffee Creek
+20771,California,Trinity,Douglas City
+12618,California,Trinity,Hayfork
+29066,California,Trinity,Hyampom
+20257,California,Trinity,Junction City
+16061,California,Trinity,Lewiston
+22666,California,Trinity,Mad River
+27664,California,Trinity,Ruth
+28058,California,Trinity,Trinity Center
+25867,California,Trinity,Trinity Village
+11930,California,Trinity,Weaverville
+21273,California,Tulare,Allensworth
+17144,California,Tulare,Alpaugh
+30805,California,Tulare,California Hot Springs
+9725,California,Tulare,Cutler
+19992,California,Tulare,Delft Colony
+5223,California,Tulare,Dinuba
+20667,California,Tulare,Ducor
+7880,California,Tulare,Earlimart
+19312,California,Tulare,East Orosi
+9047,California,Tulare,East Porterville
+18878,California,Tulare,East Tulare Villa
+30516,California,Tulare,El Rancho
+7282,California,Tulare,Exeter
+7222,California,Tulare,Farmersville
+11703,California,Tulare,Goshen
+10629,California,Tulare,Ivanhoe
+26271,California,Tulare,Lemon Cove
+25253,California,Tulare,Lindcove
+6044,California,Tulare,Lindsay
+18368,California,Tulare,Linnell Camp
+14955,California,Tulare,London
+17194,California,Tulare,Matheny
+30795,California,Tulare,McClenney Tract
+25302,California,Tulare,Monson
+8031,California,Tulare,Orosi
+30744,California,Tulare,Panorama Heights
+13874,California,Tulare,Patterson Tract
+30980,California,Tulare,Pierpoint
+28264,California,Tulare,Pine Flat
+11635,California,Tulare,Pixley
+18656,California,Tulare,Plainview
+31382,California,Tulare,Ponderosa
+13480,California,Tulare,Poplar-Cotton Center
+3869,California,Tulare,Porterville
+31582,California,Tulare,Poso Park
+13371,California,Tulare,Richgrove
+29434,California,Tulare,Rodriguez Camp
+31003,California,Tulare,Sequoia Crest
+20876,California,Tulare,Seville
+18106,California,Tulare,Springville
+12111,California,Tulare,Strathmore
+31511,California,Tulare,Sugarloaf Village
+17866,California,Tulare,Sultana
+11887,California,Tulare,Terra Bella
+18698,California,Tulare,Teviston
+13168,California,Tulare,Three Rivers
+11805,California,Tulare,Tipton
+23620,California,Tulare,Tonyville
+27736,California,Tulare,Tooleville
+19660,California,Tulare,Traver
+4003,California,Tulare,Tulare
+3446,California,Tulare,Visalia
+28182,California,Tulare,Waukena
+23080,California,Tulare,West Goshen
+8237,California,Tulare,Woodlake
+14720,California,Tulare,Woodville
+21940,California,Tulare,Yettem
+17790,California,Tuolumne,Cedar Ridge
+27571,California,Tuolumne,Chinese Camp
+13559,California,Tuolumne,Columbia
+13446,California,Tuolumne,East Sonora
+25980,California,Tuolumne,Groveland
+12012,California,Tuolumne,Jamestown
+29425,California,Tuolumne,Long Barn
+18708,California,Tuolumne,Mi-Wuk Village
+11502,California,Tuolumne,Mono Vista
+10315,California,Tuolumne,Phoenix Lake
+12503,California,Tuolumne,Pine Mountain Lake
+27686,California,Tuolumne,Sierra Village
+4960,California,Tuolumne,Sonora
+13584,California,Tuolumne,Soulsbyville
+15314,California,Tuolumne,Tuolumne City
+17859,California,Tuolumne,Tuttletown
+13383,California,Tuolumne,Twain Harte
+13821,California,Ventura,Bell Canyon
+3873,California,Ventura,Camarillo
+11600,California,Ventura,Casa Conejo
+12305,California,Ventura,Channel Islands Beach
+9045,California,Ventura,El Rio
+6158,California,Ventura,Fillmore
+15000,California,Ventura,Lake Sherwood
+11338,California,Ventura,Meiners Oaks
+8827,California,Ventura,Mira Monte
+4600,California,Ventura,Moorpark
+6504,California,Ventura,Oak Park
+10214,California,Ventura,Oak View
+8417,California,Ventura,Ojai
+3369,California,Ventura,Oxnard
+14603,California,Ventura,Piru
+5448,California,Ventura,Port Hueneme
+3677,California,Ventura,San Buenaventura
+4852,California,Ventura,Santa Paula
+12137,California,Ventura,Santa Rosa Valley
+18322,California,Ventura,Santa Susana
+16659,California,Ventura,Saticoy
+3606,California,Ventura,Simi Valley
+3464,California,Ventura,Thousand Oaks
+22682,California,Yolo,Clarksburg
+3872,California,Yolo,Davis
+15749,California,Yolo,Dunnigan
+11754,California,Yolo,Esparto
+26166,California,Yolo,Guinda
+17691,California,Yolo,Knights Landing
+21216,California,Yolo,Madison
+15709,California,Yolo,Monument Hills
+8497,California,Yolo,University of California-Davis
+4188,California,Yolo,West Sacramento
+8257,California,Yolo,Winters
+4071,California,Yolo,Woodland
+27133,California,Yolo,Yolo
+17770,California,Yuba,Beale AFB
+24362,California,Yuba,Camptonville
+19963,California,Yuba,Challenge-Brownsville
+24233,California,Yuba,Dobbins
+5617,California,Yuba,Linda
+11896,California,Yuba,Loma Rica
+6777,California,Yuba,Marysville
+6567,California,Yuba,Olivehurst
+8373,California,Yuba,Plumas Lake
+25603,California,Yuba,Smartsville
+10989,California,Yuba,Wheatland

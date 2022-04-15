@@ -86,9 +86,6 @@ to reorganize the data in this file to include a race attribute because the orig
 contained different segments of rows dedicated to each race. We used Table HH-4 for the second link to get average 
 household members by year. 
 
-
-
-
 END:
 During our process we slimmed down our database tables. We realized some were pretty unreasonable to have. The ones we eliminated were:
 Food, NutritionValue, FoodInitiativesCreated, FoodConsumption. We eliminated Food, NutritionValue, and FoodConsumption since these would not really add anything to the rest
