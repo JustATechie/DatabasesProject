@@ -311,31 +311,31 @@ CREATE TABLE SchoolFoodPrograms(
 /* Load data into tables from files. */
 
 /* Location Data */
-LOAD DATA LOCAL INFILE './DatabasesProject/data/final/Location.csv' INTO TABLE Location FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE './data/final/Location.txt' INTO TABLE Location FIELDS TERMINATED BY ',';
 
 /* Data Type */
-LOAD DATA LOCAL INFILE './DatabasesProject/data/final/DataType.csv' INTO TABLE DataType FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE './data/final/DataType.txt' INTO TABLE DataType FIELDS TERMINATED BY ',';
 
 /* Food Legislation Data */
-#LOAD DATA LOCAL INFILE './DatabasesProject/data/final/FoodLegislation.csv' INTO TABLE FoodLegislation FIELDS TERMINATED BY ',';
+#LOAD DATA LOCAL INFILE '.data/final/FoodLegislation.txt' INTO TABLE FoodLegislation FIELDS TERMINATED BY ',';
 
 /* population Stats Data */
-#LOAD DATA LOCAL INFILE './DatabasesProject/data/final/PopulationStats.csv' INTO TABLE PopulationStats FIELDS TERMINATED BY ',';
+#LOAD DATA LOCAL INFILE './data/final/PopulationStats.txt' INTO TABLE PopulationStats FIELDS TERMINATED BY ',';
 
 /* Consumption Stats Data */
-#LOAD DATA LOCAL INFILE './DatabasesProject/data/final/ConsumptionStats.csv' INTO TABLE ConsumptionStats FIELDS TERMINATED BY ',';
+#LOAD DATA LOCAL INFILE './data/final/ConsumptionStats.txt' INTO TABLE ConsumptionStats FIELDS TERMINATED BY ',';
 
 /* Metabolic Disease Data */
-#LOAD DATA LOCAL INFILE './DatabasesProject/data/final/MetabolicDisease.csv' INTO TABLE MetabolicDisease FIELDS TERMINATED BY ',';
+#LOAD DATA LOCAL INFILE './data/final/MetabolicDisease.txt' INTO TABLE MetabolicDisease FIELDS TERMINATED BY ',';
 
 /* Food Assistance Data */
-#LOAD DATA LOCAL INFILE './DatabasesProject/data/final/FoodAssistance.csv' INTO TABLE FoodAssistance FIELDS TERMINATED BY ',';
+#LOAD DATA LOCAL INFILE './data/final/FoodAssistance.txt' INTO TABLE FoodAssistance FIELDS TERMINATED BY ',';
 
 /* School Lunch Program Data */
-#LOAD DATA LOCAL INFILE './DatabasesProject/data/final/SchoolFoodPrograms.csv' INTO TABLE SchoolFoodPrograms FIELDS TERMINATED BY ',';
+#LOAD DATA LOCAL INFILE './data/final/SchoolFoodPrograms.txt' INTO TABLE SchoolFoodPrograms FIELDS TERMINATED BY ',';
 
 /* Average Household Data */
-LOAD DATA LOCAL INFILE 'home/justatechie/IdeaProjects/DatabasesProject/data/final/AvgHousehold.txt' INTO TABLE AvgHousehold FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE '/data/final/AvgHousehold.txt' INTO TABLE AvgHousehold FIELDS TERMINATED BY ',';
 
 /* Lock tables that should be read-only (should be all tables eventually to prevent data deletion.) */
 /*LOCK TABLES DataType READ;*/
