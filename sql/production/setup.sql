@@ -317,22 +317,22 @@ LOAD DATA LOCAL INFILE './data/final/Location.txt' INTO TABLE Location FIELDS TE
 LOAD DATA LOCAL INFILE './data/final/DataType.txt' INTO TABLE DataType FIELDS TERMINATED BY ',';
 
 /* Food Legislation Data */
-#LOAD DATA LOCAL INFILE '.data/final/FoodLegislation.txt' INTO TABLE FoodLegislation FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE '.data/final/FoodLegislation.txt' INTO TABLE FoodLegislation FIELDS TERMINATED BY ',';
 
 /* population Stats Data */
-#LOAD DATA LOCAL INFILE './data/final/PopulationStats.txt' INTO TABLE PopulationStats FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE './data/final/PopulationStats.txt' INTO TABLE PopulationStats FIELDS TERMINATED BY ',';
 
 /* Consumption Stats Data */
-#LOAD DATA LOCAL INFILE './data/final/ConsumptionStats.txt' INTO TABLE ConsumptionStats FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE './data/final/ConsumptionStats.txt' INTO TABLE ConsumptionStats FIELDS TERMINATED BY ',';
 
 /* Metabolic Disease Data */
-#LOAD DATA LOCAL INFILE './data/final/MetabolicDisease.txt' INTO TABLE MetabolicDisease FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE './data/final/MetabolicDisease.txt' INTO TABLE MetabolicDisease FIELDS TERMINATED BY ',';
 
 /* Food Assistance Data */
-#LOAD DATA LOCAL INFILE './data/final/FoodAssistance.txt' INTO TABLE FoodAssistance FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE './data/final/FoodAssistance.txt' INTO TABLE FoodAssistance FIELDS TERMINATED BY ',';
 
 /* School Lunch Program Data */
-#LOAD DATA LOCAL INFILE './data/final/SchoolFoodPrograms.txt' INTO TABLE SchoolFoodPrograms FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE './data/final/SchoolFoodPrograms.txt' INTO TABLE SchoolFoodPrograms FIELDS TERMINATED BY ',';
 
 /* Average Household Data */
 LOAD DATA LOCAL INFILE './data/final/AvgHousehold.txt' INTO TABLE AvgHousehold FIELDS TERMINATED BY ',';
