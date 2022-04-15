@@ -4,6 +4,7 @@ Partners:
 Louie DiBernardo (LDIBERN1)
 Sanddhya Jayabalan (SJAYABA1)
 
+CONCERNS/WRAP-UP:
 We have gone into more depth about these concerns/issues in our process.txt files. We had some trouble 
 finding all the original data we hoped for. For example, we could not find breakdowns of crime rate or 
 literacy rate by location. We also had some trouble finding some average household stats like the number of
@@ -49,3 +50,17 @@ This contains all data we have gathered. Sadly, this will fail in dbase due to u
 If you run these scripts on a local mariadb instance using the root account, all the scripts will work,
 and all data will be populated. We explain further in the section about this.
 
+If you do plan to run the full script on your local machine, you'll need to adjust the paths in the setup
+sql scripts for the data files to be their absolute paths in your system. An example of this is commented
+at the bottom of the full setup file. You'll also need to use the correct path for the script files when
+you run them. We used an IDE to run our scripts so we didnt need to use cli to run them.
+
+WHERE TO FIND FILES:
+Full data files can be found under: /DatabasesProject/data/final/
+
+Small data files can be found under: /DatabasesProject/data/final-small/
+
+SQL scripts can be found under: /DatabasesProject/sql/production/
+
+Phase C documents can be found under: /DatabasesProject/docs/PhaseC/
+These include the process.txt file, and a couple extra files we used for planning you can see as well.

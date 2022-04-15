@@ -337,6 +337,11 @@ LOAD DATA LOCAL INFILE './data/final/SchoolFoodPrograms.txt' INTO TABLE SchoolFo
 /* Average Household Data */
 LOAD DATA LOCAL INFILE './data/final/AvgHousehold.txt' INTO TABLE AvgHousehold FIELDS TERMINATED BY ',';
 
+/********/
+
+/* Data Type - Local Example */
+#LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/final/DataType.txt' INTO TABLE DataType FIELDS TERMINATED BY ',';
+
 /* Lock tables that should be read-only (should be all tables eventually to prevent data deletion.) */
 /*LOCK TABLES DataType READ;*/
 
