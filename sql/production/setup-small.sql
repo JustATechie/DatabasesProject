@@ -315,7 +315,7 @@ LOAD DATA LOCAL INFILE './data/final-small/DataType-small.txt' INTO TABLE DataTy
 LOAD DATA LOCAL INFILE './data/final-small/FoodLegislation-small.txt' INTO TABLE FoodLegislation FIELDS TERMINATED BY ',';
 
 /* population Stats Data */
-LOAD DATA LOCAL INFILE './data/final-small/PopulationStats-small.' INTO TABLE PopulationStats FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE './data/final-small/PopulationStats-small.txt' INTO TABLE PopulationStats FIELDS TERMINATED BY ',';
 
 /* Consumption Stats Data */
 LOAD DATA LOCAL INFILE './data/final-small/ConsumptionStats-small.txt' INTO TABLE ConsumptionStats FIELDS TERMINATED BY ',';
