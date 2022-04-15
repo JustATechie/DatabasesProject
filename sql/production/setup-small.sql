@@ -326,13 +326,13 @@ LOAD DATA LOCAL INFILE './data/final-small/PopulationStats-small.txt' INTO TABLE
 LOAD DATA LOCAL INFILE './data/final-small/ConsumptionStats-small.txt' INTO TABLE ConsumptionStats FIELDS TERMINATED BY ',';
 
 /* Metabolic Disease Data */
-#LOAD DATA LOCAL INFILE './DatabasesProject/data/final/MetabolicDisease.csv' INTO TABLE MetabolicDisease FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE './DatabasesProject/data/final/MetabolicDisease-small.txt' INTO TABLE MetabolicDisease FIELDS TERMINATED BY ',';
 
 /* Food Assistance Data */
 LOAD DATA LOCAL INFILE './data/final-small/FoodAssistance-small.txt' INTO TABLE FoodAssistance FIELDS TERMINATED BY ',';
 
 /* School Lunch Program Data */
-#LOAD DATA LOCAL INFILE './DatabasesProject/data/final/SchoolFoodPrograms.csv' INTO TABLE SchoolFoodPrograms FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE './data/final-small/SchoolFoodPrograms-small.txt' INTO TABLE SchoolFoodPrograms FIELDS TERMINATED BY ',';
 
 /* Average Household Data */
 LOAD DATA LOCAL INFILE './data/final-small/AvgHousehold-small.txt' INTO TABLE AvgHousehold FIELDS TERMINATED BY ',';
