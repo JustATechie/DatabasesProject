@@ -33,7 +33,7 @@ Order by Year;
 
 /**
   * NEW QUESTION:
-  * The state with the highest sugar intake, how many residents are enrolled in food assistance programs?
+  * The state with the highest sugar intake, how many residents are enrolled in food assistance programs? (Specifically in CA)
   *
   *
   */
@@ -52,6 +52,8 @@ from ConsumptionStats left join Location on ConsumptionStats.LocationID = Locati
   * enrolled in school programs? (Specifically in CA)
   *
   */
+
+
 
 /**
 * How many students with childhood metabolic disease are enrolled in school lunch assistance programs? - (Specifically in CA) - Adapted from question #18 from PhaseA
