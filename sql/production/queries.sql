@@ -41,10 +41,11 @@ select ConsumptionStats.Year as 'Year with Maximum Sugar Intake', MAX(SugarIntak
        (select SUM(numEnrolled) as 'EnrollmentNumbers' from FoodAssistance left join Location on FoodAssistance.LocationID = Location.LocationID and Location.State='California' where Year=ConsumptionStats.Year) as numEnrolled
 from ConsumptionStats left join Location on ConsumptionStats.LocationID = Location.LocationID and Location.State='California';
 
-# we could try to modify the following query to select the state with the highest sugar intake.
-# select Location.State as 'State', ConsumptionStats.Year as 'Year with Maximum Sugar Intake', MAX(SugarIntake) as 'Maximum Sugar Intake',
-#        (select SUM(numEnrolled) as 'EnrollmentNumbers' from FoodAssistance left join Location on FoodAssistance.LocationID = Location.LocationID where Location.State=Location.State and Year=ConsumptionStats.Year) as numEnrolled
-# from ConsumptionStats left join Location on ConsumptionStats.LocationID = Location.LocationID;
+# We can use the following query for this same question to select the state with the highest sugar intake.
+select Year, State, Max(totalSugar) as 'Sugar intake this year',
+       (select SUM(numEnrolled) from FoodAssistance left join Location on FoodAssistance.LocationID = Location.LocationID where year=sugarIntake.Year and Location.State=sugarIntake.State group by year) as 'Number of people enrolled this year'
+from (select Year, State, SUM(SugarIntake) as 'totalSugar' from ConsumptionStats left join Location on ConsumptionStats.LocationID = Location.LocationID where (Gender='Female' or Gender='Male') group by Year order by totalSugar DESC) as sugarIntake;
+
 
 
 
