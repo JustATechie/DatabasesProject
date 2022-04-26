@@ -31,3 +31,29 @@ from MetabolicDisease left join Location on Location.State='California' and Meta
 Order by Year;
 
 
+/**
+  * NEW QUESTION:
+  * The state with the highest sugar intake, how many residents are enrolled in food assistance programs?
+  *
+  *
+  */
+
+select ConsumptionStats.Year as 'Year with Maximum Sugar Intake', MAX(SugarIntake) as 'Maximum Sugar Intake',
+       (select SUM(numEnrolled) as 'EnrollmentNumbers' from FoodAssistance left join Location on FoodAssistance.LocationID = Location.LocationID and Location.State='California' where Year=ConsumptionStats.Year) as numEnrolled
+from ConsumptionStats left join Location on ConsumptionStats.LocationID = Location.LocationID and Location.State='California';
+
+
+
+
+
+/**
+  * NEW QUESTION:
+  * Does the state with the highest number of people enrolled in food assistance programs also have the highest number of students
+  * enrolled in school programs? (Specifically in CA)
+  *
+  */
+
+/**
+* How many students with childhood metabolic disease are enrolled in school lunch assistance programs? - (Specifically in CA) - Adapted from question #18 from PhaseA
+*
+*/
