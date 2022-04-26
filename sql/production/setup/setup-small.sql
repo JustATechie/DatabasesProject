@@ -147,8 +147,8 @@ CREATE TABLE MetabolicDisease(
                                          ON UPDATE RESTRICT,
 
                                  Year SMALLINT(4) UNSIGNED NOT NULL,
-                                 AgeRange TEXT NOT NULL,
                                  Gender ENUM('Female', 'Male', 'All') NOT NULL,
+                                 AgeRange TEXT NOT NULL,
                                  HeartDisease DECIMAL(5,2) UNSIGNED,
                                  Diabetes DECIMAL(5,2) UNSIGNED,
                                  Obesity DECIMAL(5,2) UNSIGNED,
