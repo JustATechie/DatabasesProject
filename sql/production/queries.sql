@@ -10,8 +10,7 @@
 
 select Distinct Location.State, ConsumptionStats.Year, ConsumptionStats.AgeRange, ConsumptionStats.Gender, SugarIntake, MetabolicDisease.HeartDisease
 from Location, ConsumptionStats left join MetabolicDisease on MetabolicDisease.Year=ConsumptionStats.Year
-where ConsumptionStats.AgeRange='18+' and MetabolicDisease.AgeRange='Ages 35-64 years'
-and ConsumptionStats.Gender=MetabolicDisease.Gender and Location.LocationID=MetabolicDisease.LocationID and Location.State='California';
+where ConsumptionStats.AgeRange='18+' and MetabolicDisease.AgeRange='Ages 35-64 years' and ConsumptionStats.Gender=MetabolicDisease.Gender and Location.LocationID=MetabolicDisease.LocationID and Location.State='California';
 
 /**
   * Which state has worked to pass the most legislative bills related to food, health and nutrition and how hasthe rates of metabolic disease changed in this state over the years? (Specifically in CA) - Adapted question #10 from PhaseA
@@ -38,16 +37,22 @@ Order by Year;
   */
 
 select ConsumptionStats.Year as 'Year with Maximum Sugar Intake', MAX(SugarIntake) as 'Maximum Sugar Intake',
-       (select SUM(numEnrolled) as 'EnrollmentNumbers' from FoodAssistance left join Location on FoodAssistance.LocationID = Location.LocationID and Location.State='California' where Year=ConsumptionStats.Year) as numEnrolled
+       (select SUM(numEnrolled) as 'EnrollmentNumbers'
+        from FoodAssistance left join Location on FoodAssistance.LocationID = Location.LocationID and Location.State='California'
+        where Year=ConsumptionStats.Year) as numEnrolled
 from ConsumptionStats left join Location on ConsumptionStats.LocationID = Location.LocationID and Location.State='California';
 
 # We can use the following query for this same question to select the state with the highest sugar intake.
 select Year, State, Max(totalSugar) as 'Sugar intake this year',
-       (select SUM(numEnrolled) from FoodAssistance left join Location on FoodAssistance.LocationID = Location.LocationID where year=sugarIntake.Year and Location.State=sugarIntake.State group by year) as 'Number of people enrolled this year'
-from (select Year, State, SUM(SugarIntake) as 'totalSugar' from ConsumptionStats left join Location on ConsumptionStats.LocationID = Location.LocationID where (Gender='Female' or Gender='Male') group by Year order by totalSugar DESC) as sugarIntake;
-
-
-
+       (select SUM(numEnrolled)
+        from FoodAssistance left join Location on FoodAssistance.LocationID = Location.LocationID
+        where year=sugarIntake.Year and Location.State=sugarIntake.State
+        group by year) as 'Number of people enrolled this year'
+from (select Year, State, SUM(SugarIntake) as 'totalSugar'
+      from ConsumptionStats left join Location on ConsumptionStats.LocationID = Location.LocationID
+      where (Gender='Female' or Gender='Male')
+      group by Year
+      order by totalSugar DESC) as sugarIntake;
 
 /**
   * NEW QUESTION:
@@ -58,10 +63,18 @@ from (select Year, State, SUM(SugarIntake) as 'totalSugar' from ConsumptionStats
   */
 
 select State, Year, MAX(sumEnrolled)
-from (select State, Year, SUM(FoodAssistance.numEnrolled) as 'sumEnrolled' from FoodAssistance left join Location on FoodAssistance.locationID=Location.locationID where State='California' group by year order by sumEnrolled DESC) as enrollmentInfo;
+from (select State, Year, SUM(FoodAssistance.numEnrolled) as 'sumEnrolled'
+      from FoodAssistance left join Location on FoodAssistance.locationID=Location.locationID
+      where State='California'
+      group by year
+      order by sumEnrolled DESC) as enrollmentInfo;
 
 select State, Year, MAX(sumEnrolled)
-from (select State, Year, SUM(SchoolFoodPrograms.numStudents) as 'sumEnrolled' from SchoolFoodPrograms left join Location on SchoolFoodPrograms.locationID=Location.locationID where State='California' group by year order by sumEnrolled DESC) as enrollmentInfo;
+from (select State, Year, SUM(SchoolFoodPrograms.numStudents) as 'sumEnrolled'
+      from SchoolFoodPrograms left join Location on SchoolFoodPrograms.locationID=Location.locationID
+      where State='California'
+      group by year
+      order by sumEnrolled DESC) as enrollmentInfo;
 
 
 /** SIMILAR QUESTION TO LAST BUT CHANGE A LITTLE TO MAKE IT ONE QUERY.
@@ -71,13 +84,30 @@ from (select State, Year, SUM(SchoolFoodPrograms.numStudents) as 'sumEnrolled' f
   */
 
 select FoodAssistanceSummed.State, FoodAssistanceSummed.Year, MAX(FoodAssistanceSummed.sumEnrolled) as 'Number of people enrolled in Food Assistance programs',
-       (select SUM(numStudents) as 'sumStudents' from SchoolFoodPrograms left join Location on SchoolFoodPrograms.locationID=Location.locationID where Year=FoodAssistanceSummed.Year and State=FoodAssistanceSummed.State Group by year order by sumStudents DESC)
-                                                                                                    as 'Number of students enrolled in SchoolFoodPrograms'
-from (select State, Year, SUM(numEnrolled) as 'sumEnrolled' from FoodAssistance left join Location on FoodAssistance.locationID=Location.locationID Group by year Order By sumEnrolled DESC) as FoodAssistanceSummed;
+       (select SUM(numStudents) as 'sumStudents'
+        from SchoolFoodPrograms left join Location on SchoolFoodPrograms.locationID=Location.locationID
+        where Year=FoodAssistanceSummed.Year and State=FoodAssistanceSummed.State
+        Group by year
+        order by sumStudents DESC) as 'Number of students enrolled in SchoolFoodPrograms'
+from (select State, Year, SUM(numEnrolled) as 'sumEnrolled'
+      from FoodAssistance left join Location on FoodAssistance.locationID=Location.locationID
+      Group by year
+      Order By sumEnrolled DESC) as FoodAssistanceSummed;
 
 
 
 /**
-* How many students with childhood metabolic disease are enrolled in school lunch assistance programs? - (Specifically in CA) - Adapted from question #18 from PhaseA
+* Is there a significant trend between childhood metabolic rates and number of students enrolled in SchoolFoodPrograms?  - (Specifically in CA) - Adapted from question #18 from PhaseA
 *
 */
+
+# NEED CHILD DATA FROM FULL METABOLIC DISEASE FILE TO TEST THIS.
+
+/**
+  * NEW QUESTION:
+  *
+  * Does the state with the highest number of food bills passed have less people enrolled in Food assistance programs compared to
+  * states with less food bills?
+ */
+
+
