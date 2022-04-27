@@ -320,7 +320,10 @@ LOAD DATA LOCAL INFILE './data/final/Location - Reduced.txt' INTO TABLE Location
 LOAD DATA LOCAL INFILE './data/final/DataType.txt' INTO TABLE DataType FIELDS TERMINATED BY ',';
 
 /* Food Legislation Data */
-LOAD DATA LOCAL INFILE './data/final/FoodLegislation.txt' INTO TABLE FoodLegislation FIELDS TERMINATED BY ',';
+#LOAD DATA LOCAL INFILE './data/final/FoodLegislation.txt' INTO TABLE FoodLegislation FIELDS TERMINATED BY ',';
+
+/* Reduced Food Legislation Data */
+LOAD DATA LOCAL INFILE './data/final/FoodLegislation - Reduced.txt' INTO TABLE FoodLegislation FIELDS TERMINATED BY ',';
 
 /* population Stats Data */
 LOAD DATA LOCAL INFILE './data/final/PopulationStats.txt' INTO TABLE PopulationStats FIELDS TERMINATED BY ',';
