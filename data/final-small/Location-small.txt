@@ -1,4 +1,3 @@
-
 5,California,,
 147,California,Alameda,
 3228,California,Alpine,
