@@ -34,7 +34,7 @@ CREATE TABLE Location(
 
 /* Create child tables. */
 
-CREATE TABLE FoodLegislation(
+/*CREATE TABLE FoodLegislation(
                                 LegislationID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
 
                                 LocationID SMALLINT UNSIGNED NOT NULL,
@@ -56,9 +56,9 @@ CREATE TABLE FoodLegislation(
                                 Setting LONGTEXT,
                                 Description LONGTEXT
 
-);
+);*/
 
-CREATE TABLE PopulationStats(
+/*CREATE TABLE PopulationStats(
                                 PopStatID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
 
                                 LocationID SMALLINT UNSIGNED NOT NULL,
@@ -77,7 +77,7 @@ CREATE TABLE PopulationStats(
                                 CrimeRate BIGINT UNSIGNED,
                                 LiteracyRate BIGINT UNSIGNED,
                                 SchoolEnrollment BIGINT UNSIGNED
-);
+);*/
 
 CREATE TABLE AvgHousehold(
                              AvgHouseID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
@@ -106,7 +106,7 @@ CREATE TABLE AvgHousehold(
                              AvgNumMembers DECIMAL(3,2) UNSIGNED
 );
 
-CREATE TABLE ConsumptionStats(
+/*CREATE TABLE ConsumptionStats(
                                  ConStatID  SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
 
                                  LocationID SMALLINT UNSIGNED NOT NULL,
@@ -129,9 +129,9 @@ CREATE TABLE ConsumptionStats(
                                  FatIntake SMALLINT UNSIGNED,
                                  ProcessedIntake SMALLINT UNSIGNED
 
-);
+);*/
 
-CREATE TABLE MetabolicDisease(
+/*CREATE TABLE MetabolicDisease(
                                  MetaDisID BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
 
                                  LocationID SMALLINT UNSIGNED NOT NULL,
@@ -153,7 +153,7 @@ CREATE TABLE MetabolicDisease(
                                  Diabetes DECIMAL(5,2) UNSIGNED,
                                  Obesity DECIMAL(5,2) UNSIGNED,
                                  Cholesterol DECIMAL(5,2) UNSIGNED
-);
+);*/
 
 /*CREATE TABLE FoodInitiatives(
                                 FoodID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
@@ -176,7 +176,7 @@ CREATE TABLE MetabolicDisease(
 
 );*/
 
-CREATE TABLE FoodAssistance(
+/*CREATE TABLE FoodAssistance(
                            FoodAssistID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
 
                            LocationID SMALLINT UNSIGNED NOT NULL,
@@ -195,9 +195,9 @@ CREATE TABLE FoodAssistance(
                            Year SMALLINT(4) UNSIGNED,
                            numEnrolled BIGINT UNSIGNED
 
-);
+);*/
 
-CREATE TABLE SchoolFoodPrograms(
+/*CREATE TABLE SchoolFoodPrograms(
                                    LunchProID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
 
                                    LocationID SMALLINT UNSIGNED NOT NULL,
@@ -216,7 +216,7 @@ CREATE TABLE SchoolFoodPrograms(
                                    Year SMALLINT(4) UNSIGNED,
                                    numStudents BIGINT UNSIGNED
 
-);
+);*/
 
 /*CREATE TABLE FoodInitiativesCreated(
                                        InitiativeID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
@@ -323,25 +323,25 @@ LOAD DATA LOCAL INFILE './data/final/DataType.txt' INTO TABLE DataType FIELDS TE
 #LOAD DATA LOCAL INFILE './data/final/FoodLegislation.txt' INTO TABLE FoodLegislation FIELDS TERMINATED BY ',';
 
 /* Reduced Food Legislation Data */
-LOAD DATA LOCAL INFILE './data/final/FoodLegislation - Reduced.txt' INTO TABLE FoodLegislation FIELDS TERMINATED BY ',';
+#LOAD DATA LOCAL INFILE './data/final/FoodLegislation - Reduced.txt' INTO TABLE FoodLegislation FIELDS TERMINATED BY ',';
 
 /* population Stats Data */
-LOAD DATA LOCAL INFILE './data/final/PopulationStats.txt' INTO TABLE PopulationStats FIELDS TERMINATED BY ',';
+#LOAD DATA LOCAL INFILE './data/final/PopulationStats.txt' INTO TABLE PopulationStats FIELDS TERMINATED BY ',';
 
 /* Consumption Stats Data */
-LOAD DATA LOCAL INFILE './data/final/ConsumptionStats.txt' INTO TABLE ConsumptionStats FIELDS TERMINATED BY ',';
+#LOAD DATA LOCAL INFILE './data/final/ConsumptionStats.txt' INTO TABLE ConsumptionStats FIELDS TERMINATED BY ',';
 
 /* Metabolic Disease Data */
 #LOAD DATA LOCAL INFILE './data/final/MetabolicDisease.txt' INTO TABLE MetabolicDisease FIELDS TERMINATED BY ',';
 
 /* Reduced Metabolic Disease Data */
-LOAD DATA LOCAL INFILE './data/final/MetabolicDisease - Reduced.txt' INTO TABLE MetabolicDisease FIELDS TERMINATED BY ',';
+#LOAD DATA LOCAL INFILE './data/final/MetabolicDisease - Reduced.txt' INTO TABLE MetabolicDisease FIELDS TERMINATED BY ',';
 
 /* Food Assistance Data */
-LOAD DATA LOCAL INFILE './data/final/FoodAssistance.txt' INTO TABLE FoodAssistance FIELDS TERMINATED BY ',';
+#LOAD DATA LOCAL INFILE './data/final/FoodAssistance.txt' INTO TABLE FoodAssistance FIELDS TERMINATED BY ',';
 
 /* School Lunch Program Data */
-LOAD DATA LOCAL INFILE './data/final/SchoolFoodPrograms.txt' INTO TABLE SchoolFoodPrograms FIELDS TERMINATED BY ',';
+#LOAD DATA LOCAL INFILE './data/final/SchoolFoodPrograms.txt' INTO TABLE SchoolFoodPrograms FIELDS TERMINATED BY ',';
 
 /* Average Household Data */
 LOAD DATA LOCAL INFILE './data/final/AvgHousehold.txt' INTO TABLE AvgHousehold FIELDS TERMINATED BY ',';
