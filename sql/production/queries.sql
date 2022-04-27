@@ -90,13 +90,12 @@ select FoodAssistanceSummed.State, FoodAssistanceSummed.Year, MAX(FoodAssistance
        (select SUM(numStudents) as 'sumStudents'
         from SchoolFoodPrograms left join Location on SchoolFoodPrograms.locationID=Location.locationID
         where Year=FoodAssistanceSummed.Year and State=FoodAssistanceSummed.State
-        Group by year
+        Group by year, State
         order by sumStudents DESC) as 'Number of students enrolled in SchoolFoodPrograms'
 from (select State, Year, SUM(numEnrolled) as 'sumEnrolled'
       from FoodAssistance left join Location on FoodAssistance.locationID=Location.locationID
-      Group by year
+      Group by year, State
       Order By sumEnrolled DESC) as FoodAssistanceSummed;
-
 
 /*============================================================================*/
 /** Q5
