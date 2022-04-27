@@ -8,10 +8,16 @@
 /** Q1
   * Is there a significant trend between sugar intake and heart disease in adults per year? (Specifically in CA) - Adapted question #9 from PhaseA
   */
+select CL.State, CL.ConsumptionYear, ConsumptionGender, SugarIntake, HeartDisease
+from (select State, Year as ConsumptionYear, Gender as ConsumptionGender, SugarIntake
+      from ConsumptionStats left join Location Loc on Loc.LocationID = ConsumptionStats.LocationID
+      where State='California' and ConsumptionStats.AgeRange='18+') as CL
+    left join
+    (select Year as MetabolicYear, Gender as MetabolicGender, AVG(HeartDisease) as HeartDisease
+     from MetabolicDisease left join Location temp on temp.LocationID=MetabolicDisease.LocationID
+     where State='California' and MetabolicDisease.AgeRange='Ages 35-64 years' group by Gender,Year) as ML
+    on (ML.MetabolicYear=CL.ConsumptionYear and ML.MetabolicGender=CL.ConsumptionGender);
 
-select Distinct Location.State, ConsumptionStats.Year, ConsumptionStats.AgeRange, ConsumptionStats.Gender, SugarIntake, MetabolicDisease.HeartDisease
-from Location, ConsumptionStats left join MetabolicDisease on MetabolicDisease.Year=ConsumptionStats.Year
-where ConsumptionStats.AgeRange='18+' and MetabolicDisease.AgeRange='Ages 35-64 years' and ConsumptionStats.Gender=MetabolicDisease.Gender and Location.LocationID=MetabolicDisease.LocationID and Location.State='California';
 
 /*============================================================================*/
 /** Q2
@@ -25,7 +31,7 @@ where ConsumptionStats.AgeRange='18+' and MetabolicDisease.AgeRange='Ages 35-64 
   */
 
 select Location.State, Count(FoodLegislation.BillName) as 'Number of Food Bills Passed'
-from FoodLegislation left join Location on Location.State='California' and FoodLegislation.LocationID=Location.LocationID;
+from FoodLegislation left join Location on Location.LocationID=FoodLegislation.LocationID and FoodLegislation.LocationID=Location.LocationID;
 
 select State, Year, Gender, AgeRange, HeartDisease
 from MetabolicDisease left join Location on Location.State='California' and MetabolicDisease.LocationID = Location.LocationID
@@ -143,4 +149,13 @@ from (select State, COUNT(LegislationID) as 'numBills' from FoodLegislation left
                    on SC.State=SS.State
 order by numBills desc;
 
+/*============================================================================*/
+/** Q7
+  * NEW QUESTION
+  * Do the genders that have the worst (highest) consumption in sugar also have the highest rates of metabolic disease?
+  *
+ */
 
+select * from ConsumptionStats;
+
+# New potential question: Did the county as a whole during recent years shift wealth further down or up? If down, did states respond by passing more food legislation bills in the following years?
