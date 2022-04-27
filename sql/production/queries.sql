@@ -21,21 +21,33 @@ from (select State, Year as ConsumptionYear, Gender as ConsumptionGender, SugarI
 
 /*============================================================================*/
 /** Q2
-  * Which state has worked to pass the most legislative bills related to food, health and nutrition and how hasthe rates of metabolic disease changed in this state over the years? (Specifically in CA) - Adapted question #10 from PhaseA
+  * Which state has worked to pass the most legislative bills related to food, health and nutrition and how hasthe rates of metabolic disease changed in this state over the years? - Adapted question #10 from PhaseA
   *
-  * I think displaying two separate tables would be best for this question. One table with the number of bills passed, and
-  * another with the changes in MetabolicDisease rates over the years.
+  * Here we use some variables to select the state that has passed the most bills, and the min and max year of available data to finally
+  * select and average the data we need.
   *
-  * Perhaps for the second query, we should only select the first and last year of available data so we can more obviously
-  * see the change.
+  * Perhaps we should also display a second table that contains the state name, and the number of bills passed in that state?
   */
 
-select Location.State, Count(FoodLegislation.BillName) as 'Number of Food Bills Passed'
-from FoodLegislation left join Location on Location.LocationID=FoodLegislation.LocationID and FoodLegislation.LocationID=Location.LocationID;
+SET @Q2State = (select State
+              from (select State, MAX(numPassed)
+                    from (select Location.State, Count(FoodLegislation.BillName) as numPassed
+                          from FoodLegislation left join Location on FoodLegislation.LocationID=Location.LocationID
+                          group by State
+                          order by numPassed DESC) as BillCount)as stateCount);
 
-select State, Year, Gender, AgeRange, HeartDisease
-from MetabolicDisease left join Location on Location.State='California' and MetabolicDisease.LocationID = Location.LocationID
-Order by Year;
+select @Q2State;
+
+SET @Q2MinYear = (select MIN(Year) from MetabolicDisease);
+
+SET @Q2MaxYear = (select MAX(Year) from MetabolicDisease);
+
+select State, Year, Gender, AgeRange, AVG(HeartDisease)
+from MetabolicDisease left
+    join Location on (MetabolicDisease.LocationID = Location.LocationID)
+where State=@Q2State and (Year=@Q2MinYear or Year=@Q2MaxYear) and (AgeRange='Ages 35-64 years' or AgeRange='Ages 65+ years')
+group by Year,AgeRange,Gender;
+
 
 /*============================================================================*/
 /** Q3
