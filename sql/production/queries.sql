@@ -103,8 +103,18 @@ from (select State, Year, SUM(numEnrolled) as 'sumEnrolled'
 * Is there a significant trend between childhood metabolic rates and number of students enrolled in SchoolFoodPrograms?  - (Specifically in CA) - Adapted from question #18 from PhaseA
 *
 */
+select SYA.State as State, SYA.Year as Year, SYA.Obesity as 'Obesity Rate', SYS.numEnrolled as 'Number of students enrolled in SFP'
+from (select State, Year, AVG(Obesity) as Obesity
+      from MetabolicDisease left join Location L on L.LocationID = MetabolicDisease.LocationID
+      where State='California' and Gender='All'
+      group by Year) as SYA
+      left join
+     (select State, Year, SUM(numStudents) as numEnrolled
+      from SchoolFoodPrograms left join Location L on SchoolFoodPrograms.LocationID = L.LocationID
+      where State='California'
+      group by Year) as SYS
+      on SYA.Year=SYS.Year;
 
-# NEED CHILD DATA FROM FULL METABOLIC DISEASE FILE TO TEST THIS.
 
 /*============================================================================*/
 /** Q6
