@@ -344,7 +344,7 @@ LOAD DATA LOCAL INFILE './data/final/DataType.txt' INTO TABLE DataType FIELDS TE
 #LOAD DATA LOCAL INFILE './data/final/SchoolFoodPrograms.txt' INTO TABLE SchoolFoodPrograms FIELDS TERMINATED BY ',';
 
 /* Average Household Data */
-LOAD DATA LOCAL INFILE './data/final/AvgHousehold.txt' INTO TABLE AvgHousehold FIELDS TERMINATED BY ',';
+#LOAD DATA LOCAL INFILE './data/final/AvgHousehold.txt' INTO TABLE AvgHousehold FIELDS TERMINATED BY ',';
 
 /********/
 
