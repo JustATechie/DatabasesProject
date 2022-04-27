@@ -9,6 +9,8 @@ Full repo zip download link:
 Part 0 Updates:
 -Fixed an ordering issue in the original PhaseC sql setup scripts that excluded age range in ConsumptionStats.
 -Fixed an ID numbering issue in MetabolicDisease that only allowed the first 150,000k tuples to be added.
+-Fixed a column issue in MetabolicDisease where gender and age range were flipped causing unexpected behavior.
+-Added in child obesity data for california into the small variant of MetabolicDisease.
 -Created reduced file versions of Location,MetabolicDisease, and FoodLegislation to resolve max tuple issue in ugradx.
     -SEE NOTE BELOW REGARDING REDUCED FILES AND ERRORS IN PHASEC
 -Decided to always use the reduced location data file that contains states, and states + counties data and does not include
