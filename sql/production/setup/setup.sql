@@ -311,7 +311,10 @@ CREATE TABLE SchoolFoodPrograms(
 /* Load data into tables from files. */
 
 /* Location Data */
-LOAD DATA LOCAL INFILE './data/final/Location.txt' INTO TABLE Location FIELDS TERMINATED BY ',';
+#LOAD DATA LOCAL INFILE './data/final/Location.txt' INTO TABLE Location FIELDS TERMINATED BY ',';
+
+/* Reduced Location Data */
+LOAD DATA LOCAL INFILE './data/final/Location - Reduced.txt' INTO TABLE Location FIELDS TERMINATED BY ',';
 
 /* Data Type */
 LOAD DATA LOCAL INFILE './data/final/DataType.txt' INTO TABLE DataType FIELDS TERMINATED BY ',';
@@ -326,7 +329,10 @@ LOAD DATA LOCAL INFILE './data/final/PopulationStats.txt' INTO TABLE PopulationS
 LOAD DATA LOCAL INFILE './data/final/ConsumptionStats.txt' INTO TABLE ConsumptionStats FIELDS TERMINATED BY ',';
 
 /* Metabolic Disease Data */
-LOAD DATA LOCAL INFILE './data/final/MetabolicDisease.txt' INTO TABLE MetabolicDisease FIELDS TERMINATED BY ',';
+#LOAD DATA LOCAL INFILE './data/final/MetabolicDisease.txt' INTO TABLE MetabolicDisease FIELDS TERMINATED BY ',';
+
+/* Reduced Metabolic Disease Data */
+LOAD DATA LOCAL INFILE './data/final/MetabolicDisease - Reduced.txt' INTO TABLE MetabolicDisease FIELDS TERMINATED BY ',';
 
 /* Food Assistance Data */
 LOAD DATA LOCAL INFILE './data/final/FoodAssistance.txt' INTO TABLE FoodAssistance FIELDS TERMINATED BY ',';
