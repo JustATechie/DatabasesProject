@@ -121,6 +121,21 @@ from (select State, Year, AVG(Obesity) as Obesity
   *
   * Does the state with the highest number of food bills passed have less people enrolled in Food assistance programs compared to
   * states with less food bills?
+  *
+  * Note: will be comparing latest data year possible for comparisons.
+  * In our website, we should have a toggle or something for the user to be able to switch the sort order from People enrolled, to numBills.
  */
 
+# Below query is sorted by number of people enrolled in FA
+select SC.State, numBills, PeopleEnrolled
+from (select State, COUNT(LegislationID) as 'numBills' from FoodLegislation left join Location L on L.LocationID = FoodLegislation.LocationID group by State) as SC
+left join (select State, SUM(numEnrolled) as 'PeopleEnrolled' from FoodAssistance left join Location L on L.LocationID = FoodAssistance.LocationID where year=2018 group by State) as SS
+on SC.State=SS.State
+order by PeopleEnrolled desc;
 
+# Below query is sorted by number of Food Legislation bills passed
+select SC.State, numBills, PeopleEnrolled
+from (select State, COUNT(LegislationID) as 'numBills' from FoodLegislation left join Location L on L.LocationID = FoodLegislation.LocationID group by State) as SC
+         left join (select State, SUM(numEnrolled) as 'PeopleEnrolled' from FoodAssistance left join Location L on L.LocationID = FoodAssistance.LocationID where year=2018 group by State) as SS
+                   on SC.State=SS.State
+order by numBills desc;
