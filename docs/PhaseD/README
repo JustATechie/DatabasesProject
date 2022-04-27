@@ -1,11 +1,32 @@
 Databases Project
-
 Partners:
 Louie DiBernardo (LDIBERN1)
 Sanddhya Jayabalan (SJAYABA1)
 
-Full zip download link:
+Full repo zip download link:
 {insert link here}
 
-Updates:
-Fixed an ordering issue in the original PhaseC sql setup scripts that excluded age range in ConsumptionStats.
+Part 0 Updates:
+-Fixed an ordering issue in the original PhaseC sql setup scripts that excluded age range in ConsumptionStats.
+-Fixed an ID numbering issue in MetabolicDisease that only allowed the first 150,000k tuples to be added.
+-Created reduced file versions of Location,MetabolicDisease, and FoodLegislation to resolve max tuple issue in ugradx.
+    -SEE NOTE BELOW REGARDING REDUCED FILES AND ERRORS IN PHASEC
+-Decided to always use the reduced location data file that contains states, and states + counties data and does not include
+city location tuples since most are not used. We will allow the user to manually add them if needed instead.
+
+Notes regarding PhaseC issues:
+Regarding the data importation issues from PhaseC, Louie found out what the problem was. It was not a maximum tuple
+restriction on our accounts, it was actually an issue with us using git-lfs with our repo to hold our huge data files.
+Anything that was larger than 10MB in size was added to git-lfs. However, this created issues when we pulled to the ugradx
+machine since ugradx does not support git-lfs. Louie tried to install it on his instance, but was unsuccessful in getting it setup.
+due to permission issues. Instead, we decided to just remove the files from git-lfs and recommit them to our repo. This
+solved our issues with getting the data files onto ugradx via github. This, however, should not affect the grading for PhaseC,
+since we manually submitted our data files via zip from our local install that worked with all files.
+
+Part 1 Notes:
+Some questions from PhaseA were unable to be converted into queries since we removed some extraneous tables, and also could not find data
+on certain columns for some tables. However, most questions were able to be adapted to newer questions that we then converted into sql queries.
+
+Some queries in the queries.sql file contain two sql statement variations depending on how we want to display data and allow the user to
+interact with the data with our website for the final phase. We did not count these second variations in the overall count of sql queries since
+they solve the same question but in a slightly different way.
