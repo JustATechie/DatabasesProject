@@ -126,16 +126,21 @@ from (select State, Year, AVG(Obesity) as Obesity
   * In our website, we should have a toggle or something for the user to be able to switch the sort order from People enrolled, to numBills.
  */
 
+# need to set this variable first before running the actual selection queries.
+Set @MaxYear = (select MAX(Year) as Year from FoodAssistance);
+
 # Below query is sorted by number of people enrolled in FA
 select SC.State, numBills, PeopleEnrolled
 from (select State, COUNT(LegislationID) as 'numBills' from FoodLegislation left join Location L on L.LocationID = FoodLegislation.LocationID group by State) as SC
-left join (select State, SUM(numEnrolled) as 'PeopleEnrolled' from FoodAssistance left join Location L on L.LocationID = FoodAssistance.LocationID where year=2018 group by State) as SS
+left join (select State, SUM(numEnrolled) as 'PeopleEnrolled' from FoodAssistance left join Location L on L.LocationID = FoodAssistance.LocationID where year=@MaxYear group by State) as SS
 on SC.State=SS.State
 order by PeopleEnrolled desc;
 
 # Below query is sorted by number of Food Legislation bills passed
 select SC.State, numBills, PeopleEnrolled
 from (select State, COUNT(LegislationID) as 'numBills' from FoodLegislation left join Location L on L.LocationID = FoodLegislation.LocationID group by State) as SC
-         left join (select State, SUM(numEnrolled) as 'PeopleEnrolled' from FoodAssistance left join Location L on L.LocationID = FoodAssistance.LocationID where year=2018 group by State) as SS
+         left join (select State, SUM(numEnrolled) as 'PeopleEnrolled' from FoodAssistance left join Location L on L.LocationID = FoodAssistance.LocationID where year=@MaxYear group by State) as SS
                    on SC.State=SS.State
 order by numBills desc;
+
+
