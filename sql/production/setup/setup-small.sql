@@ -6,8 +6,7 @@
 
 /*********** Begin Test Setup ***********/
 
-/* Create and select new database. */
-#CREATE DATABASE 22sp_ldibern1_db;
+/* Select the right database */
 #USE 22sp_ldibern1_db;
 
 /* Create Parent Tables */
@@ -24,13 +23,6 @@ CREATE TABLE Location(
                          City VARCHAR(100),
                          LocationType ENUM('urban', 'suburban', 'mixed', 'rural')
 );
-
-/*CREATE TABLE Food(
-                     FoodID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
-                     Name LONGTEXT,
-                     Brand LONGTEXT,
-                     Type ENUM('cereal','test','ebola')
-);*/
 
 /* Create child tables. */
 
@@ -155,27 +147,6 @@ CREATE TABLE MetabolicDisease(
                                  Cholesterol DECIMAL(5,2) UNSIGNED
 );
 
-/*CREATE TABLE FoodInitiatives(
-                                FoodID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
-
-                                LocationID SMALLINT UNSIGNED NOT NULL,
-                                CONSTRAINT FK_LocationID_FI
-                                    FOREIGN KEY (LocationID) references Location(LocationID)
-                                        ON DELETE CASCADE
-                                        ON UPDATE RESTRICT,
-
-                                TypeID SMALLINT UNSIGNED NOT NULL,
-                                CONSTRAINT FK_TypeID_FI
-                                    FOREIGN KEY (TypeID) references DataType(TypeID)
-                                        ON DELETE CASCADE
-                                        ON UPDATE RESTRICT,
-
-                                Name LONGTEXT NOT NULL,
-                                AgeRange VARCHAR(20),
-                                Genders ENUM('female', 'male', 'both')
-
-);*/
-
 CREATE TABLE FoodAssistance(
                                FoodAssistID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
 
@@ -217,96 +188,6 @@ CREATE TABLE SchoolFoodPrograms(
                                    numStudents BIGINT UNSIGNED
 
 );
-
-/*CREATE TABLE FoodInitiativesCreated(
-                                       InitiativeID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
-
-                                       LocationID SMALLINT UNSIGNED NOT NULL,
-                                       CONSTRAINT FK_LocationID_FIC
-                                           FOREIGN KEY (LocationID) references Location(LocationID)
-                                               ON DELETE CASCADE
-                                               ON UPDATE RESTRICT,
-
-                                       TypeID SMALLINT UNSIGNED NOT NULL,
-                                       CONSTRAINT FK_TypeID_FIC
-                                           FOREIGN KEY (TypeID) references DataType(TypeID)
-                                               ON DELETE CASCADE
-                                               ON UPDATE RESTRICT,
-
-                                       Name LONGTEXT NOT NULL,
-                                       StartYear SMALLINT(4) UNSIGNED,
-                                       EndYear SMALLINT(4) UNSIGNED
-
-);*/
-
-/*CREATE TABLE NutritionalValue(
-                                 ValueID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
-
-                                 FoodID SMALLINT UNSIGNED NOT NULL,
-                                 CONSTRAINT FK_FoodID_NV
-                                     FOREIGN KEY (FoodID) references Food(FoodID)
-                                         ON DELETE CASCADE
-                                         ON UPDATE RESTRICT,
-
-                                 Calories SMALLINT UNSIGNED,
-                                 Sugars SMALLINT UNSIGNED,
-                                 Fats SMALLINT UNSIGNED,
-                                 Sodium SMALLINT UNSIGNED
-
-);*/
-
-
-/*CREATE TABLE FoodConsumption(
-                                ConsumptionID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
-
-                                LocationID SMALLINT UNSIGNED NOT NULL,
-                                CONSTRAINT FK_LocationID_FC
-                                    FOREIGN KEY (LocationID) references Location(LocationID)
-                                        ON DELETE CASCADE
-                                        ON UPDATE RESTRICT,
-
-                                TypeID SMALLINT UNSIGNED NOT NULL,
-                                CONSTRAINT FK_TypeID_FC
-                                    FOREIGN KEY (TypeID) references DataType(TypeID)
-                                        ON DELETE CASCADE
-                                        ON UPDATE RESTRICT,
-
-                                FoodID SMALLINT UNSIGNED NOT NULL,
-                                CONSTRAINT FK_FoodID_FC
-                                    FOREIGN KEY (FoodID) references Food(FoodID)
-                                        ON DELETE CASCADE
-                                        ON UPDATE RESTRICT,
-
-                                Year SMALLINT(4) UNSIGNED NOT NULL,
-                                Age SMALLINT(3) UNSIGNED NOT NULL,
-                                AmountConsumed SMALLINT UNSIGNED
-);*/
-
-/*CREATE TABLE FoodDistribution(
-                                 DistributionID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
-
-                                 LocationID SMALLINT UNSIGNED NOT NULL,
-                                 CONSTRAINT FK_LocationID_FD
-                                     FOREIGN KEY (LocationID) references Location(LocationID)
-                                         ON DELETE CASCADE
-                                         ON UPDATE RESTRICT,
-
-                                 TypeID SMALLINT UNSIGNED NOT NULL,
-                                 CONSTRAINT FK_TypeID_FD
-                                     FOREIGN KEY (TypeID) references DataType(TypeID)
-                                         ON DELETE CASCADE
-                                         ON UPDATE RESTRICT,
-
-                                 FoodID SMALLINT UNSIGNED NOT NULL,
-                                 CONSTRAINT FK_FoodID_FD
-                                     FOREIGN KEY (FoodID) references Food(FoodID)
-                                         ON DELETE CASCADE
-                                         ON UPDATE RESTRICT,
-
-                                 Year SMALLINT(4) UNSIGNED NOT NULL,
-                                 amountDistributed SMALLINT UNSIGNED
-);*/
-
 
 /* Load data into tables from files. */
 
