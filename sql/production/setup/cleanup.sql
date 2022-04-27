@@ -20,22 +20,14 @@ DROP TABLE IF EXISTS PopulationStats;
 DROP TABLE IF EXISTS AvgHousehold;
 DROP TABLE IF EXISTS ConsumptionStats;
 DROP TABLE IF EXISTS MetabolicDisease;
-DROP TABLE IF EXISTS FoodInitiatives;
-DROP TABLE IF EXISTS FoodStamps;
 DROP TABLE IF EXISTS FoodAssistance;
 DROP TABLE IF EXISTS SchoolFoodPrograms;
-DROP TABLE IF EXISTS FoodInitiativesCreated;
-DROP TABLE IF EXISTS NutritionalValue;
-DROP TABLE IF EXISTS FoodConsumption;
-DROP TABLE IF EXISTS FoodDistribution;
 
 /* Parent Tables */
 DROP TABLE IF EXISTS DataType;
 DROP TABLE IF EXISTS Location;
-DROP TABLE IF EXISTS Food;
 
 /* Functions */
-DROP FUNCTION IF EXISTS FilePath;
 
 /* Drop Database */
 #DROP DATABASE IF EXISTS 22sp_ldibern1_db;
