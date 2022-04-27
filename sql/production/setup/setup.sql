@@ -192,10 +192,10 @@ CREATE TABLE SchoolFoodPrograms(
 /* Load data into tables from files. */
 
 /* Location Data */
-LOAD DATA LOCAL INFILE './data/final/Location.txt' INTO TABLE Location FIELDS TERMINATED BY ',';
+#LOAD DATA LOCAL INFILE './data/final/Location.txt' INTO TABLE Location FIELDS TERMINATED BY ',';
 
 /* Reduced Location Data */
-#LOAD DATA LOCAL INFILE './data/final/Location - Reduced.txt' INTO TABLE Location FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE './data/final/Location - Reduced.txt' INTO TABLE Location FIELDS TERMINATED BY ',';
 
 /* Data Type */
 LOAD DATA LOCAL INFILE './data/final/DataType.txt' INTO TABLE DataType FIELDS TERMINATED BY ',';

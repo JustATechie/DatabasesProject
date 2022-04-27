@@ -18,7 +18,7 @@ Notes regarding PhaseC issues:
 Regarding the data importation issues from PhaseC, Louie found out what the problem was. It was not a maximum tuple
 restriction on our accounts, it was actually an issue with us using git-lfs with our repo to hold our huge data files.
 Anything that was larger than 10MB in size was added to git-lfs. However, this created issues when we pulled to the ugradx
-machine since ugradx does not support git-lfs. Louie tried to install it on his instance, but was unsuccessful in getting it setup.
+machine since ugradx does not support git-lfs. Louie tried to install it on his instance, but was unsuccessful in getting it setup
 due to permission issues. Instead, we decided to just remove the files from git-lfs and recommit them to our repo. This
 solved our issues with getting the data files onto ugradx via github. This, however, should not affect the grading for PhaseC,
 since we manually submitted our data files via zip from our local install that worked with all files.
