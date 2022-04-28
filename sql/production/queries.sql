@@ -226,3 +226,32 @@ MetabolicDisease
 ON AgeRange <> "Ages 35-64 years" AND AgeRange <> "Ages 65+ years" AND MetabolicDisease.Year = minObesity.MaxEnrolledYear
 GROUP BY State
 ORDER BY minYearObesity DESC, maxYearObesity DESC, State ASC;
+
+/*============================================================================*/
+/** Q10
+  * What was the average, minimum, and maximum level of childhood objesity by state in the years after the intiation of the “No Kid Hungry” initiative?
+  * (Adapted from questions 1 and 7 from PhaseA)
+ */
+ 
+ SELECT State, avgObesity, minObesity, minObesityYear, maxObesity, maxObesityYear
+FROM
+        (SELECT *
+        FROM
+                (SELECT State, AVG(Obesity) AS avgObesity, MAX(Obesity) AS minObesity, MIN(Obesity) AS maxObesity
+                FROM
+                (SELECT LocationID, Year, AgeRange, Gender, Obesity
+                FROM MetabolicDisease
+                WHERE Year >= "2010" AND Year <= "2022" AND AgeRange <> "Ages 35-64 years" AND AgeRange <> "Ages 65+ years") AS childObesity
+                NATURAL JOIN Location
+                GROUP BY State) obesityStats
+                JOIN 
+                (SELECT Year as minObesityYear, Obesity
+                FROM MetabolicDisease
+                WHERE Year >= "2010" AND Year <= "2022" AND AgeRange <> "Ages 35-64 years" AND AgeRange <> "Ages 65+ years") AS allObesity
+                ON obesityStats.minObesity = allObesity.Obesity) as minObesityStats
+         JOIN
+         (SELECT Year as maxObesityYear, Obesity AS maxObesity2
+         FROM MetabolicDisease
+         WHERE Year >= "2010" AND Year <= "2022" AND AgeRange <> "Ages 35-64 years" AND AgeRange <> "Ages 65+ years") AS maxObesityYears
+         ON minObesityStats.maxObesity = maxObesityYears.maxObesity2
+GROUP BY avgObesity DESC, State ASC;
