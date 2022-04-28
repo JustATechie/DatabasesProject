@@ -180,7 +180,7 @@ from (select Gender,AVG(SugarIntake) as 'AVGSugar' from ConsumptionStats where (
   * If up, did states respond by passing more food legislation bills in the following years?
   *
   * Using some parameters that the user would give us when interacting with the site.
-  * MaxYear=2015,MinYear=2016
+  * MaxYear=2015,MinYear=2000
   * right now we compare numbers of those over 200k salary, but we could also compare avg income overall.
   *
   * to be displayed as two separate tables to make better understanding of data.
