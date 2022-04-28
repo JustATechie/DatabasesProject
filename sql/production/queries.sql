@@ -176,10 +176,22 @@ from (select Gender,AVG(SugarIntake) as 'AVGSugar' from ConsumptionStats where (
 /*============================================================================*/
 /** Q8
   * NEW QUESTION
-  * New potential question: Did the county as a whole during recent years shift wealth further down or up?
-  * If down, did states respond by passing more food legislation bills in the following years?
+  * Did the county as a whole during recent years shift wealth further down or up?
+  * If up, did states respond by passing more food legislation bills in the following years?
   *
+  * Using some parameters that the user would give us when interacting with the site.
+  * MaxYear=2015,MinYear=2016
+  * right now we compare numbers of those over 200k salary, but we could also compare avg income overall.
+  *
+  * to be displayed as two separate tables to make better understanding of data.
  */
+
+#Set @Q8MaxYear = (select MAX(Year) as Year from AvgHousehold);
+#Set @Q8MinYear = (select MIN(Year) as Year from AvgHousehold);
+
+select Year,Income200kAbove from AvgHousehold where (year = 2015 or year=2000) order by year;
+
+select YearPassed,sum(LegislationID) from FoodLegislation where yearPassed>=2015 group by YearPassed;
 
 
 /*============================================================================*/
