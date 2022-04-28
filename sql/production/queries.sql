@@ -167,7 +167,19 @@ order by numBills desc;
   * Do the genders that have the worst (highest) consumption in sugar also have the highest rates of metabolic disease?
   *
  */
+select GAS.Gender,AVGSugar as 'Average sugar intake',AVGHeart as 'Number of people per 100,00 with heart disease'
+from (select Gender,AVG(SugarIntake) as 'AVGSugar' from ConsumptionStats where (Gender='Female' or Gender='Male') group by Gender) GAS
+     left join
+     ((select Gender,AVG(HeartDisease) as 'AVGHeart' from MetabolicDisease where (Gender='Female' or Gender='Male') and (AgeRange='Ages 35-64 years' or AgeRange='Ages 65+ years') group by Gender) as GAH)
+     on GAS.Gender=GAH.Gender;
 
-select * from ConsumptionStats;
+/*============================================================================*/
+/** Q8
+  * NEW QUESTION
+  * New potential question: Did the county as a whole during recent years shift wealth further down or up?
+  * If down, did states respond by passing more food legislation bills in the following years?
+  *
+ */
 
-# New potential question: Did the county as a whole during recent years shift wealth further down or up? If down, did states respond by passing more food legislation bills in the following years?
+
+/*============================================================================*/
