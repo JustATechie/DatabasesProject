@@ -32,3 +32,15 @@ on certain columns for some tables. However, most questions were able to be adap
 Some queries in the queries.sql file contain two sql statement variations depending on how we want to display data and allow the user to
 interact with the data with our website for the final phase. We did not count these second variations in the overall count of sql queries since
 they solve the same question but in a slightly different way.
+
+Part 2 Notes:
+Specifically for missing foreign keys:
+Ideally when the user inserts data, we would have them select the state and county from dropdowns to
+ensure the proper locationID is used. However, the user may want to insert data down to the city level.
+In this case the user would have to provide us with the state, county, and city that they wish to add and
+we would generate an id number for the database. This would mean that it would be impossible to run into
+missing foreign key constraint issues with how we currently have things set and plan to set up for PhaseE.
+
+The example we used assumes none of that, but that the user has provided just a locationID for something we do
+not have in the database. First we will check if that ID exists, and if not, then add it to the parent table
+and then try to insert the data.
