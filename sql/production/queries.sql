@@ -350,3 +350,27 @@ SELECT Year, IncomeUnder15k, Income15kTo25k, Income25kTo35k,
 FROM AvgHousehold
 WHERE Year = @maxEnrollmentYear;
 
+
+/*============================================================================*/
+/** Q14
+  * NEW QUESTION
+  * In 2013 in California, for adults (18+), which gender had the greater ratio of sugar to produce intake and what was the 
+  * rate of heart disease for this gender by county? 
+  * (Adapted from question 21 from PhaseA)
+  * 
+  * Will have option to look at gender with min/max students sugar to produce intake ratio. 
+ */
+ 
+ SET @maxConsumptionGender = (SELECT Gender
+                             FROM
+                                   (SELECT State, Year, AgeRange, Gender, ProduceIntake, SugarIntake, SugarIntake / ProduceIntake AS ConsumptionRatio
+                                    FROM ConsumptionStats NATURAL JOIN Location
+                                    WHERE Year = "2013" AND AgeRange = "18+") AS AdultConsumption
+                             ORDER BY ConsumptionRatio DESC
+                             LIMIT 1);
+
+SELECT County, HeartDisease
+FROM MetabolicDisease NATURAL JOIN Location
+WHERE Year = "2013" AND Gender = @maxConsumptionGender AND AgeRange = "Ages 35-64 years" AND State = "California"
+ORDER By HeartDisease DESC;
+
