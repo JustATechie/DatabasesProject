@@ -233,7 +233,7 @@ ORDER BY minYearObesity DESC, maxYearObesity DESC, State ASC;
   * (Adapted from questions 1 and 7 from PhaseA)
  */
  
- SELECT State, avgObesity, minObesity, minObesityYear, maxObesity, maxObesityYear
+SELECT State, avgObesity, minObesity, minObesityYear, maxObesity, maxObesityYear
 FROM
         (SELECT *
         FROM
@@ -255,3 +255,43 @@ FROM
          WHERE Year >= "2010" AND Year <= "2022" AND AgeRange <> "Ages 35-64 years" AND AgeRange <> "Ages 65+ years") AS maxObesityYears
          ON minObesityStats.maxObesity = maxObesityYears.maxObesity2
 GROUP BY avgObesity DESC, State ASC;
+
+
+
+/*============================================================================*/
+/** Q11
+  * NEW QUESTION
+  * For each state, what year did NSLP help the most and least students and what was the average income for households in this year? 
+  * 
+  * Will have dropdown to choose from different food programs in SchoolFoodPrograms table to see similar type of stats
+ */
+
+SELECT State, minStudents, minStudentsYear, minYearAvgIncome, maxStudents, maxStudentsYear, AvgIncome as "maxYearAvgIncome"
+FROM
+        (SELECT State, minStudents, minStudentsYear, AvgIncome as "minYearAvgIncome", maxStudents, maxStudentsYear
+        FROM
+                (SELECT State, minStudents, Year as minStudentsYear, maxStudents, maxStudentsYear
+                FROM
+                        (SELECT State, maxStudents, Year AS maxStudentsYear, minStudents
+                        FROM
+                                (SELECT State, MAX(numStudents) as "maxStudents", MIN(numStudents) as "minStudents"
+                                FROM
+                                        (SELECT *
+                                        FROM SchoolFoodPrograms
+                                        WHERE Name = "NSLP") as NSLPStats
+                                        NATURAL JOIN 
+                                        Location
+                                GROUP BY State) studentCounts
+                                        JOIN
+                                SchoolFoodPrograms
+                                ON studentCounts.maxStudents = SchoolFoodPrograms.numStudents) as maxStudents
+                            JOIN
+                        SchoolFoodPrograms
+                        ON maxStudents.minStudents = SchoolFoodPrograms.numStudents) as schoolProgramCounts
+                 JOIN
+                 AvgHousehold
+                 ON schoolProgramCounts.minStudentsYear = AvgHousehold.Year) AS minAvgIncome
+        JOIN
+        AvgHousehold
+        ON minAvgIncome.maxStudentsYear = AvgHousehold.Year
+ORDER BY maxStudents DESC, minStudents DESC;
