@@ -295,3 +295,31 @@ FROM
         AvgHousehold
         ON minAvgIncome.maxStudentsYear = AvgHousehold.Year
 ORDER BY maxStudents DESC, minStudents DESC;
+
+
+/*============================================================================*/
+/** Q12
+  * NEW QUESTION
+  * In the state that on average had the most students enrolled in the SBP program, what was the number of people enrolled in the WIC 
+  * FoodAssistance Program by year?
+  * 
+  * Will have dropdown to choose from different food programs (NSLP, SBP, WIC, etc.) and option to look at state with min/max students enrolled. 
+ */
+
+SET @maxState = (SELECT State
+                FROM    (SELECT State, AVG(numStudents) as avgStudents
+                        FROM SchoolFoodPrograms NATURAL JOIN Location
+                        WHERE Name = "SBP"
+                        GROUP BY State
+                        ORDER BY avgStudents DESC
+                        LIMIT 1) as maxStudentState);
+
+SELECT State, Year, Name, numEnrolled
+FROM FoodAssistance NATURAL JOIN Location
+WHERE State = @maxState AND Name = "WIC"
+ORDER BY Year ASC;
+
+SELECT State, Year, Name, numStudents
+FROM SchoolFoodPrograms NATURAL JOIN Location
+WHERE State = @maxState AND Name = "SBP"
+ORDER BY Year ASC;
