@@ -374,3 +374,31 @@ FROM MetabolicDisease NATURAL JOIN Location
 WHERE Year = "2013" AND Gender = @maxConsumptionGender AND AgeRange = "Ages 35-64 years" AND State = "California"
 ORDER By HeartDisease DESC;
 
+/*============================================================================*/
+/** Q15
+  * NEW QUESTION
+  * Which year had the overall greatest enrollment in school food programs and what was the enrollment for each individual 
+  * program in this year and the average income distribution for this year? 
+  * 
+  * Will have option to use dropdown to look at different years to see enrollment in each program.
+ */
+
+SET @maxYearFoodPrograms =  (SELECT Year
+                             FROM
+                                   (SELECT Year, SUM(numEnrolled) as totalEnrolled
+                                    FROM FoodAssistance
+                                    GROUP BY Year
+                                    ORDER BY totalEnrolled DESC
+                                    LIMIT 1) as totalEnrolledCounts); 
+                                    
+SELECT Name, Year, SUM(numEnrolled) as "numEnrolled"
+FROM FoodAssistance NATURAL JOIN Location
+WHERE Year = @maxYearFoodPrograms
+GROUP BY Name
+ORDER BY numEnrolled DESC;
+
+SELECT Year, IncomeUnder15k, Income15kTo25k, Income25kTo35k, 
+       Income35kTo50k, Income50kTo75k, Income75kTo100k, Income100kTo150k, 
+       Income150kTo200k, Income200kAbove, AvgIncome, AvgNumMembers
+FROM AvgHousehold
+WHERE Year = @maxYearFoodPrograms;
