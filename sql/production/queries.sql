@@ -326,3 +326,27 @@ SELECT State, Year, Name, numStudents
 FROM SchoolFoodPrograms NATURAL JOIN Location
 WHERE State = @maxState AND Name = "SBP"
 ORDER BY Year ASC;
+
+/*============================================================================*/
+/** Q13
+  * NEW QUESTION
+  * In the year with the most people enrolled in school food programs in the whole country, what was the federal income 
+  * distribution and average income? 
+  * 
+  * Will have dropdown to choose from different food programs (WIC, SNAP, etc) or all food programs in total and option to look 
+  * at state with min/max students enrolled. 
+ */
+
+SET @maxEnrollmentYear = (SELECT totalEnrollments.Year FROM
+                                (SELECT Year, SUM(numEnrolled) as totalEnrolled
+                                FROM FoodAssistance
+                                GROUP BY Year
+                                ORDER BY totalEnrolled DESC
+                                LIMIT 1) AS totalEnrollments);
+
+SELECT Year, IncomeUnder15k, Income15kTo25k, Income25kTo35k, 
+       Income35kTo50k, Income50kTo75k, Income75kTo100k, Income100kTo150k, 
+       Income150kTo200k, Income200kAbove, AvgIncome
+FROM AvgHousehold
+WHERE Year = @maxEnrollmentYear;
+
