@@ -303,6 +303,9 @@ ORDER BY maxStudents DESC, minStudents DESC;
   * In the state that on average had the most students enrolled in the SBP program, what was the number of people enrolled in the WIC 
   * FoodAssistance Program by year?
   * 
+  * Returns two tables: One for WIC enrollment by year and one for SBP enrollment by year, both in the state with the average max
+  * number of students enrolled.
+  * 
   * Will have dropdown to choose from different food programs (NSLP, SBP, WIC, etc.) and option to look at state with min/max students enrolled. 
  */
 
