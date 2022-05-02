@@ -1,0 +1,6 @@
+Before you add your credentials to conf.php, please run the following
+in the root project directory in terminal:
+
+git update-index --assume-unchanged finalSubmission/public_html/conf.php
+
+This ensures that your credentials are not committed to the repo.
