@@ -28,6 +28,7 @@ DROP TABLE IF EXISTS DataType;
 DROP TABLE IF EXISTS Location;
 
 /* Functions */
+DROP PROCEDURE IF EXISTS insertInvalidForeignKeyEx;
 
 /* Drop Database */
 #DROP DATABASE IF EXISTS 22sp_ldibern1_db;
