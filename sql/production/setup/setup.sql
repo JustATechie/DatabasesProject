@@ -9,7 +9,7 @@
 /* Select the right database */
 #USE 22sp_ldibern1_db;
 
-/* Create Parent Tables */
+/*================= Create Parent Tables =================*/
 CREATE TABLE DataType(
                          TypeID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
                          BrokenTo ENUM('state', 'county', 'city', 'federal') NOT NULL,
@@ -24,7 +24,7 @@ CREATE TABLE Location(
                          LocationType ENUM('urban', 'suburban', 'mixed', 'rural')
 );
 
-/* Create child tables. */
+/*================= Create child tables. =================*/
 
 CREATE TABLE FoodLegislation(
                                 LegislationID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
@@ -189,7 +189,7 @@ CREATE TABLE SchoolFoodPrograms(
 
 );
 
-/* Load data into tables from files. */
+/*================= Load data into tables from files. =================*/
 
 /* Location Data */
 #LOAD DATA LOCAL INFILE './data/final/Location.txt' INTO TABLE Location FIELDS TERMINATED BY ',';
@@ -227,4 +227,18 @@ LOAD DATA LOCAL INFILE './data/final/SchoolFoodPrograms.txt' INTO TABLE SchoolFo
 /* Average Household Data */
 LOAD DATA LOCAL INFILE './data/final/AvgHousehold.txt' INTO TABLE AvgHousehold FIELDS TERMINATED BY ',';
 
-/********/
+/*================= Stored Procedures =================*/
+
+/* Get location information from given ID */
+DELIMITER //
+CREATE Procedure getLocationInfo (IN givenID int)
+BEGIN
+
+# we first check if the given locationID is valid, if not add it in and continue
+IF EXISTS (SELECT * FROM Location WHERE LocationID = givenID) THEN
+    select * from Location where LocationID = givenID;
+END IF;
+
+END;
+//
+DELIMITER ;

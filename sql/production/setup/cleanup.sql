@@ -28,7 +28,11 @@ DROP TABLE IF EXISTS DataType;
 DROP TABLE IF EXISTS Location;
 
 /* Functions */
+# from PhaseD
 DROP PROCEDURE IF EXISTS insertInvalidForeignKeyEx;
+
+#PhaseE
+Drop Procedure IF EXISTS getLocationInfo;
 
 /* Drop Database */
 #DROP DATABASE IF EXISTS 22sp_ldibern1_db;
