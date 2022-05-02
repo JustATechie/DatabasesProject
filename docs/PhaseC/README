@@ -8,14 +8,14 @@ Full zip download link:
 https://livejohnshopkins-my.sharepoint.com/:u:/g/personal/ldibern1_jh_edu/EYvp8JxlwNRAgDsZ5SDeteQBd9dHB8XfQF4ZggIKyYDlEQ?e=JdoONL
 
 CONCERNS/WRAP-UP:
-We have gone into more depth about these concerns/issues in our process.txt files. We had some trouble 
-finding all the original data we hoped for. For example, we could not find breakdowns of crime rate or 
+We have gone into more depth about these concerns/issues in our process.txt files. We had some trouble
+finding all the original data we hoped for. For example, we could not find breakdowns of crime rate or
 literacy rate by location. We also had some trouble finding some average household stats like the number of
 dependents, number enrolled in school, etc by location but we tried to get as much average household
 data as we could at the federal level by year to try to make some interesting correlations in this
-area. Finally, we had to cut down on some of the Food/Consumption/Nutrition/Distribution relations (described 
+area. Finally, we had to cut down on some of the Food/Consumption/Nutrition/Distribution relations (described
 in process.txt) because the consumption data we were able to find was pretty general and not broken
-down into speicfic food groups as we had originally hoped. We were also only able to find detailed 
+down into speicfic food groups as we had originally hoped. We were also only able to find detailed
 consumption data for California so when writing queries with this relation we will keep this in mind.
 
 Aside from finding the data we had another issue with loading our full datasets into dbase. Some of
@@ -23,18 +23,18 @@ our largest datasets contain ~32000 and ~212000 tuples (for the Location and Met
 repsectively). Louie has a local instance of MariaDB running on his computer and we were able to
 successfully use the setup.sql script to load all the data without any error. However, we had an issue
 with loading more than 32000 tuples into the dbase database so when we tried to run our setup.sql
-script with the original datafiles it would throw an error which we found online to be due to a 
+script with the original datafiles it would throw an error which we found online to be due to a
 32000 tuple-limit in the database. We did not have enough time to resolve this issue during this phase
 but we have ideas for how to resolve this issue before next phase. Namely, we are going to write a
 script that will parse through all the scripts that have LocationID as a foreign key constraing with
-respect to the Location relation to find all the location IDs in the locatio relation that are 
-actually referenced. The location relation contains every single city/county/state in the US so 
-it contains over 32000 entries. We are hoping that by pruning it to only contain referenced 
+respect to the Location relation to find all the location IDs in the locatio relation that are
+actually referenced. The location relation contains every single city/county/state in the US so
+it contains over 32000 entries. We are hoping that by pruning it to only contain referenced
 locations this will significantly cut down the size. Out MetabolicDisease relation data file
-is also extremely large (~212000 tuples). To make this file smaller we plan on consolidating 
+is also extremely large (~212000 tuples). To make this file smaller we plan on consolidating
 the data by location (by performing an average across each county). We will first try to consolidate
-at the county level, but if there are still too many tuples, we may have to consolidate to the 
-state level. 
+at the county level, but if there are still too many tuples, we may have to consolidate to the
+state level.
 
 HOW TO RUN THIS REPO:
 Log into ugradx and put this entire repo into your home folder. cd into the DatabasesProject folder.

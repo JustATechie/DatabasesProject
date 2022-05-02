@@ -12,7 +12,7 @@ Part 0 Updates:
 -Fixed a column issue in MetabolicDisease where gender and age range were flipped causing unexpected behavior.
 -Added in child obesity data for california into the small variant of MetabolicDisease.
 -Created reduced file versions of Location,MetabolicDisease, and FoodLegislation to resolve max tuple issue in ugradx.
-    -SEE NOTE BELOW REGARDING REDUCED FILES AND ERRORS IN PHASEC
+-SEE NOTE BELOW REGARDING REDUCED FILES AND ERRORS IN PHASEC
 -Decided to always use the reduced location data file that contains states, and states + counties data and does not include
 city location tuples since most are not used. We will allow the user to manually add them if needed instead.
 
