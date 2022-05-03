@@ -9,19 +9,19 @@
 		<title>PHP Chart Samples using CanvasJS</title>
 		
 		<!-- stylesheets -->
-		<link href="/php/canvasTesting/assets/bootstrap.min.css" rel="stylesheet">
-		<link href="/php/canvasTesting/assets/style.css" rel="stylesheet">
-		<link href="/php/canvasTesting/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+		<link href="/public_html/test/phplic_html/test/php/canvasTesting/assets/bootstrap.min.css" rel="stylesheet">
+		<link href="/public_html/test/phplic_html/test/php/canvasTesting/assets/style.css" rel="stylesheet">
+		<link href="/public_html/test/phplic_html/test/php/canvasTesting/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 		<!-- scripts -->
 		
 		<!--[if lt IE 9 ]>
-        <script src="/php/canvasTesting/assets/js/html5shiv.min.js"></script>
-        <script src="/php/canvasTesting/assets/js/respond.min.js"></script>
+        <script src="/public_html/test/phplic_html/test/php/canvasTesting/assets/js/html5shiv.min.js"></script>
+        <script src="/public_html/test/phplic_html/test/php/canvasTesting/assets/js/respond.min.js"></script>
         <![endif]-->
 		
 		<!--script src="/assets/js/	"></script-->
-		<script src="/php/canvasTesting/assets/js/jquery-1.12.4.min.js"></script>
-		<script src="/php/canvasTesting/assets/js/bootstrap.min.js"></script>
+		<script src="/public_html/test/phplic_html/test/php/canvasTesting/assets/js/jquery-1.12.4.min.js"></script>
+		<script src="/public_html/test/phplic_html/test/php/canvasTesting/assets/js/bootstrap.min.js"></script>
 		
 		
 		<script>

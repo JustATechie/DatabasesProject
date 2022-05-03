@@ -1,7 +1,6 @@
 <?php include 'header.php'; ?>
 
-<head><title>Render Data From Database</title></head>
-<body>
+
 <?php
 include '../open.php';
 //Override the PHP configuration file to display all errors
