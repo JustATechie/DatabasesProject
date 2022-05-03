@@ -1,36 +1,26 @@
-<head><title>PHP PreparedStatement example</title></head>
+<?php include 'header.php'; ?>
+
+<head><title>Render Data From Database</title></head>
 <body>
-
 <?php
-include 'open.php';
-
+include '../open.php';
 //Override the PHP configuration file to display all errors
 //This is useful during development but generally disabled before release
 ini_set('error_reporting', E_ALL);
 ini_set('display_errors', true);
 
-//Collect the posted value in a variable called $item
-$LocationID = $_POST['LocationID'];
+$dataPoints = array();
 
-echo "<h2>State</h2>";
 
-//Determine if any input was actually collected
-if (!empty($LocationID)) {
-    //for debugging
-    echo "Not empty! LocationID: ";
-    echo $LocationID;
-    echo "<br><br>";
 
-    //Prepare a statement that we can later execute. The ?'s are placeholders for
-    //parameters whose values we will set before we run the query.
-    if ($stmt = $conn->prepare("call getLocationInfo(?)")) {
+if ($stmt = $conn->prepare("select * from datapoints")) {
 
         //Attach the ? in prepared statements to variables (even if those variables
         //don't hold the values we want yet).  First parameter is a list of types of
         //the variables that follow: 's' means string, 'i' means integer, 'd' means
         //double. E.g., for a statment with 3 ?'s, where middle parameter is an integer
         //and the other two are strings, the first argument included should be "sis".
-        $stmt->bind_param("i", $LocationID);
+        #$stmt->bind_param("i", $LocationID);
 
         //Run the actual query
         if ($stmt->execute()) {
@@ -39,30 +29,28 @@ if (!empty($LocationID)) {
             $result = $stmt->get_result();
 
             if($result->num_rows < 1){
-                echo "ERROR: locationID not found!";
+                echo "ERROR: could not obtain data from database!";
                 echo "<br><br>";
             } else {
                 //Create table to display results
                 echo "<table border=\"1px solid black\">";
-                echo "<tr><th>State</th><th>County</th><th>City</th></tr>";
+                echo "<tr><th>x</th><th>y</th></tr>";
 
                 //Report result set by visiting each row in it
-                foreach($result as $row){
+                foreach($result as $row) {
                     echo "<tr>";
-                    echo "<td>".$row["State"]."</td>";
-                    echo "<td>".$row["County"]."</td>";
-                    echo "<td>".$row["City"]."</td>";
+                    echo "<td>" . $row["x"] . "</td>";
+                    echo "<td>" . $row["y"] . "</td>";
                     echo "</tr>";
                 }
 
-                //Report result set by visiting each row in it
-                /*while ($row = $result->fetch_row()) {
-                    echo "<tr>";
-                    echo "<td>".$row['State']."</td>";
-                    echo "<td>".$row['County']."</td>";
-                    echo "<td>".$row['City']."</td>";
-                    echo "</tr>";
+                /*while ($row = mysqli_fetch_array($data, MYSQL_ASSOC)) {
+                    array_push($dataPoints, $row);
                 }*/
+
+                foreach($result as $row){
+                    array_push($dataPoints, $row);
+                }
 
 
                 echo "</table>";
@@ -80,21 +68,44 @@ if (!empty($LocationID)) {
         //Close down the prepared statement
         $stmt->close();
 
-    } else {
+} else {
 
         //A problem occurred when preparing the statement; check for syntax errors
         //and misspelled attribute names in the statement string.
         echo "Prepare failed.<br>";
         $error = $conn->errno . ' ' . $conn->error;
         echo $error;
-    }
-
-} else {
-    echo "LocationID not set!";
 }
 
 $conn->close();
 
-?>
-</body>
 
+
+
+?>
+
+
+<div id="chartContainer"></div>
+
+<script type="text/javascript">
+    $(function () {
+        var chart = new CanvasJS.Chart("chartContainer", {
+            theme: "light2",
+            zoomEnabled: true,
+            animationEnabled: true,
+            title: {
+                text: "Line Chart with Data-Points from DataBase"
+            },
+            data: [
+                {
+                    type: "line",
+                    dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
+                }
+            ]
+        });
+        chart.render();
+    });
+</script>
+
+</body>
+<?php include 'footer.php'; ?>

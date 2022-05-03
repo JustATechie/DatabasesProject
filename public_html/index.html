@@ -3,9 +3,31 @@
 <head>
     <meta charset="UTF-8" />
     <title>Title</title>
+
+    <style>
+        body {
+            padding: 25px;
+            background-color: white;
+            color: black;
+            font-size: 25px;
+        }
+        .dark-mode {
+            background-color: #262A2B;
+            color: white;
+        }
+        .light-mode {
+            background-color: white;
+            color: black;
+        }
+    </style>
 </head>
 
 <body>
+<!--<h3 id="DarkModetext">Dark Mode is OFF</h3>-->
+<button onclick="darkMode()">Darkmode</button>
+<button onclick="lightMode()">LightMode</button>
+
+
 <!-- (1) -->
 <h2>Select CA Example</h2>
 <form action="/php/test.php" method="post">
@@ -14,6 +36,34 @@
 </form>
 <br /><br />
 
+<h2>CanvasJS</h2>
+<form action="/php/canvasTesting/canvasEx.php" method="post">
+    LocationID: <label><input type="text" name="LocationID" /></label><br />
+    <input type="submit" />
+</form>
+<br /><br />
 
+<h2>Custom</h2>
+<form action="/php/canvasTesting/custom.php" method="post">
+    LocationID: <label><input type="text" name="LocationID" /></label><br />
+    <input type="submit" />
+</form>
+<br /><br />
+
+
+<script>
+    function darkMode() {
+        var element = document.body;
+        var content = document.getElementById("DarkModetext");
+        element.className = "dark-mode";
+        content.innerText = "Dark Mode is ON";
+    }
+    function lightMode() {
+        var element = document.body;
+        var content = document.getElementById("DarkModetext");
+        element.className = "light-mode";
+        content.innerText = "Dark Mode is OFF";
+    }
+</script>
 </body>
 </html>

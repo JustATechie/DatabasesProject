@@ -228,7 +228,7 @@ LOAD DATA LOCAL INFILE './data/final/SchoolFoodPrograms.txt' INTO TABLE SchoolFo
 LOAD DATA LOCAL INFILE './data/final/AvgHousehold.txt' INTO TABLE AvgHousehold FIELDS TERMINATED BY ',';
 
 /*================= Stored Procedures =================*/
-
+# TEST PROCEDURE FOR TEST PHP.
 /* Get location information from given ID */
 DELIMITER //
 CREATE Procedure getLocationInfo (IN givenID int)

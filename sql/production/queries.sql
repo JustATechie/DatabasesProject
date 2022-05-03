@@ -21,7 +21,7 @@ from (select State, Year as ConsumptionYear, Gender as ConsumptionGender, SugarI
 
 /*============================================================================*/
 /** Q2
-  * Which state has worked to pass the most legislative bills related to food, health and nutrition and how hasthe rates of metabolic disease changed in this state over the years? - Adapted question #10 from PhaseA
+  * Which state has worked to pass the most legislative bills related to food, health and nutrition and how have the rates of metabolic disease changed in this state over the years? - Adapted question #10 from PhaseA
   *
   * Here we use some variables to select the state that has passed the most bills, and the min and max year of available data to finally
   * select and average the data we need.

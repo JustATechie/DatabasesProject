@@ -369,3 +369,28 @@ LOAD DATA LOCAL INFILE '/home/justatechie/IdeaProjects/DatabasesProject/data/tes
 
 /* Lock tables that should be read-only (should be all tables eventually to prevent data deletion.) */
 /*LOCK TABLES DataType READ;*/
+
+
+
+
+CREATE TABLE IF NOT EXISTS `datapoints` (
+                                            `x` int(11) NOT NULL,
+                                            `y` int(11) DEFAULT NULL
+);
+
+INSERT INTO `datapoints` (`x`, `y`) VALUES
+                                        (10, 71),
+                                        (20, 55),
+                                        (30, 50),
+                                        (40, 65),
+                                        (50, 95),
+                                        (60, 68),
+                                        (70, 28),
+                                        (80, 34),
+                                        (90, 50),
+                                        (100, 65),
+                                        (110, 45),
+                                        (120, 30),
+                                        (130, 45),
+                                        (140, 85),
+                                        (150, 14);
