@@ -8,20 +8,80 @@
 
 <body>
 
-<div class="col-md-6 well">
+<?php $stateNamesList = $conn->query("select distinct State from Location;"); ?>
+
+<form method="POST" action="">
+    <div class="form-inline">
+        <label>Select State Name:</label>
+        <select class="form-control" name="stateFilter">
+            <?php
+            foreach($stateNamesList as $row){
+                $stateName = $row['State'];
+                echo "<option value =$stateName>$stateName</option>";
+            }
+            ?>
+        </select>
+        <button class="btn btn-primary" name="getStats">Submit</button>
+    </div>
+</form>
+
+<?php $stateNamesList->free_result(); ?>
+
+<?php
+$data = include'filter.php';
+
+$dataPoints = array();
+
+foreach($data as $row) {
+    array_push($dataPoints, $row);
+}
+?>
+
+<?php include('../../templates/questions/chartArea.php'); ?>
+
+
+<div id="chartContainer1"></div>
+
+<script type="text/javascript">
+    $(function () {
+        var chart = new CanvasJS.Chart("chartContainer1", {
+            theme: "light2",
+            zoomEnabled: true,
+            animationEnabled: true,
+            title: {
+                text: "Line Chart with Data-Points from DataBase"
+            },
+            data: [
+                {
+                    type: "line",
+                    dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
+                }
+            ]
+        });
+        chart.render();
+    });
+</script>
+
+
+
+
+
+<br><br>
+
+<!--<div class="col-md-6 well">
     <div class="col-md-8">
 
-        <?php $resultSet = $conn->query("select distinct State from Location;"); ?>
+        <?php /*$resultSet = $conn->query("select distinct State from Location;"); */?>
         <form method="POST" action="">
             <div class="form-inline">
                 <label>Category:</label>
                 <select class="form-control" name="category">
                     <?php
-                    while($rows = $resultSet-> fetch_assoc()){
+/*                    while($rows = $resultSet-> fetch_assoc()){
                         $stateName = $rows['State'];
                         echo "<option value =$stateName>$stateName</option>";
                     }
-                    ?>
+                    */?>
                 </select>
                 <button class="btn btn-primary" name="filter">Filter</button>
                 <button class="btn btn-success" name="reset">Reset</button>
@@ -34,11 +94,20 @@
             <th>Brand</th>
             </thead>
             <thead>
-            <?php include 'filter.php' ?>
+            <?php
+/*            $data = include'filter.php';
+
+            foreach($data as $row) {
+                echo "<tr>";
+                echo "<td>" . $row["x"] . "</td>";
+                echo "<td>" . $row["y"] . "</td>";
+                echo "</tr>";
+            }
+            */?>
             </thead>
         </table>
     </div>
-</div>
+</div>-->
 
 <?php 
 /*$data = include'filter.php'*/
@@ -116,32 +185,6 @@ if ($stmt = $conn->prepare("select Year as x, numStudents as y from SchoolFoodPr
 $conn->close();
 
 ?>
-
-<?php include('../../templates/questions/chartArea.php'); ?>
-
-
-<div id="chartContainer1"></div>
-
-<script type="text/javascript">
-    $(function () {
-        var chart = new CanvasJS.Chart("chartContainer1", {
-            theme: "light2",
-            zoomEnabled: true,
-            animationEnabled: true,
-            title: {
-                text: "Line Chart with Data-Points from DataBase"
-            },
-            data: [
-                {
-                    type: "line",
-                    dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
-                }
-            ]
-        });
-        chart.render();
-    });
-</script>
-
 
 
 
