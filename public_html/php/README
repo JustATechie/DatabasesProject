@@ -4,5 +4,3 @@ in the root project directory in terminal:
 git update-index --assume-unchanged public_html/php/conf.php
 
 This ensures that your credentials are not committed to the repo.
-
-Note: if you refactor the code base or move this file, you'll need to delete the file in github or
