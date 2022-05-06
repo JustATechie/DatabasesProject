@@ -1,5 +1,3 @@
-<!-- INCLUDE ME AFTER YOU'VE OPENED A BODY TAG! -->
-
 <!-------------------- NavBar -------------------->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">

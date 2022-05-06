@@ -1,32 +1,54 @@
 <!--Q1: How have enrollment numbers in Food Assistance programs varied over the years by state?-->
-
-<!DOCTYPE html>
-<html lang="en">
+<?php include "../../templates/questions/question.php" ?>
+<!-------------------------- ONLY MAKE CHANGES BELOW THIS LINE -------------------------->
 <head>
-    <!-- Include head information from template file -->
-    <?php include('../templates/head.php'); ?>
-
     <!-- Tab Title -->
     <title>Food Assistance Data</title>
 </head>
 
 <body>
-<!-------------------- NavBar -------------------->
-<?php include('../templates/navbar.php'); ?>
-<!-------------------- End NavBar -------------------->
 
-<!-------------------------- ONLY MAKE CHANGES BELOW THIS LINE -------------------------->
+<div class="col-md-6 well">
+    <div class="col-md-8">
+
+        <?php $resultSet = $conn->query("select distinct State from Location;"); ?>
+        <form method="POST" action="">
+            <div class="form-inline">
+                <label>Category:</label>
+                <select class="form-control" name="category">
+                    <?php
+                    while($rows = $resultSet-> fetch_assoc()){
+                        $stateName = $rows['State'];
+                        echo "<option value =$stateName>$stateName</option>";
+                    }
+                    ?>
+                </select>
+                <button class="btn btn-primary" name="filter">Filter</button>
+                <button class="btn btn-success" name="reset">Reset</button>
+            </div>
+        </form>
+        <br /><br />
+        <table class="table table-bordered">
+            <thead class="alert-info">
+            <th>Name</th>
+            <th>Brand</th>
+            </thead>
+            <thead>
+            <?php include 'filter.php' ?>
+            </thead>
+        </table>
+    </div>
+</div>
+
+<?php 
+/*$data = include'filter.php'*/
+?>
+
+
+
 <?php
-include '../open.php';
-//Override the PHP configuration file to display all errors
-//This is useful during development but generally disabled before release
-ini_set('error_reporting', E_ALL);
-ini_set('display_errors', true);
 
 $dataPoints = array();
-
-
-
 if ($stmt = $conn->prepare("select Year as x, numStudents as y from SchoolFoodPrograms where LocationID=5 group by Year")) {
 
     //Attach the ? in prepared statements to variables (even if those variables
@@ -95,7 +117,7 @@ $conn->close();
 
 ?>
 
-<?php include('../templates/chartArea.php'); ?>
+<?php include('../../templates/questions/chartArea.php'); ?>
 
 
 <div id="chartContainer1"></div>
@@ -119,6 +141,10 @@ $conn->close();
         chart.render();
     });
 </script>
+
+
+
+
 
 <!-- Closing opening body tag from PageSetup.php -->
 </body>
