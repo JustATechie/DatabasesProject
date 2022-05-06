@@ -12,7 +12,7 @@
 <!-------------------- End NavBar -------------------->
 
 <?php
-include '../../open.php';
+require '../../open.php';
 //Override the PHP configuration file to display all errors
 //This is useful during development but generally disabled before release
 ini_set('error_reporting', E_ALL);

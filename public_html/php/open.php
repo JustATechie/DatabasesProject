@@ -12,7 +12,7 @@ if ($conn->connect_errno) {
     exit();
 } else {
     // remove this else part once you get connections created successfully
-    echo "We have connected to MySQL! :-) <br/>";
+    #echo "We have connected to MySQL! :-) <br/>";
 
     // now $conn contains a connection to dbase we can use - we'll close it
     // in another php script after we use it to execute some SQL statements
