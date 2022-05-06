@@ -1,7 +1,22 @@
 <!--Q1: How have enrollment numbers in Food Assistance programs varied over the years by state?-->
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Include head information from template file -->
+    <?php include('../templates/head.php'); ?>
+
+    <!-- Tab Title -->
+    <title>Food Assistance Data</title>
+</head>
+
+<body>
+<!-------------------- NavBar -------------------->
+<?php include('../templates/navbar.php'); ?>
+<!-------------------- End NavBar -------------------->
+
+<!-------------------------- ONLY MAKE CHANGES BELOW THIS LINE -------------------------->
 <?php
-include '../PageSetup.php';
 include '../open.php';
 //Override the PHP configuration file to display all errors
 //This is useful during development but generally disabled before release
@@ -79,6 +94,8 @@ if ($stmt = $conn->prepare("select Year as x, numStudents as y from SchoolFoodPr
 $conn->close();
 
 ?>
+
+<?php include('../templates/chartArea.php'); ?>
 
 
 <div id="chartContainer1"></div>

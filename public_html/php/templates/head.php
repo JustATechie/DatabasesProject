@@ -1,4 +1,3 @@
-<!-- NOTE: Include this at the top of all php files for sizing and canvasJS charts! -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,15 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>PHP Chart Samples using CanvasJS</title>
-
-    <!-- stylesheets -->
+    <!---------------------- stylesheets ---------------------->
+    <!-- From CanvasJS-->
     <!--<link href="/public_html/assets/bootstrap.min.css" rel="stylesheet">-->
-    <link href="/public_html/assets/style.css" rel="stylesheet">
-    <link href="/public_html/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../../assets/style.css" rel="stylesheet">
+    <link href="../../assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- From Bootstrap -->
-    <link href="/public_html/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../../assets/css/bootstrap.css" rel="stylesheet">
     <!--<link href="/public_html/assets/css/bootstrap.rtl.css" rel="stylesheet">
     <link href="/public_html/assets/css/bootstrap-grid.css" rel="stylesheet">
     <link href="/public_html/assets/css/bootstrap-grid.rtl.css" rel="stylesheet">
@@ -23,19 +21,16 @@
     <link href="/public_html/assets/css/bootstrap-reboot.rtl.css" rel="stylesheet">
     <link href="/public_html/assets/css/bootstrap-utilities.css" rel="stylesheet">
     <link href="/public_html/assets/css/bootstrap-utilities.rtl.css" rel="stylesheet">-->
+    <!---------------------- End stylesheets ---------------------->
 
-
-    <!-- scripts -->
-
+    <!---------------------- scripts ---------------------->
     <!--[if lt IE 9 ]>
-    <script src="/public_html/assets/js/html5shiv.min.js"></script>
-    <script src="/public_html/assets/js/respond.min.js"></script>
+    <script src="../../assets/js/html5shiv.min.js"></script>
+    <script src="../../assets/js/respond.min.js"></script>
     <![endif]-->
-
     <!--script src="/assets/js/	"></script-->
-    <script src="/public_html/assets/js/jquery-1.12.4.min.js"></script>
-    <script src="/public_html/assets/js/bootstrap.min.js"></script>
-
+    <script src="../../assets/js/jquery-1.12.4.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
 
     <script>
         $(function () {
@@ -84,13 +79,31 @@
         })
     </script>
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <!---------------------- End Scripts ---------------------->
 
-</head>
+    <!---------------------- Basic page styling ---------------------->
+    <style>
+        body {
+            padding: 25px;
+            background-color: white;
+            color: black;
+            font-size: 15px;
+        }
+        /*.dark-mode {
+        background-color: #262a2b;
+        color: white;
+      }
+      .light-mode {
+        background-color: white;
+        color: black;
+      }*/
+    </style>
+    <!---------------------- End Basic page styling ---------------------->
 
-<body>
-<!-- page-content-wrapper -->
-<div id="page-content-wrapper" class="page-content-toggle">
-    <div class="container-fluid">
+    <!-- Tab Icon -->
+    <link rel="icon" href="../../assets/seal.png">
 
-        <div class="row">
-            <div id="content" class="col-md-8 col-md-offset-1 col-xs-12">
+    <!-------------------------- ONLY MAKE CHANGES BELOW THIS LINE -------------------------->
+    <!-- Tab Title -->
+    <!-- MUST BE SET IN DOCUMENT THAT CALLS THIS FILE. -->
+
