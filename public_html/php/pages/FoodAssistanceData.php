@@ -7,7 +7,7 @@
 
 <body>
 <!-- (1) -->
-How have enrollment numbers in Food Assistance programs varied over the years by state?
+<h5>How have enrollment numbers in Food Assistance programs varied over the years by state?</h5>
 <form action="../questions/GeneralFoodAssist/GenFoodAssist.php" method="post">
   <input type="submit" value="Go!"/>
 </form>

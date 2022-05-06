@@ -7,7 +7,7 @@ if ($stmt = $conn->prepare("select distinct State from Location;")) {
         $result = $stmt->get_result();
 
         if($result->num_rows < 1){
-            echo "ERROR: Unable to obtain state list from database!<br>";
+            echo "<br>ERROR: Unable to obtain state list from database!<br>";
         } else {
             $stmt->close();
             return $result;
@@ -16,14 +16,14 @@ if ($stmt = $conn->prepare("select distinct State from Location;")) {
     } else {
         //Call to execute failed, e.g. because server is no longer reachable,
         //or because supplied values are of the wrong type
-        echo "ERROR: Execute failed.<br>";
+        echo "<br>ERROR: Execute failed.<br>";
     }
 } else {
 
     //A problem occurred when preparing the statement; check for syntax errors
     //and misspelled attribute names in the statement string.
 
-    echo "ERROR: Prepare failed.<br>" . $conn->errno . ' ' . $conn->error;
+    echo "<br>ERROR: Prepare failed.<br>" . $conn->errno . ' ' . $conn->error;
 }
 
 $stmt->close();

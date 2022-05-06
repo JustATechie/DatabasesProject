@@ -11,7 +11,7 @@ if(ISSET($_POST['getStats'])){
             $result = $stmt->get_result();
 
             if($result->num_rows < 1){
-                echo "ERROR: This state has no records in our database!<br>";
+                echo "<br>ERROR: This state has no records in our database!<br>";
             } else {
                 $stmt->close();
                 return $result;
@@ -20,14 +20,14 @@ if(ISSET($_POST['getStats'])){
         } else {
             //Call to execute failed, e.g. because server is no longer reachable,
             //or because supplied values are of the wrong type
-            echo "ERROR: Execute failed.<br>";
+            echo "<br>ERROR: Execute failed.<br>";
         }
     } else {
 
         //A problem occurred when preparing the statement; check for syntax errors
         //and misspelled attribute names in the statement string.
 
-        echo "ERROR: Prepare failed.<br>" . $conn->errno . ' ' . $conn->error;
+        echo "<br>ERROR: Prepare failed.<br>" . $conn->errno . ' ' . $conn->error;
     }
 
     $stmt->close();
