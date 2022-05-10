@@ -42,10 +42,17 @@ SET @Q2MinYear = (select MIN(Year) from MetabolicDisease);
 
 SET @Q2MaxYear = (select MAX(Year) from MetabolicDisease);
 
+select * from (select MIN(Year) from MetabolicDisease) as min, (select MAX(Year) from MetabolicDisease) as max;
+
 select State, Year, Gender, AgeRange, AVG(HeartDisease)
 from MetabolicDisease left
     join Location on (MetabolicDisease.LocationID = Location.LocationID)
-where State=@Q2State and (Year=@Q2MinYear or Year=@Q2MaxYear) and (AgeRange='Ages 35-64 years' or AgeRange='Ages 65+ years')
+where State=@Q2State and (Year Between @Q2MinYear and @Q2MaxYear) and (AgeRange='Ages 35-64 years') and (Gender='Male')
+group by Year,AgeRange,Gender;
+
+select State, Year, Gender, AgeRange, AVG(HeartDisease)
+from MetabolicDisease left join Location on (MetabolicDisease.LocationID = Location.LocationID)
+where State=@Q2State and (Year Between @Q2MinYear and @Q2MaxYear) and (AgeRange='Ages 65+ years') and Gender='Female'
 group by Year,AgeRange,Gender;
 
 
