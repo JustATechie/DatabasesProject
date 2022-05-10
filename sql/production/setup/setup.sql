@@ -252,7 +252,6 @@ CREATE FUNCTION getLocationID (givenState VARCHAR(100), givenCounty VARCHAR(100)
     RETURNS INT DETERMINISTIC
 BEGIN
 
-
     DECLARE id INT;
 
     if (givenCounty is NULL || givenCounty=' ' || givenCounty='') then
@@ -268,4 +267,68 @@ BEGIN
 END; //
 DELIMITER ;
 
-#call deleteLocationByNames('California', ' ', null);
+/* DELETION FOR SFP BELOW*/
+DELIMITER //
+CREATE Procedure deleteSFP (IN givenState VARCHAR(100), IN givenName VARCHAR(100), IN givenYear INT)
+BEGIN
+
+    SET @ID = getSFPID(givenState, givenName, givenYear);
+
+# we first check if the given locationID is valid, if not add it in and continue
+    IF EXISTS (SELECT * FROM SchoolFoodPrograms WHERE LunchProID = @ID) THEN
+        delete SchoolFoodPrograms from SchoolFoodPrograms where LunchProID=@ID;
+    ELSE
+        select -1 as result;
+    END IF;
+
+END;
+//
+
+
+DELIMITER //
+CREATE FUNCTION getSfpID (givenState VARCHAR(100), givenName VARCHAR(100), givenYear INT) RETURNS INT DETERMINISTIC
+BEGIN
+
+    DECLARE locID INT;
+
+    set @locID = getLocationID(givenState, '','');
+
+    return (select LunchProID from SchoolFoodPrograms where locationID = @locID and Name=givenName and Year=givenYear limit 1);
+
+
+END; //
+DELIMITER ;
+
+/* DELETION FOR FA BELOW*/
+DELIMITER //
+CREATE Procedure deleteFA (IN givenState VARCHAR(100), IN givenName VARCHAR(100), IN givenYear INT)
+BEGIN
+
+    SET @ID = getFAID(givenState, givenName, givenYear);
+
+# we first check if the given locationID is valid, if not add it in and continue
+    IF EXISTS (SELECT * FROM FoodAssistance WHERE FoodAssistID = @ID) THEN
+        delete FoodAssistance from FoodAssistance where FoodAssistID=@ID;
+    ELSE
+        select -1 as result;
+    END IF;
+
+END;
+//
+
+
+DELIMITER //
+CREATE FUNCTION getFAID (givenState VARCHAR(100), givenName VARCHAR(100), givenYear INT) RETURNS INT DETERMINISTIC
+BEGIN
+
+    DECLARE locID INT;
+
+    set @locID = getLocationID(givenState, '','');
+
+    return (select FoodAssistID from FoodAssistance where locationID = @locID and Name=givenName and Year=givenYear limit 1);
+
+
+END; //
+DELIMITER ;
+
+

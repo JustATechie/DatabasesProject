@@ -44,7 +44,7 @@
 
 <!-- (2) -->
 <h5>Delete Food Assistance Data!</h5>
-<form action="../updates/addFA/addFA.php" method="post">
+<form action="../updates/deleteFA/deleteFA.php" method="post">
     <div class="form-inline">
         <button class="btn btn-primary">Go!</button>
     </div>
@@ -53,7 +53,7 @@
 
 <!-- (3) -->
 <h5>Delete School Food Program Data!</h5>
-<form action="../updates/addSFP/addSFP.php" method="post">
+<form action="../updates/deleteSFP/deleteSFP.php" method="post">
     <div class="form-inline">
         <button class="btn btn-primary">Go!</button>
     </div>

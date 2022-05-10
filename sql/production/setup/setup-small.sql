@@ -9,9 +9,9 @@
 /* Select the right database */
 #USE 22sp_ldibern1_db;
 
-/* Create Parent Tables */
+/*================= Create Parent Tables =================*/
 CREATE TABLE DataType(
-                         TypeID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
+                         TypeID SMALLINT UNSIGNED PRIMARY KEY NOT NULL,
                          BrokenTo ENUM('state', 'county', 'city', 'federal') NOT NULL,
                          Researcher ENUM('federal', 'state') NOT NULL
 );
@@ -24,7 +24,7 @@ CREATE TABLE Location(
                          LocationType ENUM('urban', 'suburban', 'mixed', 'rural')
 );
 
-/* Create child tables. */
+/*================= Create child tables. =================*/
 
 CREATE TABLE FoodLegislation(
                                 LegislationID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
@@ -84,15 +84,15 @@ CREATE TABLE AvgHousehold(
                                      ON DELETE CASCADE
                                      ON UPDATE RESTRICT,
 
-                             IncomeUnder15k DECIMAL(4,1),
-                             Income15kTo25k DECIMAL(4,1),
-                             Income25kTo35k DECIMAL(4,1),
-                             Income35kTo50k DECIMAL(4,1),
-                             Income50kTo75k DECIMAL(4,1),
-                             Income75kTo100k DECIMAL(4,1),
-                             Income100kTo150k DECIMAL(4,1),
-                             Income150kTo200k DECIMAL(4,1),
-                             Income200kAbove DECIMAL(4,1),
+                             IncomeUnder15k DECIMAL(3,1),
+                             Income15kTo25k DECIMAL(3,1),
+                             Income25kTo35k DECIMAL(3,1),
+                             Income35kTo50k DECIMAL(3,1),
+                             Income50kTo75k DECIMAL(3,1),
+                             Income75kTo100k DECIMAL(3,1),
+                             Income100kTo150k DECIMAL(3,1),
+                             Income150kTo200k DECIMAL(3,1),
+                             Income200kAbove DECIMAL(3,1),
                              MedianIncome INT UNSIGNED,
                              AvgIncome INT UNSIGNED,
                              AvgNumMembers DECIMAL(3,2) UNSIGNED
@@ -139,8 +139,8 @@ CREATE TABLE MetabolicDisease(
                                          ON UPDATE RESTRICT,
 
                                  Year SMALLINT(4) UNSIGNED NOT NULL,
-                                 Gender ENUM('Female', 'Male', 'All') NOT NULL,
                                  AgeRange TEXT NOT NULL,
+                                 Gender ENUM('Female', 'Male', 'All') NOT NULL,
                                  HeartDisease DECIMAL(5,2) UNSIGNED,
                                  Diabetes DECIMAL(5,2) UNSIGNED,
                                  Obesity DECIMAL(5,2) UNSIGNED,
@@ -177,13 +177,13 @@ CREATE TABLE SchoolFoodPrograms(
                                            ON DELETE CASCADE
                                            ON UPDATE RESTRICT,
 
-                                   TypeID SMALLINT UNSIGNED NOT NULL,
+                                   TypeID SMALLINT UNSIGNED NOT NULL DEFAULT 1,
                                    CONSTRAINT FK_TypeID_SLP
                                        FOREIGN KEY (TypeID) references DataType(TypeID)
                                            ON DELETE CASCADE
                                            ON UPDATE RESTRICT,
 
-                                   Name LONGTEXT NOT NULL,
+                                   Name LONGTEXT NOT NULL DEFAULT 'TEST',
                                    Year SMALLINT(4) UNSIGNED,
                                    numStudents BIGINT UNSIGNED
 
@@ -224,3 +224,107 @@ LOAD DATA LOCAL INFILE './data/final-small/AvgHousehold-small.txt' INTO TABLE Av
 
 # for louie:
 #USE information_schema;
+
+/*================= Stored Procedures =================*/
+# DELETE PROCEDURE FOR LOCATION DATA
+/* Get location information from given ID */
+
+DELIMITER //
+CREATE Procedure deleteLocationByNames (IN givenState VARCHAR(100), IN givenCounty VARCHAR(100), IN givenCity VARCHAR(100))
+BEGIN
+
+    SET @ID = getLocationID(givenState, givenCounty, givenCity);
+
+# we first check if the given locationID is valid, if not add it in and continue
+    IF EXISTS (SELECT * FROM Location WHERE LocationID = @ID) THEN
+        delete Location from Location where LocationID=@ID;
+    ELSE
+        select -1 as result;
+    END IF;
+
+END;
+//
+
+DELIMITER //
+CREATE FUNCTION getLocationID (givenState VARCHAR(100), givenCounty VARCHAR(100), givenCity VARCHAR(100))
+    RETURNS INT DETERMINISTIC
+BEGIN
+
+    DECLARE id INT;
+
+    if (givenCounty is NULL || givenCounty=' ' || givenCounty='') then
+        return (select locationID from Location where state=givenState and (county=' ' or county='') order by locationID asc limit 1);
+
+    elseif (givenCity is Null || givenCity=' ' || givenCity='') then
+        return (select locationID from Location where state=givenState and county=givenCounty and (city=' ' or city IS NULL or city='') limit 1);
+    else
+        return (select locationID from Location where state=givenState and county=givenCounty and City=givenCity limit 1);
+    end if;
+
+
+END; //
+DELIMITER ;
+
+/* DELETION FOR SFP BELOW*/
+DELIMITER //
+CREATE Procedure deleteSFP (IN givenState VARCHAR(100), IN givenName VARCHAR(100), IN givenYear INT)
+BEGIN
+
+    SET @ID = getSFPID(givenState, givenName, givenYear);
+
+# we first check if the given locationID is valid, if not add it in and continue
+    IF EXISTS (SELECT * FROM SchoolFoodPrograms WHERE LunchProID = @ID) THEN
+        delete SchoolFoodPrograms from SchoolFoodPrograms where LunchProID=@ID;
+    ELSE
+        select -1 as result;
+    END IF;
+
+END;
+//
+
+
+DELIMITER //
+CREATE FUNCTION getSfpID (givenState VARCHAR(100), givenName VARCHAR(100), givenYear INT) RETURNS INT DETERMINISTIC
+BEGIN
+
+    DECLARE locID INT;
+
+    set @locID = getLocationID(givenState, '','');
+
+    return (select LunchProID from SchoolFoodPrograms where locationID = @locID and Name=givenName and Year=givenYear limit 1);
+
+
+END; //
+DELIMITER ;
+
+/* DELETION FOR FA BELOW*/
+DELIMITER //
+CREATE Procedure deleteFA (IN givenState VARCHAR(100), IN givenName VARCHAR(100), IN givenYear INT)
+BEGIN
+
+    SET @ID = getFAID(givenState, givenName, givenYear);
+
+# we first check if the given locationID is valid, if not add it in and continue
+    IF EXISTS (SELECT * FROM FoodAssistance WHERE FoodAssistID = @ID) THEN
+        delete FoodAssistance from FoodAssistance where FoodAssistID=@ID;
+    ELSE
+        select -1 as result;
+    END IF;
+
+END;
+//
+
+
+DELIMITER //
+CREATE FUNCTION getFAID (givenState VARCHAR(100), givenName VARCHAR(100), givenYear INT) RETURNS INT DETERMINISTIC
+BEGIN
+
+    DECLARE locID INT;
+
+    set @locID = getLocationID(givenState, '','');
+
+    return (select FoodAssistID from FoodAssistance where locationID = @locID and Name=givenName and Year=givenYear limit 1);
+
+
+END; //
+DELIMITER ;
