@@ -11,3 +11,39 @@ Changes to original questions:
 
 New questions:
 Added section for interacting with Food Assistance data because it was really cool. We did not count this in our total query count.
+
+
+
+
+
+
+
+HOW TO SET EVERYTHING UP:
+clone our repo directly into your ugrad home.
+
+cd into DatabasesProject
+
+log into dbase, select your database and run:
+source ~/DatabasesProject/sql/production/setup/cleanup.sql
+and:
+source ~/DatabasesProject/sql/production/setup/setup.sql;
+
+You can now exit out of dbase!
+
+cd into your home dir
+
+copy our public_html file into yours with:
+cp DatabasesProject/public_html/* public_html/DatabasesProject/
+
+some helpful commands for ugrad:
+(they require you to be in the right sub folder already)
+(dont forget to make DatabasesProject executeable as well!)
+
+Make all subfolders executable:
+find public_html/ -type d -exec chmod o+x {} \;
+
+make all files in assets readable:
+find assets/ -type f -exec chmod o+r {} \;
+
+copy .htaccess to all sub directories with the same persmisisons
+for dir in `find . -type d` ; do cp -p .htaccess $dir/.htaccess ; done

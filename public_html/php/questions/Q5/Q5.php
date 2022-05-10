@@ -23,7 +23,7 @@
 <br>
 <br>
 
-<!-- Get specific data! -->
+<!-- Get obesity data! -->
 <?php
 
 $ObesityResults = include 'getObesityData.php';
@@ -32,18 +32,42 @@ if($ObesityResults->num_rows > 0){
     $ObesityDataPoints = array();
 
     foreach($ObesityResults as $row) {
-        echo $row['x'] . " ";
-        echo $row['y'] . "<br>";
+        #echo $row['x'] . " ";
+        #echo $row['y'] . "<br>";
         array_push($ObesityDataPoints, $row);
     }
 
-    echo "<br> got data!";
+    #echo "<br> got data!";
 
 }
 
 ?>
 
+<!-- Get obesity data! -->
+<?php
+
+$SFPResults = include 'getSFPData.php';
+
+if($SFPResults->num_rows > 0){
+    $SFPDataPoints = array();
+
+    foreach($SFPResults as $row) {
+        #echo $row['x'] . " ";
+        #echo $row['y'] . "<br>";
+        array_push($SFPDataPoints, $row);
+    }
+
+    #echo "<br> got data!";
+
+}
+
+?>
+
+<?php include('../../templates/questions/chartArea.php'); ?>
+
+
 <div id="chartContainer1" style="width: 49%; height: 300px;display: inline-block;"></div>
+<div id="chartContainer2" style="width: 49%; height: 300px;display: inline-block;"></div>
 
 <script type="text/javascript">
     if("<?php echo $ObesityDataPoints; ?>".length < 1){
@@ -55,7 +79,13 @@ if($ObesityResults->num_rows > 0){
                 zoomEnabled: true,
                 animationEnabled: true,
                 title: {
-                    text: "Number of people enrolled in Food Assistance programs by year in "
+                    text: "Childhood Obesity Rates in California"
+                },axisX: {
+                    //valueFormatString: "#,###"
+                    title: "Year"
+                },
+                axisY: {
+                    title: "Obesity Rate (per 100,000)"
                 },
                 data: [
                     {
@@ -65,6 +95,36 @@ if($ObesityResults->num_rows > 0){
                 ]
             });
             chart1.render();
+        });
+    }
+</script>
+
+<script type="text/javascript">
+    if("<?php echo $SFPDataPoints; ?>".length < 1){
+        //if not enough data, do not draw graph!
+    } else {
+        $(function () {
+            var chart2 = new CanvasJS.Chart("chartContainer2", {
+                theme: "light2",
+                zoomEnabled: true,
+                animationEnabled: true,
+                title: {
+                    text: "Number of students enrolled in School Food Programs by year in California"
+                },axisX: {
+                    //valueFormatString: "#,###"
+                    title: "Year"
+                },
+                axisY: {
+                    title: "Total Enrolled"
+                },
+                data: [
+                    {
+                        type: "line",
+                        dataPoints: <?php echo json_encode($SFPDataPoints, JSON_NUMERIC_CHECK); ?>
+                    }
+                ]
+            });
+            chart2.render();
         });
     }
 </script>
