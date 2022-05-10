@@ -74,8 +74,8 @@ if($Object->num_rows > 0){
 
 <?php include('../../templates/questions/chartArea.php'); ?>
 
-<div id="chartContainer1" style="width: 49%; height: 300px;display: inline-block;"></div>
-<div id="chartContainer2" style="width: 49%; height: 300px;display: inline-block;"></div>
+<div class="center" id="chartContainer1" style="width: 40%; margin: auto;height: 300px;"></div>
+<div class="center" id="chartContainer2" style="width: 80%; height: 300px;margin: auto;padding:10px;"></div>
 
 <script type="text/javascript">
     $(function () {
