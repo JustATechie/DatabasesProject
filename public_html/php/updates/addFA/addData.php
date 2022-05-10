@@ -4,7 +4,7 @@ GLOBAL $selectedLocationID;
 if(ISSET($_POST['addInfo'])){
     $givenName = $_POST['givenName'];
     $givenYear = $_POST['givenYear'];
-    $givenNumStudents = $_POST['givenNumStudents'];
+    $givenNumStudents = $_POST['givenNumEnrolled'];
     $givenID = 1;
 
     #echo $selectedLocationID;
@@ -14,7 +14,7 @@ if(ISSET($_POST['addInfo'])){
         echo "<br>ERROR: Please complete all required fields!<br>";
     } else if((! ctype_digit(strval($givenYear))) ||(! ctype_digit(strval($givenNumStudents)))){
         echo "<br>ERROR: Please make sure the Year and Student number fields are integers!<br>";
-    } else if($stmt = $conn->prepare("SELECT * FROM SchoolFoodPrograms WHERE LocationID = ? AND Name = ? AND Year = ? AND numStudents = ?;")){
+    } else if($stmt = $conn->prepare("SELECT * FROM FoodAssistance WHERE LocationID = ? AND Name = ? AND Year = ? AND numEnrolled = ?;")){
 
         #echo "<br>INFO: Adding data!<br>";
 
@@ -30,14 +30,14 @@ if(ISSET($_POST['addInfo'])){
             if($result->num_rows > 0) {
                 $stmt->close();
                 $result->free_result();
-                echo "<br>ERROR: That School Food Program data already exists!<br>";
+                echo "<br>ERROR: That Food Assistance data already exists!<br>";
             } else {
                 $stmt->close();
                 $result->free_result();
                 #echo "<br>INFO: That location does not exist!<br>";
 
 
-                if ($stmt = $conn->prepare("INSERT INTO SchoolFoodPrograms (LocationID, TypeID, Name, Year, numStudents) VALUES ('$selectedLocationID', 1, '$givenName', '$givenYear', '$givenNumStudents');
+                if ($stmt = $conn->prepare("INSERT INTO FoodAssistance (LocationID, TypeID, Name, Year, numEnrolled) VALUES ('$selectedLocationID', 1, '$givenName', '$givenYear', '$givenNumStudents');
 ")) {
 
                     #$stmt->bind_param('isii', $selectedLocationID, $givenName, $givenYear, $givenNumStudents);
@@ -50,10 +50,10 @@ if(ISSET($_POST['addInfo'])){
                             $result->free_result();
                             $stmt->close();
 
-                            echo "<br>ERROR: Data insert failed! That School Food Program data might already exist or is too long!<br>";
+                            echo "<br>ERROR: Data insert failed! That Food Assistance data might already exist or is too long!<br>";
                         } else {
                             $stmt->close();
-                            echo "<br>School Food Program data added successfully!<br>";
+                            echo "<br>Food Assistance data added successfully!<br>";
                         }
 
                     } else {

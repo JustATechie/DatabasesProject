@@ -14,7 +14,12 @@ Added section for interacting with Food Assistance data because it was really co
 
 
 
-
+Some stuff we couldn't do:
+We wanted to have the Add Data portion of our project to be much more streamlined in terms of user experience.
+However, it was extremely difficult to try to implement a cascading dropdown selection system for location information
+for the tables. We did not like this approach, but aftr tinkering for a few hours trying to get it to work,
+and several google searches later, we realized it would not be possible without lots of javascript (which Louie
+does not know).
 
 
 

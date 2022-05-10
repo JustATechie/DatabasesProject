@@ -17,7 +17,7 @@
 
 <!-- (2) -->
 <h5>Add Food Assistance Data!</h5>
-<form action="../updates/addLocation/addLocation.php" method="post">
+<form action="../updates/addFA/addFA.php" method="post">
     <div class="form-inline">
         <button class="btn btn-primary">Go!</button>
     </div>
@@ -26,7 +26,7 @@
 
 <!-- (3) -->
 <h5>Add School Food Program Data!</h5>
-<form action="../updates/addLocation/addLocation.php" method="post">
+<form action="../updates/addSFP/addSFP.php" method="post">
     <div class="form-inline">
         <button class="btn btn-primary">Go!</button>
     </div>
