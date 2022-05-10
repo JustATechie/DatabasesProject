@@ -9,21 +9,27 @@
 <!-- (1) -->
 <h5>Add a Location!</h5>
 <form action="../updates/addLocation/addLocation.php" method="post">
-  <input type="submit" value="Go!"/>
+    <div class="form-inline">
+        <button class="btn btn-primary">Go!</button>
+    </div>
 </form>
 <br /><br />
 
 <!-- (2) -->
 <h5>Add Food Assistance Data!</h5>
 <form action="../updates/addLocation/addLocation.php" method="post">
-    <input type="submit" value="Go!"/>
+    <div class="form-inline">
+        <button class="btn btn-primary">Go!</button>
+    </div>
 </form>
 <br /><br />
 
 <!-- (3) -->
 <h5>Add School Food Program Data!</h5>
 <form action="../updates/addLocation/addLocation.php" method="post">
-    <input type="submit" value="Go!"/>
+    <div class="form-inline">
+        <button class="btn btn-primary">Go!</button>
+    </div>
 </form>
 <br /><br />
 

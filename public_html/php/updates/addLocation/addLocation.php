@@ -15,7 +15,7 @@
 
 <h4>Add a location below!</h4>
 
-Fields marked with * are mandatory!
+<h6>Fields marked with * are mandatory!</h6>
 
 <form method="POST" action="">
     <div class="form-inline">

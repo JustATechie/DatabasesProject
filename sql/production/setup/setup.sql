@@ -11,7 +11,7 @@
 
 /*================= Create Parent Tables =================*/
 CREATE TABLE DataType(
-                         TypeID SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
+                         TypeID SMALLINT UNSIGNED PRIMARY KEY NOT NULL,
                          BrokenTo ENUM('state', 'county', 'city', 'federal') NOT NULL,
                          Researcher ENUM('federal', 'state') NOT NULL
 );
@@ -177,13 +177,13 @@ CREATE TABLE SchoolFoodPrograms(
                                            ON DELETE CASCADE
                                            ON UPDATE RESTRICT,
 
-                                   TypeID SMALLINT UNSIGNED NOT NULL,
+                                   TypeID SMALLINT UNSIGNED NOT NULL DEFAULT 1,
                                    CONSTRAINT FK_TypeID_SLP
                                        FOREIGN KEY (TypeID) references DataType(TypeID)
                                            ON DELETE CASCADE
                                            ON UPDATE RESTRICT,
 
-                                   Name LONGTEXT NOT NULL,
+                                   Name LONGTEXT NOT NULL DEFAULT 'TEST',
                                    Year SMALLINT(4) UNSIGNED,
                                    numStudents BIGINT UNSIGNED
 
