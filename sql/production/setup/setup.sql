@@ -228,19 +228,29 @@ LOAD DATA LOCAL INFILE './data/final/SchoolFoodPrograms.txt' INTO TABLE SchoolFo
 LOAD DATA LOCAL INFILE './data/final/AvgHousehold.txt' INTO TABLE AvgHousehold FIELDS TERMINATED BY ',';
 
 /*================= Stored Procedures =================*/
-# TEST PROCEDURE FOR TEST PHP.
+# DELETE PROCEDURE FOR LOCATION DATA
 /* Get location information from given ID */
 
-
-/*DELIMITER //
-CREATE Procedure addLocation (IN givenState VARCHAR(100), IN givenCounty VARCHAR(100), IN givenCity VARCHAR(100))
+DELIMITER //
+CREATE Procedure deleteLocationByNames (IN givenState VARCHAR(100), IN givenCounty VARCHAR(100), IN givenCity VARCHAR(100))
 BEGIN
 
+    SET @ID = getLocationID(givenState, givenCounty, givenCity);
+
 # we first check if the given locationID is valid, if not add it in and continue
-IF EXISTS (SELECT * FROM Location WHERE LocationID = givenID) THEN
-    select * from Location where LocationID = givenID;
+IF EXISTS (SELECT * FROM Location WHERE LocationID = @ID) THEN
+    delete Location from Location where LocationID=@ID;
 END IF;
 
 END;
 //
-DELIMITER ;*/
+
+DELIMITER //
+CREATE FUNCTION getLocationID (givenState VARCHAR(100), givenCounty VARCHAR(100), givenCity VARCHAR(100))
+    RETURNS INT DETERMINISTIC
+BEGIN
+    SET @ID = (select locationID from Location where state=givenState and county=givenCounty and City=givenCity);
+    return @ID;
+
+END; //
+DELIMITER ;

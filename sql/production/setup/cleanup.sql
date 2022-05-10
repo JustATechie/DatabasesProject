@@ -33,6 +33,8 @@ DROP PROCEDURE IF EXISTS insertInvalidForeignKeyEx;
 
 #PhaseE
 Drop Procedure IF EXISTS getLocationInfo;
+DROP PROCEDURE IF EXISTS deleteLocationByNames;
+DROP FUNCTION IF EXISTS getLocationID;
 
 /* Drop Database */
 #DROP DATABASE IF EXISTS 22sp_ldibern1_db;

@@ -74,64 +74,68 @@ if($Object->num_rows > 0){
 
 <?php include('../../templates/questions/chartArea.php'); ?>
 
-<div id="chartContainer1" style="width: 100%; height: 300px;"></div>
-<div id="chartContainer2" style="width: 100%; height: 300px;"></div>
+<div id="chartContainer1" style="width: 49%; height: 300px;display: inline-block;"></div>
+<div id="chartContainer2" style="width: 49%; height: 300px;display: inline-block;"></div>
 
 <script type="text/javascript">
-	window.onload = function () {
-		if ("<?php echo $minMaxData; ?>".length > 1) {
-            		var chart1 = new CanvasJS.Chart("chartContainer1", {
-	    			animationEnabled: true,
-				theme: "light1", // "light1", "light2", "dark1", "dark2"
-				title:{
-					text: "Minimum and Maximum Childhood Obesity Rates in  "  + "<?php echo $selectedState ?>",
-					horizontalAlign: "center",
-    				},
-				axisY: {
-					title: "Obesity Rate (%)",
-					horizontalAlign: "center",
-    				},
-				axisX: {
-					title: "Year",
-					horizontalAlign: "center",
-    				},
-				data: [{
-				type: "column",
-				dataPoints: [
-					{ y: parseFloat("<?php echo $minObesity ?>"), label: "Minimum Rate (" + "<?php echo $minYear ?>" + ")"},
-					{ y: parseFloat("<?php echo $maxObesity ?>"),  label:  "Maximum Rate (" + "<?php echo $maxYear ?>" + ")"}
-				]
-			}]
-	    	});
+    $(function () {
+        if ("<?php echo $minMaxData; ?>".length > 1) {
+            var chart1 = new CanvasJS.Chart("chartContainer1", {
+                animationEnabled: true,
+                theme: "light1", // "light1", "light2", "dark1", "dark2"
+                title: {
+                    text: "Minimum and Maximum Childhood Obesity Rates in  " + "<?php echo $selectedState ?>",
+                    horizontalAlign: "center",
+                },
+                axisY: {
+                    title: "Obesity Rate (%)",
+                    horizontalAlign: "center",
+                },
+                axisX: {
+                    title: "Year",
+                    horizontalAlign: "center",
+                },
+                data: [{
+                    type: "column",
+                    dataPoints: [
+                        {y: parseFloat("<?php echo $minObesity ?>"), label: "Minimum Rate (" + "<?php echo $minYear ?>" + ")"},
+                        {y: parseFloat("<?php echo $maxObesity ?>"), label: "Maximum Rate (" + "<?php echo $maxYear ?>" + ")"}
+                    ]
+                }]
+            });
+
             chart1.render();
-	}
-     }
+        }
+    });
+
+
 </script>
 
 <script>
-window.onload = function () {
+    $(function () {
+        if ("<?php echo $obesityData; ?>".length > 1) {
+            var chart2 = new CanvasJS.Chart("chartContainer2", {
+                animationEnabled: true,
+                title: {
+                    text: "Childhood Obesity Rate by Year following start of No Kid Hungry Movement in 2010 in " + "<?php echo $selectedState ?>"
+                },
+                axisY: {
+                    title: "Obesity Rate (%)",
+                    stripLines: [{
+                        value: parseFloat("<?php echo $avgObesity ?>"),
+                        label: "Average"
+                    }]
+                },
+                data: [{
+                    xValueFormatString: "YYYY",
+                    type: "spline",
+                    dataPoints: <?php echo json_encode($obesityData, JSON_NUMERIC_CHECK); ?>
+                }]
+            });
+            chart2.render();
+        }
+    });
 
-	var chart2 = new CanvasJS.Chart("chartContainer2", {
-		animationEnabled: true,
-		title:{
-			text: "Childhood Obesity Rate by Year following start of No Kid Hungry Movement in 2010 in " + "<?php echo $selectedState ?>",
-		},
-		axisY: {
-			title: "Obesity Rate (%)",
-			stripLines: [{
-				value: parseFloat("<?php echo $avgObesity ?>"),
-				label: "Average"
-			}]
-	},
-		data: [{
-			xValueFormatString: "YYYY",
-			type: "spline",
-			dataPoints: <?php echo json_encode($obesityData, JSON_NUMERIC_CHECK); ?>
-		}]
-	});
-	chart2.render();
-
-}
 </script>
 
 
