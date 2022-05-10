@@ -5,11 +5,20 @@ if(ISSET($_POST['addInfo'])){
     $County = $_POST['givenCounty'];
     $City = $_POST['givenCity'];
 
+    if(empty($State)){
+        $State = null;
+    } else if (empty($County)){
+        $County = null;
+    } else if (empty($City)){
+        $City = null;
+    }
+
+
     //state cannot be empty when inserting data. We will tolerate not having counties for special zones like reservations
     if($State == null){
         echo "<br>ERROR: State field cannot be empty!<br>";
     } else if(($State != null) && (($County == null) && ($City != null))){
-        echo "<br>ERROR: To specify a city, please specify the county that city resides in!!<br>";
+        echo "<br>ERROR: To specify a city, please specify the county that city resides in!<br>";
     } else if($stmt = $conn->prepare("call deleteLocationByNames('$State', '$County', '$City')")){
 
         #echo "<br>INFO: Adding data!<br>";
@@ -23,11 +32,10 @@ if(ISSET($_POST['addInfo'])){
 
             if($result->num_rows > 0) {
 
-                echo "<br>ERROR: something went wrong.<br>";
+                echo "<br>ERROR: That location does not exist!<br>";
             } else {
 
-
-                #echo "<br>INFO: That location does not exist!<br>";
+                echo "<br>Location deleted!<br>";
 
 
             }

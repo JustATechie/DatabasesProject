@@ -3,7 +3,7 @@
 <!-------------------------- ONLY MAKE CHANGES BELOW THIS LINE -------------------------->
 <head>
     <!-- Tab Title -->
-    <title>Add Location</title>
+    <title>Delete Location</title>
 </head>
 <body>
 <br>
@@ -13,7 +13,7 @@
 
 ?>
 
-<h4>Add a location below!</h4>
+<h4>Delete a location below!</h4>
 
 <h6>Fields marked with * are mandatory!</h6>
 <p></p>

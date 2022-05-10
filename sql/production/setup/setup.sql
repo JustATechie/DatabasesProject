@@ -240,6 +240,8 @@ BEGIN
 # we first check if the given locationID is valid, if not add it in and continue
 IF EXISTS (SELECT * FROM Location WHERE LocationID = @ID) THEN
     delete Location from Location where LocationID=@ID;
+ELSE
+    select -1 as result;
 END IF;
 
 END;
@@ -249,8 +251,21 @@ DELIMITER //
 CREATE FUNCTION getLocationID (givenState VARCHAR(100), givenCounty VARCHAR(100), givenCity VARCHAR(100))
     RETURNS INT DETERMINISTIC
 BEGIN
-    SET @ID = (select locationID from Location where state=givenState and county=givenCounty and City=givenCity);
-    return @ID;
+
+
+    DECLARE id INT;
+
+    if (givenCounty is NULL || givenCounty=' ' || givenCounty='') then
+        return (select locationID from Location where state=givenState and (county=' ' or county='') order by locationID asc limit 1);
+
+    elseif (givenCity is Null || givenCity=' ' || givenCity='') then
+        return (select locationID from Location where state=givenState and county=givenCounty and (city=' ' or city IS NULL or city='') limit 1);
+    else
+        return (select locationID from Location where state=givenState and county=givenCounty and City=givenCity limit 1);
+    end if;
+
 
 END; //
 DELIMITER ;
+
+#call deleteLocationByNames('California', ' ', null);
