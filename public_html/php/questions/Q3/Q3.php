@@ -39,7 +39,13 @@ if($Object->num_rows > 0){
         $Q3Enroll=$row['EnrollNum'];
 
     }
-    echo "<h5>" . $Q3State . " had the highest sugar intake across all genders and ages in " . $Q3Year . ". In this year, the average person consumed " . $Q3Sugar . " sugary drinks per day. In this same year, " . $Q3Enroll . " people were enrolled in Food Assistance programs." . "</h5>";
+
+    if(empty($Q3State) || empty($Q3Year) || empty($Q3Sugar) || empty($Q3Enroll)){
+        echo "<br> No data available for sugar intake at this time!";
+    } else {
+        echo "<h5>" . $Q3State . " had the highest sugar intake across all genders and ages in " . $Q3Year . ". In this year, the average person consumed " . $Q3Sugar . " sugary drinks per day. In this same year, " . $Q3Enroll . " people were enrolled in Food Assistance programs." . "</h5>";
+    }
+
 
 }
 ?>

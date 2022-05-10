@@ -54,3 +54,12 @@ if($Results->num_rows > 0){
 }
 
 ?>
+
+
+<!------------------ Graph Drawing Section ------------------>
+
+<!-- Include template file for chart section. -->
+<?php include('../../templates/questions/chartArea.php'); ?>
+
+<div id="chartContainer1" style="width: 49%; height: 300px;display: inline-block;"></div>
+<div id="chartContainer2" style="width: 49%; height: 300px;display: inline-block;"></div>
