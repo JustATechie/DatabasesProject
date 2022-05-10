@@ -90,6 +90,102 @@ if($Object->num_rows > 0){
 }
 ?>
 
+<?php
+
+$sfResults = include 'getSFData.php';
+
+if($sfResults->num_rows > 0){
+    $sfDataPoints = array();
+
+    foreach($sfResults as $row) {
+        array_push($sfDataPoints, $row);
+    }
+
+    #echo "<br> got sf data!";
+
+}
+
+?>
+
+<?php
+
+$faResults = include 'getFAData.php';
+
+if($faResults->num_rows > 0){
+    $faDataPoints = array();
+
+    foreach($faResults as $row) {
+        array_push($faDataPoints, $row);
+    }
+
+    #echo "<br> got fa data!";
+
+}
+
+?>
+
+
+<script type="text/javascript">
+    window.onload = function () {
+        if ("<?php echo $female65PlusDataPoints; ?>".length > 1) {
+            //if not enough data, do not draw graph!
+
+            var chart = new CanvasJS.Chart("chartContainer", {
+                title: {
+                    text: "Heart Disease Rates by Gender and Age in " + "<?php echo $Q2State ?>"
+                },
+                axisX: {
+                    //valueFormatString: "#,###"
+                    title: "Year"
+                },
+                axisY2: {
+                    title: "Enrollment Number"
+                },
+                toolTip: {
+                    shared: true
+                },
+                legend: {
+                    cursor: "pointer",
+                    verticalAlign: "top",
+                    horizontalAlign: "center",
+                    dockInsidePlotArea: true,
+                    itemclick: toogleDataSeries
+                },
+                data: [{
+                    type: "line",
+                    axisYType: "secondary",
+                    name: "<?php echo $selectedSF ?>",
+                    showInLegend: true,
+                    markerSize: 1,
+                    dataPoints: <?php echo json_encode($sfDataPoints, JSON_NUMERIC_CHECK); ?>
+                }, {
+                    type: "line",
+                    axisYType: "secondary",
+                    name: "<?php echo $selectedFA ?>",
+                    showInLegend: true,
+                    markerSize: 1,
+                    dataPoints: <?php echo json_encode($faDataPoints, JSON_NUMERIC_CHECK); ?>
+                }]
+            });
+            chart.render();
+
+            function toogleDataSeries(e) {
+                if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+                    e.dataSeries.visible = false;
+                } else {
+                    e.dataSeries.visible = true;
+                }
+                chart.render();
+            }
+
+        }
+    }
+</script>
+
+<body>
+<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+</body>
+
 </body>
 
 <?php $conn->close(); ?>

@@ -2,18 +2,19 @@
 
 if(ISSET($_POST['getInfo'])){
 	$sf = $_POST['sfFilter'];
+    $fa = $_POST['faFilter'];
 	if ($stmt = $conn->prepare("
 		SET @maxState = (SELECT State
                 FROM    (SELECT State, AVG(numStudents) as avgStudents
                         FROM SchoolFoodPrograms NATURAL JOIN Location
-                        WHERE Name = '$sf'
+                    WHERE Name = '$sf'
                         GROUP BY State
                         ORDER BY avgStudents DESC
                         LIMIT 1) as maxStudentState);
 
-		SELECT Year as x, numStudents as y
-		FROM SchoolFoodPrograms NATURAL JOIN Location
-		WHERE State = @maxState AND Name = '$sf'
+		SELECT Year as x, numEnrolled as y
+		FROM FoodAssistance NATURAL JOIN Location
+		WHERE State = @maxState AND Name = '$fa'
 		ORDER BY Year ASC;
 	")) {
         if ($stmt->execute()) {
