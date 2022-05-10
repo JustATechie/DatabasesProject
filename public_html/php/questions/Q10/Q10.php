@@ -59,10 +59,28 @@ if($Object->num_rows > 0){
     }}
 ?>
 
+<!-- Get obesity data by year -->
+<!-- Get general info! -->
+<?php
+
+$Object = include 'obesityData.php';
+
+if($Object->num_rows > 0){
+        $obesityData = array();
+        foreach($Object as $row){
+            array_push($obesityData, $row);
+    }}
+?>
+
+<?php include('../../templates/questions/chartArea.php'); ?>
+
+<div id="chartContainer1" style="width: 100%; height: 300px;"></div>
+<div id="chartContainer2" style="width: 100%; height: 300px;"></div>
+
 <script type="text/javascript">
 	window.onload = function () {
 		if ("<?php echo $minMaxData; ?>".length > 1) {
-            		var chart = new CanvasJS.Chart("chartContainer", {
+            		var chart1 = new CanvasJS.Chart("chartContainer1", {
 	    			animationEnabled: true,
 				theme: "light1", // "light1", "light2", "dark1", "dark2"
 				title:{
@@ -85,13 +103,38 @@ if($Object->num_rows > 0){
 				]
 			}]
 	    	});
-            chart.render();
+            chart1.render();
 	}
      }
 </script>
 
-<body>
-<div class="center" id="chartContainer" style="height: 370px; width: 40%; margin: auto; padding: 4px"></div>
+<script>
+window.onload = function () {
+
+	var chart2 = new CanvasJS.Chart("chartContainer2", {
+		animationEnabled: true,
+		title:{
+			text: "Childhood Obesity Rate by Year following start of No Kid Hungry Movement in 2010 in " + "<?php echo $selectedState ?>",
+		},
+		axisY: {
+			title: "Obesity Rate (%)",
+			stripLines: [{
+				value: parseFloat("<?php echo $avgObesity ?>"),
+				label: "Average"
+			}]
+	},
+		data: [{
+			xValueFormatString: "YYYY",
+			type: "spline",
+			dataPoints: <?php echo json_encode($obesityData, JSON_NUMERIC_CHECK); ?>
+		}]
+	});
+	chart2.render();
+
+}
+</script>
+
+
 </body>
 
 <?php $conn->close(); ?>
