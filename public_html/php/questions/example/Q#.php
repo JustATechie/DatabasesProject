@@ -36,3 +36,21 @@ if($Object->num_rows > 0){
     }
 }
 ?>
+
+<!-- Get specific data! -->
+<?php
+
+$Results = include '';
+
+if($Results->num_rows > 0){
+    $DataPoints = array();
+
+    foreach($Results as $row) {
+        array_push($DataPoints, $row);
+    }
+
+    #echo "<br> got data!";
+
+}
+
+?>
