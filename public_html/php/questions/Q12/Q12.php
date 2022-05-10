@@ -101,8 +101,6 @@ if($sfResults->num_rows > 0){
         array_push($sfDataPoints, $row);
     }
 
-    #echo "<br> got sf data!";
-
 }
 
 ?>
@@ -118,74 +116,72 @@ if($faResults->num_rows > 0){
         array_push($faDataPoints, $row);
     }
 
-    #echo "<br> got fa data!";
-
 }
 
 ?>
 
 
-<script type="text/javascript">
-    window.onload = function () {
-        if ("<?php echo $female65PlusDataPoints; ?>".length > 1) {
-            //if not enough data, do not draw graph!
 
-            var chart = new CanvasJS.Chart("chartContainer", {
-                title: {
-                    text: "Heart Disease Rates by Gender and Age in " + "<?php echo $Q2State ?>"
-                },
-                axisX: {
-                    //valueFormatString: "#,###"
-                    title: "Year"
-                },
-                axisY2: {
-                    title: "Enrollment Number"
-                },
-                toolTip: {
-                    shared: true
-                },
-                legend: {
-                    cursor: "pointer",
-                    verticalAlign: "top",
-                    horizontalAlign: "center",
-                    dockInsidePlotArea: true,
-                    itemclick: toogleDataSeries
-                },
-                data: [{
-                    type: "line",
-                    axisYType: "secondary",
-                    name: "<?php echo $selectedSF ?>",
-                    showInLegend: true,
-                    markerSize: 1,
-                    dataPoints: <?php echo json_encode($sfDataPoints, JSON_NUMERIC_CHECK); ?>
-                }, {
-                    type: "line",
-                    axisYType: "secondary",
-                    name: "<?php echo $selectedFA ?>",
-                    showInLegend: true,
-                    markerSize: 1,
-                    dataPoints: <?php echo json_encode($faDataPoints, JSON_NUMERIC_CHECK); ?>
-                }]
-            });
-            chart.render();
+<script>
+window.onload = function () {
+if ("<?php echo $sfDataPoints; ?>".length > 1) {
+var chart = new CanvasJS.Chart("chartContainer", {
+	title: {
+		text: "Number of People enrolled in " + "<?php echo $selectedSF ?>" + " and " + "<?php echo $selectedFA ?>" + " in " + "<?php echo $maxState ?>"
+	},
+	axisX: {
+		// valueFormatString: "YYYY",
+		title: "Year"
+	},
+	axisY2: {
+		title: "Number Enrolled",
+	},
+	toolTip: {
+		shared: true
+	},
+	legend: {
+		cursor: "pointer",
+		verticalAlign: "top",
+		horizontalAlign: "center",
+		dockInsidePlotArea: false,
+		itemclick: toogleDataSeries
+	},
+	data: [{
+		type:"line",
+		axisYType: "secondary",
+		name: "FoodAssistance Program: " + "<?php echo $selectedFA ?>",
+		showInLegend: true,
+		markerSize: 10,
+		// yValueFormatString: "$#,###k",
+		dataPoints: <?php echo json_encode($faDataPoints, JSON_NUMERIC_CHECK); ?>
+	},
+	{
+		type: "line",
+		axisYType: "secondary",
+		name: "School Food Program: " + "<?php echo $selectedSF ?>",
+		showInLegend: true,
+		markerSize: 10,
+		// yValueFormatString: "$#,###k",
+		dataPoints: <?php echo json_encode($sfDataPoints, JSON_NUMERIC_CHECK); ?>
+	}]
+});
+chart.render();
 
-            function toogleDataSeries(e) {
-                if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
-                    e.dataSeries.visible = false;
-                } else {
-                    e.dataSeries.visible = true;
-                }
-                chart.render();
-            }
+function toogleDataSeries(e){
+	if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+		e.dataSeries.visible = false;
+	} else{
+		e.dataSeries.visible = true;
+	}
+	chart.render();
+}
 
-        }
-    }
+}
+}
 </script>
 
 <body>
-<div id="chartContainer" style="height: 370px; width: 100%;"></div>
-</body>
-
+<div class="center" id="chartContainer" style="height: 370px; width: 50%;margin: auto; padding:10px;"></div>
 </body>
 
 <?php $conn->close(); ?>
