@@ -84,21 +84,43 @@
 
     <br /><br />
 
-    <!-- (1) -->
+    <!-- (0) -->
     <h3>General Food Assistance Programs Data</h3>
-    <form
-      action="php/questions/GeneralFoodAssist/GenFoodAssist.php"
-      method="post"
-    >
-      <input type="submit" value="Go!" />
-    </form>
-    <br /><br />
 
-    <!-- (1) -->
-    <h3>Food Legislation and Heart Disease Rates</h3>
-    <form action="php/questions/Q2/Q2.php" method="post">
-      <input type="submit" value="Go!" />
+    <form
+      method="POST"
+      action="php/questions/GeneralFoodAssist/GenFoodAssist.php"
+    >
+      <div class="form-inline">
+        <button class="btn btn-primary">Go!</button>
+      </div>
     </form>
-    <br /><br />
+
+    <br />
+    <br />
+
+    <!-- (2) -->
+    <h3>Food Legislation and Heart Disease Rates</h3>
+
+    <form method="POST" action="php/questions/Q2/Q2.php">
+      <div class="form-inline">
+        <button class="btn btn-primary">Go!</button>
+      </div>
+    </form>
+
+    <br />
+    <br />
+
+    <!-- (3) -->
+    <h3>Sugar Intake and Food Assistance</h3>
+
+    <form method="POST" action="php/questions/Q3/Q3.php">
+      <div class="form-inline">
+        <button class="btn btn-primary">Go!</button>
+      </div>
+    </form>
+
+    <br />
+    <br />
   </body>
 </html>
