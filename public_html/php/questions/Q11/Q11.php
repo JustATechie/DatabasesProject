@@ -1,4 +1,4 @@
-<!--Q#:-->
+<!--Q11:-->
 <?php include "../../templates/questions/question.php" ?>
 <!-------------------------- ONLY MAKE CHANGES BELOW THIS LINE -------------------------->
 <head>
@@ -49,33 +49,108 @@ if($SFList->num_rows > 1){
 <br>
 <br>
 
-<!-- Get general info! -->
+
 <?php
 
-$Object = include 'getData.php';
+$maxResults = include 'getMaxData.php';
 
-if($Object->num_rows > 0){
-    foreach($Object as $row){
-        $ex=$row['Ex'];
+if($maxResults->num_rows > 0){
+    $maxDataPoints = array();
 
+    foreach($maxResults as $row) {
+        array_push($maxDataPoints, $row);
     }
-}
-?>
-
-<!-- Get specific data! -->
-<?php
-
-$Results = include '';
-
-if($Results->num_rows > 0){
-    $DataPoints = array();
-
-    foreach($Results as $row) {
-        array_push($DataPoints, $row);
-    }
-
-    #echo "<br> got data!";
 
 }
 
 ?>
+
+<?php
+
+$minResults = include 'getMinData.php';
+
+if($minResults->num_rows > 0){
+    $minDataPoints = array();
+
+    foreach($minResults as $row) {
+        array_push($minDataPoints, $row);
+    }
+
+}
+
+?>
+
+
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	exportEnabled: true,
+	animationEnabled: true,
+	title:{
+		text: "Car Parts Sold in Different States"
+	},
+	subtitles: [{
+		text: "Click Legend to Hide or Unhide Data Series"
+	}], 
+	axisX: {
+		title: "States"
+	},
+	axisY: {
+		title: "Oil Filter - Units",
+		titleFontColor: "#4F81BC",
+		lineColor: "#4F81BC",
+		labelFontColor: "#4F81BC",
+		tickColor: "#4F81BC",
+		includeZero: true
+	},
+	axisY2: {
+		title: "Clutch - Units",
+		titleFontColor: "#C0504E",
+		lineColor: "#C0504E",
+		labelFontColor: "#C0504E",
+		tickColor: "#C0504E",
+		includeZero: true
+	},
+	toolTip: {
+		shared: true
+	},
+	legend: {
+		cursor: "pointer",
+		itemclick: toggleDataSeries
+	},
+	data: [{
+		type: "column",
+		name: "Oil Filter",
+		showInLegend: true,      
+		yValueFormatString: "#,##0.# Units",
+		dataPoints: <?php echo json_encode($maxDataPoints, JSON_NUMERIC_CHECK); ?>
+	},
+	{
+		type: "column",
+		name: "Clutch",
+		axisYType: "secondary",
+		showInLegend: true,
+		yValueFormatString: "#,##0.# Units",
+		dataPoints: <?php echo json_encode($minDataPoints, JSON_NUMERIC_CHECK); ?>
+	}]
+});
+chart.render();
+
+function toggleDataSeries(e) {
+	if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+		e.dataSeries.visible = false;
+	} else {
+		e.dataSeries.visible = true;
+	}
+	e.chart.render();
+}
+
+}
+</script>
+
+body>
+<div class="center" id="chartContainer" style="height: 370px; width: 50%;margin: auto; padding:10px;"></div>
+</body>
+
+<?php $conn->close(); ?>
