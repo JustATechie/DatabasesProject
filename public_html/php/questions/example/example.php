@@ -7,9 +7,10 @@
 </head>
 <body>
 <br>
+
 <!-- Global variables -->
 <?php
-
+GLOBAL $ex;
 ?>
 
 <h4></h4>
@@ -22,3 +23,16 @@
 
 <br>
 <br>
+
+<!-- Get general info! -->
+<?php
+
+$Object = include '';
+
+if($Object->num_rows > 0){
+    foreach($Object as $row){
+        $ex=$row['Ex'];
+
+    }
+}
+?>
