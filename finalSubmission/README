@@ -21,6 +21,12 @@ for the tables. We did not like this approach, but aftr tinkering for a few hour
 and several google searches later, we realized it would not be possible without lots of javascript (which Louie
 does not know).
 
+Changes to our data:
+While testing, we noticed that some of our queries did not work with our small files (which we found odd,
+considering we tested and made sure we got correct output when we wrote them). Due to this, we had to make a few
+additions from our larger full data to our small data. Notably, some California heart disease data, california
+child obesity data,
+
 
 
 HOW TO SET EVERYTHING UP:
