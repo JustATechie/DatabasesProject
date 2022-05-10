@@ -35,7 +35,7 @@
 
 <!-- (1) -->
 <h5>Delete a Location!</h5>
-<form action="../updates/addLocation/addLocation.php" method="post">
+<form action="../updates/deleteLocation/deleteLocation.php" method="post">
     <div class="form-inline">
         <button class="btn btn-primary">Go!</button>
     </div>
