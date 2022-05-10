@@ -230,8 +230,10 @@ LOAD DATA LOCAL INFILE './data/final/AvgHousehold.txt' INTO TABLE AvgHousehold F
 /*================= Stored Procedures =================*/
 # TEST PROCEDURE FOR TEST PHP.
 /* Get location information from given ID */
-DELIMITER //
-CREATE Procedure getLocationInfo (IN givenID int)
+
+
+/*DELIMITER //
+CREATE Procedure addLocation (IN givenState VARCHAR(100), IN givenCounty VARCHAR(100), IN givenCity VARCHAR(100))
 BEGIN
 
 # we first check if the given locationID is valid, if not add it in and continue
@@ -241,4 +243,4 @@ END IF;
 
 END;
 //
-DELIMITER ;
+DELIMITER ;*/

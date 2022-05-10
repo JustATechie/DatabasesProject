@@ -1,0 +1,30 @@
+<?php include "../templates/pages/page.php"?>
+<!-------------------------- ONLY MAKE CHANGES BELOW THIS LINE -------------------------->
+<head>
+    <!-- Tab Title -->
+    <title>Updates</title>
+</head>
+
+<body>
+<!-- (1) -->
+<h5>Add a Location!</h5>
+<form action="../updates/addLocation/addLocation.php" method="post">
+  <input type="submit" value="Go!"/>
+</form>
+<br /><br />
+
+<!-- (2) -->
+<h5>Add Food Assistance Data!</h5>
+<form action="../updates/addLocation/addLocation.php" method="post">
+    <input type="submit" value="Go!"/>
+</form>
+<br /><br />
+
+<!-- (3) -->
+<h5>Add School Food Program Data!</h5>
+<form action="../updates/addLocation/addLocation.php" method="post">
+    <input type="submit" value="Go!"/>
+</form>
+<br /><br />
+
+</body>
