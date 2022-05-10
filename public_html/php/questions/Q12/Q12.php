@@ -124,7 +124,7 @@ if($faResults->num_rows > 0){
 
 <script>
 window.onload = function () {
-
+if ("<?php echo $sfDataPoints; ?>".length > 1) {
 var chart = new CanvasJS.Chart("chartContainer", {
 	title: {
 		text: "Number of People enrolled in " + "<?php echo $selectedSF ?>" + " and " + "<?php echo $selectedFA ?>" + " in " + "<?php echo $maxState ?>"
@@ -176,6 +176,7 @@ function toogleDataSeries(e){
 	chart.render();
 }
 
+}
 }
 </script>
 
