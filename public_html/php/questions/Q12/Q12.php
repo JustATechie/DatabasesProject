@@ -78,31 +78,18 @@ if($yearList->num_rows > 1){
 
 <!-- Get general info! -->
 <?php
-
-$Object = include '';
-
+$Object = include 'getMaxState.php';
+// $dataPoints = array();
 if($Object->num_rows > 0){
-    foreach($Object as $row){
-        $ex=$row['Ex'];
-
+	$dataPoints = array();
+	foreach($Object as $row){
+	    array_push($dataPoints, $row);
+	    $maxState=$row['State'];
     }
+    echo "<h5>". $maxState. " is the state with the highest number of students enrolled in the ". $selectedSF." program on average (across all years).</h5>";
 }
 ?>
 
-<!-- Get specific data! -->
-<?php
+</body>
 
-$Results = include '';
-
-if($Results->num_rows > 0){
-    $DataPoints = array();
-
-    foreach($Results as $row) {
-        array_push($DataPoints, $row);
-    }
-
-    #echo "<br> got data!";
-
-}
-
-?>
+<?php $conn->close(); ?>

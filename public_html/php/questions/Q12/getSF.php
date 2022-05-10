@@ -1,7 +1,4 @@
 <?php
-
-if(ISSET($_POST['getInfo'])){
-    $sf = $_POST['sfFilter'];
     if ($stmt = $conn->prepare("
         SELECT DISTINCT Name
         FROM SchoolFoodPrograms;")) {
@@ -30,4 +27,3 @@ if(ISSET($_POST['getInfo'])){
     }
 
     $stmt->close();
-}
