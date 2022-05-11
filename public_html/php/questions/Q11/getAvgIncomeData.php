@@ -2,7 +2,7 @@
 
 if(ISSET($_POST['getStats'])){
     if ($stmt = $conn->prepare("            
-        SELECT Year, AvgIncome
+        SELECT Year as x, AvgIncome as y
         FROM AvgHousehold
         WHERE Year >= '2009' AND Year <= '2018'
         ORDER BY Year ASC;
