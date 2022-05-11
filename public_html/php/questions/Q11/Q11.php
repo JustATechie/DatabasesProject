@@ -88,28 +88,20 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	exportEnabled: true,
 	animationEnabled: true,
 	title:{
-		text: "Car Parts Sold in Different States"
+		text: "Number of states with minimum and maximum enrollment for the " + "<?php echo $selectedSF ?>" + " program by year",
 	},
 	subtitles: [{
 		text: "Click Legend to Hide or Unhide Data Series"
 	}], 
 	axisX: {
-		title: "States"
+		title: "Year"
 	},
 	axisY: {
-		title: "Oil Filter - Units",
-		titleFontColor: "#4F81BC",
-		lineColor: "#4F81BC",
-		labelFontColor: "#4F81BC",
-		tickColor: "#4F81BC",
-		includeZero: true
-	},
-	axisY2: {
-		title: "Clutch - Units",
-		titleFontColor: "#C0504E",
-		lineColor: "#C0504E",
-		labelFontColor: "#C0504E",
-		tickColor: "#C0504E",
+		title: "Number of States",
+		//titleFontColor: "#4F81BC",
+		//lineColor: "#4F81BC",
+		//labelFontColor: "#4F81BC",
+		//tickColor: "#4F81BC",
 		includeZero: true
 	},
 	toolTip: {
@@ -121,17 +113,17 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	},
 	data: [{
 		type: "column",
-		name: "Oil Filter",
+		name: "Maximum Enrollment",
 		showInLegend: true,      
-		yValueFormatString: "#,##0.# Units",
+		// yValueFormatString: "#,##0.# Units",
 		dataPoints: <?php echo json_encode($maxDataPoints, JSON_NUMERIC_CHECK); ?>
 	},
 	{
 		type: "column",
-		name: "Clutch",
+		name: "Minimum Enrollment",
 		axisYType: "secondary",
 		showInLegend: true,
-		yValueFormatString: "#,##0.# Units",
+		// yValueFormatString: "#,##0.# Units",
 		dataPoints: <?php echo json_encode($minDataPoints, JSON_NUMERIC_CHECK); ?>
 	}]
 });
@@ -149,7 +141,7 @@ function toggleDataSeries(e) {
 }
 </script>
 
-body>
+<body>
 <div class="center" id="chartContainer" style="height: 370px; width: 50%;margin: auto; padding:10px;"></div>
 </body>
 
