@@ -80,77 +80,163 @@ if($minResults->num_rows > 0){
 
 ?>
 
+<?php
+
+$incomeResults = include 'getAvgIncomeData.php';
+
+if($incomeResults->num_rows > 0){
+    $incomeDataPoints = array();
+
+    foreach($incomeResults as $row) {
+        array_push($incomeDataPoints, $row);
+    }
+
+}
+
+?>
+
+<?php include('../../templates/questions/chartArea.php'); ?>
+
+<div class="center" id="chartContainer1" style="width: 40%; margin: auto;height: 300px;"></div>
+<div class="center" id="chartContainer2" style="width: 80%; height: 300px;margin: auto;padding:10px;"></div>
+
 
 <script>
-window.onload = function () {
+$(function () {
 
-var chart = new CanvasJS.Chart("chartContainer", {
-	exportEnabled: true,
-	animationEnabled: true,
-	title:{
-		text: "Car Parts Sold in Different States"
-	},
-	subtitles: [{
-		text: "Click Legend to Hide or Unhide Data Series"
-	}], 
-	axisX: {
-		title: "States"
-	},
-	axisY: {
-		title: "Oil Filter - Units",
-		titleFontColor: "#4F81BC",
-		lineColor: "#4F81BC",
-		labelFontColor: "#4F81BC",
-		tickColor: "#4F81BC",
-		includeZero: true
-	},
-	axisY2: {
-		title: "Clutch - Units",
-		titleFontColor: "#C0504E",
-		lineColor: "#C0504E",
-		labelFontColor: "#C0504E",
-		tickColor: "#C0504E",
-		includeZero: true
-	},
-	toolTip: {
-		shared: true
-	},
-	legend: {
-		cursor: "pointer",
-		itemclick: toggleDataSeries
-	},
-	data: [{
-		type: "column",
-		name: "Oil Filter",
-		showInLegend: true,      
-		yValueFormatString: "#,##0.# Units",
-		dataPoints: <?php echo json_encode($maxDataPoints, JSON_NUMERIC_CHECK); ?>
-	},
-	{
-		type: "column",
-		name: "Clutch",
-		axisYType: "secondary",
-		showInLegend: true,
-		yValueFormatString: "#,##0.# Units",
-		dataPoints: <?php echo json_encode($minDataPoints, JSON_NUMERIC_CHECK); ?>
-	}]
+    var chart = new CanvasJS.Chart("chartContainer", {
+        exportEnabled: true,
+        animationEnabled: true,
+        title:{
+            text: "Car Parts Sold in Different States"
+        },
+        subtitles: [{
+            text: "Click Legend to Hide or Unhide Data Series"
+        }], 
+        axisX: {
+            title: "States"
+        },
+        axisY: {
+            title: "Oil Filter - Units",
+            titleFontColor: "#4F81BC",
+            lineColor: "#4F81BC",
+            labelFontColor: "#4F81BC",
+            tickColor: "#4F81BC",
+            includeZero: true
+        },
+        axisY2: {
+            title: "Clutch - Units",
+            titleFontColor: "#C0504E",
+            lineColor: "#C0504E",
+            labelFontColor: "#C0504E",
+            tickColor: "#C0504E",
+            includeZero: true
+        },
+        toolTip: {
+            shared: true
+        },
+        legend: {
+            cursor: "pointer",
+            itemclick: toggleDataSeries
+        },
+        data: [{
+            type: "column",
+            name: "Oil Filter",
+            showInLegend: true,      
+            yValueFormatString: "#,##0.# Units",
+            dataPoints: <?php echo json_encode($maxDataPoints, JSON_NUMERIC_CHECK); ?>
+        },
+        {
+            type: "column",
+            name: "Clutch",
+            axisYType: "secondary",
+            showInLegend: true,
+            yValueFormatString: "#,##0.# Units",
+            dataPoints: <?php echo json_encode($minDataPoints, JSON_NUMERIC_CHECK); ?>
+        }]
+    });
+    chart.render();
+
+    function toggleDataSeries(e) {
+        if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+            e.dataSeries.visible = false;
+        } else {
+            e.dataSeries.visible = true;
+        }
+        e.chart.render();
+    }
+
 });
-chart.render();
-
-function toggleDataSeries(e) {
-	if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
-		e.dataSeries.visible = false;
-	} else {
-		e.dataSeries.visible = true;
-	}
-	e.chart.render();
-}
-
-}
 </script>
 
-body>
-<div class="center" id="chartContainer" style="height: 370px; width: 50%;margin: auto; padding:10px;"></div>
+<script>
+$(function () {
+
+    var chart = new CanvasJS.Chart("chartContainer", {
+        exportEnabled: true,
+        animationEnabled: true,
+        title:{
+            text: "Car Parts Sold in Different States"
+        },
+        subtitles: [{
+            text: "Click Legend to Hide or Unhide Data Series"
+        }], 
+        axisX: {
+            title: "States"
+        },
+        axisY: {
+            title: "Oil Filter - Units",
+            titleFontColor: "#4F81BC",
+            lineColor: "#4F81BC",
+            labelFontColor: "#4F81BC",
+            tickColor: "#4F81BC",
+            includeZero: true
+        },
+        axisY2: {
+            title: "Clutch - Units",
+            titleFontColor: "#C0504E",
+            lineColor: "#C0504E",
+            labelFontColor: "#C0504E",
+            tickColor: "#C0504E",
+            includeZero: true
+        },
+        toolTip: {
+            shared: true
+        },
+        legend: {
+            cursor: "pointer",
+            itemclick: toggleDataSeries
+        },
+        data: [{
+            type: "column",
+            name: "Oil Filter",
+            showInLegend: true,      
+            yValueFormatString: "#,##0.# Units",
+            dataPoints: <?php echo json_encode($maxDataPoints, JSON_NUMERIC_CHECK); ?>
+        },
+        {
+            type: "column",
+            name: "Clutch",
+            axisYType: "secondary",
+            showInLegend: true,
+            yValueFormatString: "#,##0.# Units",
+            dataPoints: <?php echo json_encode($minDataPoints, JSON_NUMERIC_CHECK); ?>
+        }]
+    });
+    chart.render();
+
+    function toggleDataSeries(e) {
+        if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+            e.dataSeries.visible = false;
+        } else {
+            e.dataSeries.visible = true;
+        }
+        e.chart.render();
+    }
+
+});
+</script>
+
 </body>
 
 <?php $conn->close(); ?>
