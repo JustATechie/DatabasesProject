@@ -1,0 +1,45 @@
+Databases Project
+Partners:
+Louie DiBernardo (LDIBERN1)
+Sanddhya Jayabalan (SJAYABA1)
+
+Members:
+Louie DiBernardo (LDIBERN1)
+Sanddhya Jayabalan (SJAYABA1)
+
+Modifications:
+From our original Phase A, we did not change domains or many of our questions. We had more than 15 questions
+originally, which definitely helped when we needed to make queries since we had to adapt a few of them
+to fit our actual dataset. We did not have to pull additional datasets since our original list contained so many
+different options, we actually found our selves being somewhat selective with our data to not have enormous
+amounts. Overall we maintained the integrity of the original plan we had in Phase A.
+
+Process:
+Only change to our data that we made this time was adding data to our MetabolicDisease-small.txt file from the
+larger file. This was because when we started to graph our results, we found that we did not have enough data
+for some of our queries. We did not add much to it, but we added enough to make the results look good.
+
+Successes:
+When it came to inserts, we found it difficult to deal with locations since the users should only interact
+with names and words, not id numbers. We solved this by either hiding the locationID when we returned from
+php files where we requested a list of states, or we used our getLocationID function to get the id from
+state name, county name, and city name if applicable.
+
+
+
+Known Issues:
+We had attempted to make cascading drop down boxes for location selection for the inserts, but were
+unsuccessful in doing so. We found it added a lot of complexity and would not work without some additional
+overhead. We think this would be a great addition to our site as it then allows users to see first what locations
+we already have, and then can add more if need be. This wasn't required, but we really wanted to do it.
+
+Extensions:
+We think it would be awesome to expand the bonus section of the website so users can more freely interact with
+our tables. We added one example with the food assistance data but we wanted to add more visualization and
+options. We feel this would be a much more user-friendly way to learn and interact with data than just a large
+endless table of rows.
+
+Second, just overall making the site appear nicer to the eyes. In the beginning we were trying to take our
+time and try to make the site look nice but we found that without additional tools and frameworks, it would be
+very difficult to do so.
+

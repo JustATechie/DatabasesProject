@@ -1,0 +1,8 @@
+Databases Project
+Partners:
+Louie DiBernardo (LDIBERN1)
+Sanddhya Jayabalan (SJAYABA1)
+
+If cloning repo from github, please see README. Otherwise:
+
+Place the root of this final submission folder into your home folder.

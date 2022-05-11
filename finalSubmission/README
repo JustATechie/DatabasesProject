@@ -3,11 +3,14 @@ Partners:
 Louie DiBernardo (LDIBERN1)
 Sanddhya Jayabalan (SJAYABA1)
 
+Github Repo:
+https://github.com/JustATechie/DatabasesProject.git
+
 Full repo zip download link:
 {insert link here}
 
 Changes to original questions:
-
+None.
 
 New questions:
 Added section for interacting with Food Assistance data because it was really cool. We did not count this in our total query count.
@@ -28,33 +31,16 @@ additions from our larger full data to our small data. Notably, some California 
 child obesity data,
 
 
-
 HOW TO SET EVERYTHING UP:
-clone our repo directly into your ugrad home.
-
-cd into DatabasesProject
-
-log into dbase, select your database and run:
+If you are cloning our repository the setup scripts are:
 source ~/DatabasesProject/sql/production/setup/cleanup.sql
-and:
 source ~/DatabasesProject/sql/production/setup/setup.sql;
+source ~/DatabasesProject/sql/production/setup/setup-small.sql;
 
-You can now exit out of dbase!
+Note: you'll need to enter dbase from within the root of our repo folder.
 
-cd into your home dir
+Make sure all folders are executable, and all necessary files are readable.
+We found that index had to be readable, as well as all the files in the assets folder.
+Also make sure that every subfolder has a .htaccess file with your acccount info.
 
-copy our public_html file into yours with:
-cp DatabasesProject/public_html/* public_html/DatabasesProject/
 
-some helpful commands for ugrad:
-(they require you to be in the right sub folder already)
-(dont forget to make DatabasesProject executeable as well!)
-
-Make all subfolders executable:
-find public_html/ -type d -exec chmod o+x {} \;
-
-make all files in assets readable:
-find assets/ -type f -exec chmod o+r {} \;
-
-copy .htaccess to all sub directories with the same persmisisons
-for dir in `find . -type d` ; do cp -p .htaccess $dir/.htaccess ; done
