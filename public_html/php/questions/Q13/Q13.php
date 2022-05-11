@@ -90,15 +90,14 @@ if($Object->num_rows > 0){
         $maxIncome150kTo200k=$row['Income150kTo200k'];
         $maxIncome200kAbove=$row['Income200kAbove'];
         $maxAvg=$row['AvgIncome'];
-    }
-} 
-?>
+	}
 
-<?php
     echo "<h5>". $maxYear. " was the year with the highest number of people enrolled in Food Assistance Programs federally. ". $maxEnroll." people were enrolled in food assistance programs this year and the average income for the year was $".$maxAvg." .</h5>";
     echo "<br>";
     echo "<h5>". $minYear. " was the year with the lowest number of people enrolled in Food Assistance Programs federally. ". $minEnroll." people were enrolled in food assistance programs this year and the average income for the year was $".$minAvg." .</h5>";
+} 
 ?>
+
 
 <?php
 $Object = include 'getTotalEnrollmentData.php';
