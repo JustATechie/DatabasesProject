@@ -192,31 +192,31 @@ CREATE TABLE SchoolFoodPrograms(
 /* Load data into tables from files. */
 
 /* Location Data */
-LOAD DATA LOCAL INFILE 'data/final-small/Location-small.txt' INTO TABLE Location FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE 'dbase_setup/Location-small.txt' INTO TABLE Location FIELDS TERMINATED BY ',';
 
 /* Data Type */
-LOAD DATA LOCAL INFILE 'data/final-small/DataType-small.txt' INTO TABLE DataType FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE 'dbase_setup/DataType-small.txt' INTO TABLE DataType FIELDS TERMINATED BY ',';
 
 /* Food Legislation Data */
-LOAD DATA LOCAL INFILE 'data/final-small/FoodLegislation-small.txt' INTO TABLE FoodLegislation FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE 'dbase_setup/FoodLegislation-small.txt' INTO TABLE FoodLegislation FIELDS TERMINATED BY ',';
 
 /* population Stats Data */
-LOAD DATA LOCAL INFILE 'data/final-small/PopulationStats-small.txt' INTO TABLE PopulationStats FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE 'dbase_setup/PopulationStats-small.txt' INTO TABLE PopulationStats FIELDS TERMINATED BY ',';
 
 /* Consumption Stats Data */
-LOAD DATA LOCAL INFILE 'data/final-small/ConsumptionStats-small.txt' INTO TABLE ConsumptionStats FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE 'dbase_setup/ConsumptionStats-small.txt' INTO TABLE ConsumptionStats FIELDS TERMINATED BY ',';
 
 /* Metabolic Disease Data */
-LOAD DATA LOCAL INFILE 'data/final-small/MetabolicDisease-small.txt' INTO TABLE MetabolicDisease FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE 'dbase_setup/MetabolicDisease-small.txt' INTO TABLE MetabolicDisease FIELDS TERMINATED BY ',';
 
 /* Food Assistance Data */
-LOAD DATA LOCAL INFILE 'data/final-small/FoodAssistance-small.txt' INTO TABLE FoodAssistance FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE 'dbase_setup/FoodAssistance-small.txt' INTO TABLE FoodAssistance FIELDS TERMINATED BY ',';
 
 /* School Lunch Program Data */
-LOAD DATA LOCAL INFILE 'data/final-small/SchoolFoodPrograms-small.txt' INTO TABLE SchoolFoodPrograms FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE 'dbase_setup/SchoolFoodPrograms-small.txt' INTO TABLE SchoolFoodPrograms FIELDS TERMINATED BY ',';
 
 /* Average Household Data */
-LOAD DATA LOCAL INFILE 'data/final-small/AvgHousehold-small.txt' INTO TABLE AvgHousehold FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE 'dbase_setup/AvgHousehold-small.txt' INTO TABLE AvgHousehold FIELDS TERMINATED BY ',';
 
 
 /* Lock tables that should be read-only (should be all tables eventually to prevent data deletion.) */
