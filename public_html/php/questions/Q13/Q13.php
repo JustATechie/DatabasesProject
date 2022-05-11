@@ -107,7 +107,7 @@ if($Object->num_rows > 0){
 	$totalEnrollmentDataPoints = array();
 	foreach($Object as $row){
 	    array_push($totalEnrollmentDataPoints, $row);
-    }
+	}
 } 
 ?>
 
@@ -119,6 +119,7 @@ if($Object->num_rows > 0){
 <?php echo "<br><br>" ?>
 <div id="chartContainer1" style="width: 49%; height: 300px;display: inline-block;padding:10px;"></div>
 <div  id="chartContainer2" style="width: 49%; height: 300px;display: inline-block;padding:10px;"></div>
+<?php echo "<br><br><br>" ?>
 <div style="center" id="chartContainer3" style="width: 80%; height: 300px;padding:10px;"></div>
 
 <script type="text/javascript">
@@ -192,7 +193,7 @@ if($Object->num_rows > 0){
         //if not enough data, do not draw graph!
     } else {
         $(function () {
-            var chart23= new CanvasJS.Chart("chartContainer3", {
+            var chart3= new CanvasJS.Chart("chartContainer3", {
                 theme: "light2",
                 zoomEnabled: true,
                 animationEnabled: true,
