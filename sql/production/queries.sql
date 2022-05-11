@@ -199,7 +199,7 @@ from (select Gender,AVG(SugarIntake) as 'AVGSugar' from ConsumptionStats where (
 select Year as x,Income200kAbove as y from AvgHousehold where (year = 2015 or year=2000) order by year;
 select Year,Income150kTo200k from AvgHousehold where (year = 2015 or year=2000) order by year;
 
-select YearPassed,sum(LegislationID) from FoodLegislation where yearPassed>=2015 group by YearPassed;
+select YearPassed as y,sum(LegislationID) as x from FoodLegislation where yearPassed>=2015 group by YearPassed;
 
 
 /*============================================================================*/
