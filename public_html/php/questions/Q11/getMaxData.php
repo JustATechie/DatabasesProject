@@ -41,7 +41,7 @@ if(ISSET($_POST['getStats'])){
             $result = $stmt->get_result();
 
             if($result->num_rows < 1){
-                echo "<br>ERROR: Unable to get data for minimum enrollment years!<br>";
+                echo "<br>ERROR: Unable to get data for maximum enrollment years!<br>";
             } else {
                 $stmt->close();
                 return $result;
