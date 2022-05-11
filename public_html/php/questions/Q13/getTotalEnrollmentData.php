@@ -1,10 +1,11 @@
 <?php
 
-if(ISSET($_POST['getStats'])){
-    if ($stmt = $conn->prepare("            
-        SELECT Year as x, AvgIncome as y
-        FROM AvgHousehold
-        WHERE Year >= '2009' AND Year <= '2018'
+if(ISSET($_POST['getInfo'])){
+
+    if ($stmt = $conn->prepare("
+        SELECT Year as x, SUM(numEnrolled) as y
+        FROM FoodAssistance
+        GROUP BY Year
         ORDER BY Year ASC;
     ")) {
         if ($stmt->execute()) {
@@ -12,7 +13,7 @@ if(ISSET($_POST['getStats'])){
             $result = $stmt->get_result();
 
             if($result->num_rows < 1){
-                echo "<br>ERROR: Unable to get data for average household data!!<br>";
+                echo "<br>ERROR: {INSERT ERROR MESSAGE HERE!}<br>";
             } else {
                 $stmt->close();
                 return $result;
