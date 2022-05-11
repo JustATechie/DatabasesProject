@@ -3,7 +3,7 @@
 if(ISSET($_POST['getInfo'])){
 
     if ($stmt = $conn->prepare("
-        SELECT County as y, HeartDisease as label
+        SELECT County as label, HeartDisease as y
         FROM MetabolicDisease NATURAL JOIN Location
         WHERE Year = '2013' AND Gender = 'Male' AND AgeRange = 'Ages 35-64 years' AND State = 'California'
         ORDER By HeartDisease DESC;

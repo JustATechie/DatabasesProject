@@ -101,14 +101,14 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		type: "bar",
 		showInLegend: true,
 		name: "Female",
-		color: "silver",
+		color: "red",
 		dataPoints: <?php echo json_encode($femaleDataPoints, JSON_NUMERIC_CHECK); ?>
 	},
 	{
 		type: "bar",
 		showInLegend: true,
 		name: "Male",
-		color: "#A57164",
+		color: "blue",
 		dataPoints: <?php echo json_encode($maleDataPoints, JSON_NUMERIC_CHECK); ?>
 	}]
 });
@@ -143,7 +143,8 @@ function toggleDataSeries(e) {
 </script>
 
 <body>
-<div style="center" id="chartContainer" style="height: 370px; width: 80%;"></div>
+<?php echo "<br><br><br>" ?>
+<div style="center" id="chartContainer" style="height: 500px; width: 50%;padding:20px;"></div>
 </body>
 
 <?php $conn->close(); ?>
