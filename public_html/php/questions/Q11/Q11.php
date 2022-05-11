@@ -90,37 +90,33 @@ if($incomeResults->num_rows > 0){
     foreach($incomeResults as $row) {
         array_push($incomeDataPoints, $row);
     }
-
 }
 
 ?>
 
 <?php include('../../templates/questions/chartArea.php'); ?>
 
-<div class="center" id="chartContainer1" style="width: 40%; margin: auto;height: 300px;"></div>
+<div class="center" id="chartContainer1" style="width: 80%; margin: auto;height: 300px;"></div>
+<?php echo "<br><br>" ?>
 <div class="center" id="chartContainer2" style="width: 80%; height: 300px;margin: auto;padding:10px;"></div>
 
 
 <script>
 $(function () {
-    var chart = new CanvasJS.Chart("chartContainer", {
+    var chart1 = new CanvasJS.Chart("chartContainer1", {
         exportEnabled: true,
         animationEnabled: true,
         title:{
             text: "Number of states with minimum and maximum enrollment for the " + "<?php echo $selectedSF ?>" + " program by year",
         },
         subtitles: [{
-            text: "Click Legend to Hide or Unhide Data Series"
+            // text: "Click Legend to Hide or Unhide Data Series"
         }], 
         axisX: {
             title: "Year"
         },
         axisY: {
             title: "Number of States",
-            //titleFontColor: "#4F81BC",
-            //lineColor: "#4F81BC",
-            //labelFontColor: "#4F81BC",
-            //tickColor: "#4F81BC",
             includeZero: true
         },
         toolTip: {
@@ -145,65 +141,8 @@ $(function () {
             // yValueFormatString: "#,##0.# Units",
             dataPoints: <?php echo json_encode($minDataPoints, JSON_NUMERIC_CHECK); ?>
         }]
-    })
-});
-</script>
-
-<script>
-$(function () {
-
-    var chart = new CanvasJS.Chart("chartContainer", {
-        exportEnabled: true,
-        animationEnabled: true,
-        title:{
-            text: "Car Parts Sold in Different States"
-        },
-        subtitles: [{
-            text: "Click Legend to Hide or Unhide Data Series"
-        }], 
-        axisX: {
-            title: "States"
-        },
-        axisY: {
-            title: "Oil Filter - Units",
-            titleFontColor: "#4F81BC",
-            lineColor: "#4F81BC",
-            labelFontColor: "#4F81BC",
-            tickColor: "#4F81BC",
-            includeZero: true
-        },
-        axisY2: {
-            title: "Clutch - Units",
-            titleFontColor: "#C0504E",
-            lineColor: "#C0504E",
-            labelFontColor: "#C0504E",
-            tickColor: "#C0504E",
-            includeZero: true
-        },
-        toolTip: {
-            shared: true
-        },
-        legend: {
-            cursor: "pointer",
-            itemclick: toggleDataSeries
-        },
-        data: [{
-            type: "column",
-            name: "Oil Filter",
-            showInLegend: true,      
-            yValueFormatString: "#,##0.# Units",
-            dataPoints: <?php echo json_encode($maxDataPoints, JSON_NUMERIC_CHECK); ?>
-        },
-        {
-            type: "column",
-            name: "Clutch",
-            axisYType: "secondary",
-            showInLegend: true,
-            yValueFormatString: "#,##0.# Units",
-            dataPoints: <?php echo json_encode($minDataPoints, JSON_NUMERIC_CHECK); ?>
-        }]
-    });
-    chart.render();
+	})
+	chart1.render();
 
     function toggleDataSeries(e) {
         if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
@@ -211,10 +150,41 @@ $(function () {
         } else {
             e.dataSeries.visible = true;
         }
-        e.chart.render();
+        e.chart1.render();
     }
 
 });
+</script>
+
+<script>
+    if("<?php echo $incomeDataPoints; ?>".length < 1){
+        //if not enough data, do not draw graph!
+    } else {
+        $(function () {
+            var chart2 = new CanvasJS.Chart("chartContainer2", {
+                theme: "light2",
+                zoomEnabled: true,
+                animationEnabled: true,
+                title: {
+                    text: "Average Federal Household Income by Year"
+                },axisX: {
+                    //valueFormatString: "#,###"
+                    title: "Year"
+                },
+                axisY: {
+			title: "Average Income"
+			prefix: "$"
+                },
+                data: [
+                    {
+                        type: "line",
+                        dataPoints: <?php echo json_encode($incomeDataPoints, JSON_NUMERIC_CHECK); ?>
+                    }
+                ]
+            });
+            chart2.render();
+        });
+    }
 </script>
 
 </body>
