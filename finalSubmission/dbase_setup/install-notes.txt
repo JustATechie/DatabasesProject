@@ -6,3 +6,21 @@ Sanddhya Jayabalan (SJAYABA1)
 If cloning repo from github, please see README. Otherwise:
 
 Place the root of this final submission folder into your home folder.
+
+enter dbase from here.
+
+run:
+source ~/finalSubmission/dbase_setup/cleanup.sql
+
+source ~/finalSubmission/dbase_setup/setup.sql
+
+source ~/finalSubmission/dbase_setup/setup-small.sql
+
+Note: path will change depending if you place our folder elsewhere.
+
+Copy our public_html folder into a subfolder within your public html.
+
+We have provided a conf.php for you to put in your credentials. This is in: public_html/php/ folder.
+
+Go ahead and assign permissions as needed as well. Index.html and all files in the assets folder as well! all folders
+must be executeable.
