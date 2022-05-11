@@ -105,5 +105,71 @@ if($Object->num_rows > 0){
 <!-- Include template file for chart section. -->
 <?php include('../../templates/questions/chartArea.php'); ?>
 
-<div id="chartContainer1" style="width: 49%; height: 300px;display: inline-block;"></div>
-<div id="chartContainer2" style="width: 49%; height: 300px;display: inline-block;"></div>
+<div id="chartContainer1" style="width: 100%; height: 300px;display: inline-block;"></div>
+<div id="chartContainer2" style="width: 100%; height: 300px;display: inline-block;"></div>
+
+<script type="text/javascript">
+    if("<?php echo $minIncomeDataPoints; ?>".length > 0) {
+
+        $(function () {
+            var chart1 = new CanvasJS.Chart("chartContainer1", {
+	            animationEnabled: true,
+                title: {
+                    text: "Federal Income Distribution in " + "<?php echo $minYear ?>" + " (Minimum Enrollment)"
+                },
+                data: [{
+                    type: "pie",
+                    startAngle: 240,
+                    yValueFormatString: "##0.00\"%\"",
+                    indexLabel: "{label} {y}",
+                    dataPoints: [
+                        {y: parseFloat(<?php echo $minIncomeUnder15k ?>), label: "Under 15K"},
+                        {y: parseFloat(<?php echo $minIncome15kTo25k ?>), label: "15K to 25K"},
+                        {y: parseFloat(<?php echo $minIncome25kTo35k ?>), label: "25K to 35K"},
+                        {y: parseFloat(<?php echo $minIncome35kTo50k ?>), label: "35K to 50K"},
+                        {y: parseFloat(<?php echo $minIncome50kTo75k ?>), label: "50K to 75K"},
+                        {y: parseFloat(<?php echo $minIncome75kTo100k ?>), label: "75K to 100K"},
+                        {y: parseFloat(<?php echo $minIncome100kTo150k ?>), label: "100K to 150K"},
+                        {y: parseFloat(<?php echo $minIncome150kTo200k ?>), label: "150K to 200K"},
+                        {y: parseFloat(<?php echo $minIncome200kAbove ?>), label: "Above 200K"}
+                    ]
+                }]
+            });
+            chart1.render();
+        });
+    }
+</script>
+
+<script type="text/javascript">
+    if("<?php echo $DataPoints2; ?>".length > 0){
+        $(function () {
+            var chart2 = new CanvasJS.Chart("chartContainer2", {
+	            animationEnabled: true,
+                title: {
+                    text: "Federal Income Distribution in " + "<?php echo $maxYear ?>" + " (Maximum Enrollment)"
+                },
+                data: [{
+                    type: "pie",
+                    startAngle: 240,
+                    yValueFormatString: "##0.00\"%\"",
+                    indexLabel: "{label} {y}",
+                    dataPoints: [
+                        {y: parseFloat(<?php echo $maxIncomeUnder15k ?>), label: "Under 15K"},
+                        {y: parseFloat(<?php echo $maxIncome15kTo25k ?>), label: "15K to 25K"},
+                        {y: parseFloat(<?php echo $maxIncome25kTo35k ?>), label: "25K to 35K"},
+                        {y: parseFloat(<?php echo $maxIncome35kTo50k ?>), label: "35K to 50K"},
+                        {y: parseFloat(<?php echo $maxIncome50kTo75k ?>), label: "50K to 75K"},
+                        {y: parseFloat(<?php echo $maxIncome75kTo100k ?>), label: "75K to 100K"},
+                        {y: parseFloat(<?php echo $maxIncome100kTo150k ?>), label: "100K to 150K"},
+                        {y: parseFloat(<?php echo $maxIncome150kTo200k ?>), label: "150K to 200K"},
+                        {y: parseFloat(<?php echo $maxIncome200kAbove ?>), label: "Above 200K"}
+                    ]
+                }]
+            });
+            chart2.render();
+
+        });
+    }
+</script>
+
+<?php $conn->close(); ?>
