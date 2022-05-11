@@ -3,7 +3,7 @@ Partners:
 Louie DiBernardo (LDIBERN1)
 Sanddhya Jayabalan (SJAYABA1)
 
-Github Repo:
+Github Repo (now made public!):
 https://github.com/JustATechie/DatabasesProject.git
 
 Full repo zip download link:
@@ -14,8 +14,6 @@ None.
 
 New questions:
 Added section for interacting with Food Assistance data because it was really cool. We did not count this in our total query count.
-
-
 
 Some stuff we couldn't do:
 We wanted to have the Add Data portion of our project to be much more streamlined in terms of user experience.
@@ -32,6 +30,8 @@ child obesity data,
 
 
 HOW TO SET EVERYTHING UP:
+If using our provided finalSubmission folder, please see install_notes.txt there.
+
 If you are cloning our repository the setup scripts are:
 source ~/DatabasesProject/sql/production/setup/cleanup.sql
 source ~/DatabasesProject/sql/production/setup/setup.sql;
@@ -42,5 +42,10 @@ Note: you'll need to enter dbase from within the root of our repo folder.
 Make sure all folders are executable, and all necessary files are readable.
 We found that index had to be readable, as well as all the files in the assets folder.
 Also make sure that every subfolder has a .htaccess file with your acccount info.
+
+There is a provided conf.php file in public_html/php folder. We do not link to any other conf.php file
+you may have, sorry.
+
+
 
 

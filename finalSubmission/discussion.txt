@@ -25,6 +25,9 @@ with names and words, not id numbers. We solved this by either hiding the locati
 php files where we requested a list of states, or we used our getLocationID function to get the id from
 state name, county name, and city name if applicable.
 
+A big success for us was back in the beginning of the project. Not only finding the sources and types of data
+we wanted to use, but also cleaning all of data. It took a lot of time for us to work through all of it, and
+in the end definitely paid off because we have some awesome data.
 
 
 Known Issues:
