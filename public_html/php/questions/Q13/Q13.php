@@ -105,8 +105,9 @@ if($Object->num_rows > 0){
 <!-- Include template file for chart section. -->
 <?php include('../../templates/questions/chartArea.php'); ?>
 
-<div id="chartContainer1" style="width: 100%; height: 300px;display: inline-block;"></div>
-<div id="chartContainer2" style="width: 100%; height: 300px;display: inline-block;"></div>
+<?php echo "<br><br>" ?>
+<div id="chartContainer1" style="width: 49%; height: 300px;display: inline-block;padding:10px;"></div>
+<div  id="chartContainer2" style="width: 49%; height: 300px;display: inline-block;padding:10px;"></div>
 
 <script type="text/javascript">
     if("<?php echo $minIncomeDataPoints; ?>".length > 0) {
@@ -115,13 +116,14 @@ if($Object->num_rows > 0){
             var chart1 = new CanvasJS.Chart("chartContainer1", {
 	            animationEnabled: true,
                 title: {
-                    text: "Federal Income Distribution in " + "<?php echo $minYear ?>" + " (Minimum Enrollment)"
+		    text: "Federal Income Distribution in " + "<?php echo $minYear ?>" + " (Min Enrollment)"
                 },
                 data: [{
                     type: "pie",
                     startAngle: 240,
-                    yValueFormatString: "##0.00\"%\"",
-                    indexLabel: "{label} {y}",
+                    // yValueFormatString: "##0.00\"%\"",
+		    indexLabel: "{label}",
+		    indexLabelFontSize: 10,
                     dataPoints: [
                         {y: parseFloat(<?php echo $minIncomeUnder15k ?>), label: "Under 15K"},
                         {y: parseFloat(<?php echo $minIncome15kTo25k ?>), label: "15K to 25K"},
@@ -141,18 +143,19 @@ if($Object->num_rows > 0){
 </script>
 
 <script type="text/javascript">
-    if("<?php echo $DataPoints2; ?>".length > 0){
+    if("<?php echo $maxIncomeDataPoints; ?>".length > 0){
         $(function () {
             var chart2 = new CanvasJS.Chart("chartContainer2", {
 	            animationEnabled: true,
                 title: {
-                    text: "Federal Income Distribution in " + "<?php echo $maxYear ?>" + " (Maximum Enrollment)"
+                    text: "Federal Income Distribution in " + "<?php echo $maxYear ?>" + " (Max Enrollment)"
                 },
                 data: [{
                     type: "pie",
                     startAngle: 240,
-                    yValueFormatString: "##0.00\"%\"",
-                    indexLabel: "{label} {y}",
+                    // yValueFormatString: "##0.00\"%\"",
+		    indexLabel: "{label}",
+		    indexLabelFontSize: 10,
                     dataPoints: [
                         {y: parseFloat(<?php echo $maxIncomeUnder15k ?>), label: "Under 15K"},
                         {y: parseFloat(<?php echo $maxIncome15kTo25k ?>), label: "15K to 25K"},
