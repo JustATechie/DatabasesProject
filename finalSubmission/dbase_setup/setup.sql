@@ -195,10 +195,10 @@ CREATE TABLE SchoolFoodPrograms(
 #LOAD DATA LOCAL INFILE './data/final/Location.txt' INTO TABLE Location FIELDS TERMINATED BY ',';
 
 /* Reduced Location Data */
-LOAD DATA LOCAL INFILE 'Location - Reduced.txt' INTO TABLE Location FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE 'dbase_setup/Location - Reduced.txt' INTO TABLE Location FIELDS TERMINATED BY ',';
 
 /* Data Type */
-LOAD DATA LOCAL INFILE 'DataType.txt' INTO TABLE DataType FIELDS TERMINATED BY ',';
+LOAD DATA LOCAL INFILE 'dbase_setup/DataType.txt' INTO TABLE DataType FIELDS TERMINATED BY ',';
 
 /* Food Legislation Data */
 LOAD DATA LOCAL INFILE 'dbase_setup/FoodLegislation.txt' INTO TABLE FoodLegislation FIELDS TERMINATED BY ',';
