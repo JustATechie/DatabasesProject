@@ -36,7 +36,6 @@ if($Object->num_rows > 0){
 	    $maxYear=$row['Year'];
         $maxEnroll=$row['totalEnrolled'];
     }
-    echo "<h5>". $maxYear. " was the year with the highest number of people enrolled in Food Assistance Programs federally. ". $maxEnroll." people were enrolled in food assistance programs this year.</h5>";
 } 
 ?>
 
@@ -50,10 +49,55 @@ if($Object->num_rows > 0){
 	    $minYear=$row['Year'];
         $minEnroll=$row['totalEnrolled'];
     }
-    echo "<h5>". $minYear. " was the year with the lowest number of people enrolled in Food Assistance Programs federally. ". $minEnroll." people were enrolled in food assistance programs this year.</h5>";
 } 
 ?>
 
+<?php
+$Object = include 'getMinIncomeData.php';
+// $dataPoints = array();
+if($Object->num_rows > 0){
+	$minIncomeDataPoints = array();
+	foreach($Object as $row){
+	    array_push($minIncomeDataPoints, $row);
+        $minIncomeUnder15k=$row['IncomeUnder15k'];
+        $minIncome15kTo25k=$row['Income15kTo25k'];
+        $minIncome25kTo35k=$row['Income25kTo35k'];
+        $minIncome35kTo50k=$row['Income35kTo50k'];
+        $minIncome50kTo75k=$row['Income50kTo75k'];
+        $minIncome75kTo100k=$row['Income75kTo100k'];
+        $minIncome100kTo150k=$row['Income100kTo150k'];
+        $minIncome150kTo200k=$row['Income150kTo200k'];
+        $minIIncome200kAbove=$row['Income200kAbove'];
+        $minAvg=$row['AvgIncome'];
+    }
+} 
+?>
+
+<?php 
+    echo "<h5>". $maxYear. " was the year with the highest number of people enrolled in Food Assistance Programs federally. ". $maxEnroll." people were enrolled in food assistance programs this year and the average income for the year was $".$maxAvg." .</h5>";
+    echo "<h5>". $minYear. " was the year with the lowest number of people enrolled in Food Assistance Programs federally. ". $minEnroll." people were enrolled in food assistance programs this year and the average income for the year was $".$minAvg." .</h5>";
+?>
+
+<?php
+$Object = include 'getMaxIncomeData.php';
+// $dataPoints = array();
+if($Object->num_rows > 0){
+	$maxIncomeDataPoints = array();
+	foreach($Object as $row){
+	    array_push($maxIncomeDataPoints, $row);
+        $maxIncomeUnder15k=$row['IncomeUnder15k'];
+        $maxIncome15kTo25k=$row['Income15kTo25k'];
+        $maxIncome25kTo35k=$row['Income25kTo35k'];
+        $maxIncome35kTo50k=$row['Income35kTo50k'];
+        $maxIncome50kTo75k=$row['Income50kTo75k'];
+        $maxIncome75kTo100k=$row['Income75kTo100k'];
+        $maxIncome100kTo150k=$row['Income100kTo150k'];
+        $maxIncome150kTo200k=$row['Income150kTo200k'];
+        $maxIIncome200kAbove=$row['Income200kAbove'];
+        $maxAvg=$row['AvgIncome'];
+    }
+} 
+?>
 
 
 <!------------------ Graph Drawing Section ------------------>
