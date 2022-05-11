@@ -100,6 +100,17 @@ if($Object->num_rows > 0){
     echo "<h5>". $minYear. " was the year with the lowest number of people enrolled in Food Assistance Programs federally. ". $minEnroll." people were enrolled in food assistance programs this year and the average income for the year was $".$minAvg." .</h5>";
 ?>
 
+<?php
+$Object = include 'getTotalEnrollmentData.php';
+// $dataPoints = array();
+if($Object->num_rows > 0){
+	$totalEnrollmentDataPoints = array();
+	foreach($Object as $row){
+	    array_push($totalEnrollmentDataPoints, $row);
+    }
+} 
+?>
+
 <!------------------ Graph Drawing Section ------------------>
 
 <!-- Include template file for chart section. -->
@@ -108,6 +119,7 @@ if($Object->num_rows > 0){
 <?php echo "<br><br>" ?>
 <div id="chartContainer1" style="width: 49%; height: 300px;display: inline-block;padding:10px;"></div>
 <div  id="chartContainer2" style="width: 49%; height: 300px;display: inline-block;padding:10px;"></div>
+<div style="center" id="chartContainer3" style="width: 80%; height: 300px;padding:10px;"></div>
 
 <script type="text/javascript">
     if("<?php echo $minIncomeDataPoints; ?>".length > 0) {
@@ -170,6 +182,39 @@ if($Object->num_rows > 0){
                 }]
             });
             chart2.render();
+
+        });
+    }
+</script>
+
+<script>
+    if("<?php echo $totalEnrollmentDataPoints; ?>".length < 1){
+        //if not enough data, do not draw graph!
+    } else {
+        $(function () {
+            var chart23= new CanvasJS.Chart("chartContainer3", {
+                theme: "light2",
+                zoomEnabled: true,
+                animationEnabled: true,
+                title: {
+                    text: "Total Number of Enrollments in the US in Food Assistance Programs by Year"
+                }, axisX: {
+                    //valueFormatString: "#,###"
+                    title: "Year"
+                },
+                axisY: {
+                    title: "Number of People Enrolled",
+                    prefix: "$"
+                },
+                data: [
+                    {
+                        type: "line",
+                        dataPoints: <?php echo json_encode($totalEnrollmentDataPoints, JSON_NUMERIC_CHECK); ?>
+                    }
+                ]
+            });
+            chart3.render();
+
 
         });
     }
