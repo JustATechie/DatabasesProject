@@ -1,7 +1,0 @@
-1,state,federal
-2,state,state
-3,county,federal
-4,county,state
-5,city,federal
-6,city,state
-7,federal,federal
