@@ -103,33 +103,24 @@ if($incomeResults->num_rows > 0){
 
 <script>
 $(function () {
-
     var chart = new CanvasJS.Chart("chartContainer", {
         exportEnabled: true,
         animationEnabled: true,
         title:{
-            text: "Car Parts Sold in Different States"
+            text: "Number of states with minimum and maximum enrollment for the " + "<?php echo $selectedSF ?>" + " program by year",
         },
         subtitles: [{
             text: "Click Legend to Hide or Unhide Data Series"
         }], 
         axisX: {
-            title: "States"
+            title: "Year"
         },
         axisY: {
-            title: "Oil Filter - Units",
-            titleFontColor: "#4F81BC",
-            lineColor: "#4F81BC",
-            labelFontColor: "#4F81BC",
-            tickColor: "#4F81BC",
-            includeZero: true
-        },
-        axisY2: {
-            title: "Clutch - Units",
-            titleFontColor: "#C0504E",
-            lineColor: "#C0504E",
-            labelFontColor: "#C0504E",
-            tickColor: "#C0504E",
+            title: "Number of States",
+            //titleFontColor: "#4F81BC",
+            //lineColor: "#4F81BC",
+            //labelFontColor: "#4F81BC",
+            //tickColor: "#4F81BC",
             includeZero: true
         },
         toolTip: {
@@ -141,31 +132,20 @@ $(function () {
         },
         data: [{
             type: "column",
-            name: "Oil Filter",
+            name: "Maximum Enrollment",
             showInLegend: true,      
-            yValueFormatString: "#,##0.# Units",
+            // yValueFormatString: "#,##0.# Units",
             dataPoints: <?php echo json_encode($maxDataPoints, JSON_NUMERIC_CHECK); ?>
         },
         {
             type: "column",
-            name: "Clutch",
+            name: "Minimum Enrollment",
             axisYType: "secondary",
             showInLegend: true,
-            yValueFormatString: "#,##0.# Units",
+            // yValueFormatString: "#,##0.# Units",
             dataPoints: <?php echo json_encode($minDataPoints, JSON_NUMERIC_CHECK); ?>
         }]
-    });
-    chart.render();
-
-    function toggleDataSeries(e) {
-        if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
-            e.dataSeries.visible = false;
-        } else {
-            e.dataSeries.visible = true;
-        }
-        e.chart.render();
-    }
-
+    })
 });
 </script>
 
