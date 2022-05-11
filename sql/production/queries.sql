@@ -196,7 +196,7 @@ from (select Gender,AVG(SugarIntake) as 'AVGSugar' from ConsumptionStats where (
 #Set @Q8MaxYear = (select MAX(Year) as Year from AvgHousehold);
 #Set @Q8MinYear = (select MIN(Year) as Year from AvgHousehold);
 
-select Year,Income200kAbove from AvgHousehold where (year = 2015 or year=2000) order by year;
+select Year as x,Income200kAbove as y from AvgHousehold where (year = 2015 or year=2000) order by year;
 select Year,Income150kTo200k from AvgHousehold where (year = 2015 or year=2000) order by year;
 
 select YearPassed,sum(LegislationID) from FoodLegislation where yearPassed>=2015 group by YearPassed;

@@ -102,59 +102,62 @@ if($incomeResults->num_rows > 0){
 
 
 <script>
-$(function () {
-    var chart1 = new CanvasJS.Chart("chartContainer1", {
-        exportEnabled: true,
-        animationEnabled: true,
-        title:{
-            text: "Number of states with minimum and maximum enrollment for the " + "<?php echo $selectedSF ?>" + " program by year",
-        },
-        subtitles: [{
-            // text: "Click Legend to Hide or Unhide Data Series"
-        }], 
-        axisX: {
-            title: "Year"
-        },
-        axisY: {
-            title: "Number of States",
-            includeZero: true
-        },
-        toolTip: {
-            shared: true
-        },
-        legend: {
-            cursor: "pointer",
-            itemclick: toggleDataSeries
-        },
-        data: [{
-            type: "column",
-            name: "Maximum Enrollment",
-            showInLegend: true,      
-            // yValueFormatString: "#,##0.# Units",
-            dataPoints: <?php echo json_encode($maxDataPoints, JSON_NUMERIC_CHECK); ?>
-        },
-        {
-            type: "column",
-            name: "Minimum Enrollment",
-            axisYType: "secondary",
-            showInLegend: true,
-            // yValueFormatString: "#,##0.# Units",
-            dataPoints: <?php echo json_encode($minDataPoints, JSON_NUMERIC_CHECK); ?>
-        }]
-	})
-	chart1.render();
+    if("<?php echo $maxDataPoints; ?>".length > 1) {
+        $(function () {
+            var chart1 = new CanvasJS.Chart("chartContainer1", {
+                exportEnabled: true,
+                animationEnabled: true,
+                title: {
+                    text: "Number of states with minimum and maximum enrollment for the " + "<?php echo $selectedSF ?>" + " program by year",
+                },
+                subtitles: [{
+                    // text: "Click Legend to Hide or Unhide Data Series"
+                }],
+                axisX: {
+                    title: "Year"
+                },
+                axisY: {
+                    title: "Number of States",
+                    includeZero: true
+                },
+                toolTip: {
+                    shared: true
+                },
+                legend: {
+                    cursor: "pointer",
+                    itemclick: toggleDataSeries
+                },
+                data: [{
+                    type: "column",
+                    name: "Maximum Enrollment",
+                    showInLegend: true,
+                    // yValueFormatString: "#,##0.# Units",
+                    dataPoints: <?php echo json_encode($maxDataPoints, JSON_NUMERIC_CHECK); ?>
+                },
+                    {
+                        type: "column",
+                        name: "Minimum Enrollment",
+                        axisYType: "secondary",
+                        showInLegend: true,
+                        // yValueFormatString: "#,##0.# Units",
+                        dataPoints: <?php echo json_encode($minDataPoints, JSON_NUMERIC_CHECK); ?>
+                    }]
+            })
+            chart1.render();
 
-    function toggleDataSeries(e) {
-        if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
-            e.dataSeries.visible = false;
-        } else {
-            e.dataSeries.visible = true;
-        }
-        e.chart1.render();
+            function toggleDataSeries(e) {
+                if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+                    e.dataSeries.visible = false;
+                } else {
+                    e.dataSeries.visible = true;
+                }
+                e.chart1.render();
+            }
+
+        });
     }
-
-});
 </script>
+
 
 <script>
     if("<?php echo $incomeDataPoints; ?>".length < 1){
@@ -167,13 +170,13 @@ $(function () {
                 animationEnabled: true,
                 title: {
                     text: "Average Federal Household Income by Year"
-                },axisX: {
+                }, axisX: {
                     //valueFormatString: "#,###"
                     title: "Year"
                 },
                 axisY: {
-			title: "Average Income"
-			prefix: "$"
+                    title: "Average Income",
+                    prefix: "$"
                 },
                 data: [
                     {
@@ -183,9 +186,15 @@ $(function () {
                 ]
             });
             chart2.render();
+
+
         });
     }
 </script>
+
+
+
+
 
 </body>
 
